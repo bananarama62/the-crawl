@@ -1,2 +1,6 @@
 # Assets
-stores source code for the game as well as code for the test cases.
+## Source
+stores assets used within unity
+## Test
+stores test cases for testing the game
+
