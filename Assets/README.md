@@ -1,6 +1,1 @@
-# Assets
-## Source
-stores assets used within unity
-## Test
-stores test cases for testing the game
-
+Store items in your individual subdirectory within source and tests
