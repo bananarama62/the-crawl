@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     float MoveX;
     float MoveY;
+    float health = 30f;
 
     Vector2 MoveVec;
 
@@ -68,5 +70,14 @@ public class PlayerController : MonoBehaviour
     void Attack()
     {
         
+    }
+
+    void playerDeath()
+    {
+        if(health <= 0 )
+        {
+            string currentScene = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentScene);
+        }
     }
 }
