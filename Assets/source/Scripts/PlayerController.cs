@@ -29,8 +29,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     void Awake()
     {
 
-      base.Awake(set_base_health: 30, speed: 5);
-      Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
+        base.Awake(set_base_health: 30, speed: 5);
+        Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
+        Swing.SetActive(false);
 
         rb = GetComponent<Rigidbody2D>();
         Attacks = InputSystem.actions.FindAction("Attacks");
@@ -81,7 +82,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         {
             MoveX = -1;
         }
-        if (Attacks.IsPressed())
+        if (Attacks.triggered)
         {
 
             AttackFun();
