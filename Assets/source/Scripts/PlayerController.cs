@@ -9,6 +9,13 @@ public class PlayerController : MonoBehaviour
     InputAction MoveDown;
     InputAction MoveRight;
     InputAction MoveLeft;
+    InputAction Attacks;
+
+    public GameObject Swing;
+    public Transform AimDirection;
+    float duration = 0.3f;
+    float timer = 0f;
+    public bool isAttacking = false;
 
     float MoveX;
     float MoveY;
@@ -21,7 +28,9 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+
         rb = GetComponent<Rigidbody2D>();
+        Attacks = InputSystem.actions.FindAction("Attacks");
         MoveUp = InputSystem.actions.FindAction("MoveUp");
         MoveDown = InputSystem.actions.FindAction("MoveDown");
         MoveRight = InputSystem.actions.FindAction("MoveRight");
@@ -31,12 +40,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        checkAttack();
         GetInput();
     }
 
     void FixedUpdate()
     {
         HandleMovement();
+        if (Moving())
+        {
+            Vector2 aimVec = MoveVec;
+            if (AimDirection != null && aimVec != Vector2.zero)
+            {
+                AimDirection.up = -aimVec;
+                AimDirection.localPosition = aimVec;
+            }
+        }
     }
 
     void GetInput()
@@ -59,6 +78,11 @@ public class PlayerController : MonoBehaviour
         {
             MoveX = -1;
         }
+        if (Attacks.IsPressed())
+        {
+
+            AttackFun();
+        }
         MoveVec = new Vector2(MoveX, MoveY).normalized;
     }
 
@@ -66,12 +90,31 @@ public class PlayerController : MonoBehaviour
     {
         rb.MovePosition(rb.position + (MoveVec * Speed * Time.fixedDeltaTime));
     }
-
-    void Attack()
+    public bool Moving()
     {
-        
+        return MoveVec != Vector2.zero;
     }
-
+    void AttackFun()
+    {
+        if (!isAttacking)
+        {
+            Swing.SetActive(true);
+            isAttacking = true;
+        }
+    }
+    void checkAttack()
+    {
+        if (isAttacking)
+        {
+            timer += Time.deltaTime;
+            if (timer >= duration)
+            {
+                Swing.SetActive(false);
+                isAttacking = false;
+                timer = 0f;
+            }
+        }
+    }
     void playerDeath()
     {
         if(health <= 0 )

@@ -5,7 +5,8 @@ public class EnemyController : MonoBehaviour
     bool ChasePlayer = false;
     Rigidbody2D Player;
     Rigidbody2D rb;
-
+    float health = 3;
+    float maxHealth = 3;
     float Speed = 4;
     Vector2 TargetPosition;
     Vector2 MoveVec;
@@ -13,6 +14,7 @@ public class EnemyController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -53,4 +55,13 @@ public class EnemyController : MonoBehaviour
             ChasePlayer = false;
         }
    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
