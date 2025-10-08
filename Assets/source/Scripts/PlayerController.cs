@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Character // Parent class is in josh/Scripts/character.cs
 {
     Rigidbody2D rb;
     InputAction MoveUp;
@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+
+      base.Awake(set_base_health: 30, speed: 5);
+      Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
 
         rb = GetComponent<Rigidbody2D>();
         Attacks = InputSystem.actions.FindAction("Attacks");
