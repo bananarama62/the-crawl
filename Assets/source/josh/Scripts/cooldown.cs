@@ -6,6 +6,14 @@ public class Cooldown : MonoBehaviour{
   private double cooldown_remaining;
   private bool on_cooldown;
 
+  public void init(double set_cooldown_length, bool set_on_cooldown=false){
+    if (setCooldownLength(set_cooldown_length)){
+      throw new System.ArithmeticException("Cooldown length must be greater than or equal to 0.");
+    }
+    if(set_on_cooldown){
+      start();
+    }
+  }
   // If the cooldown is active, updates the cooldown time cooldown time
   // remaining. If time remaining is 0 or less, sets cooldown to inactive.
   void FixedUpdate(){
