@@ -1,10 +1,15 @@
+using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
     bool ChasePlayer = false;
     Rigidbody2D Player;
     Rigidbody2D rb;
+
+    public Slider healthBar;
+    string healthBarPath = "Canvas/HealthBar";
     float health = 3;
     float maxHealth = 3;
     float Speed = 1;
@@ -14,7 +19,17 @@ public class EnemyController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        //Path to slider
+        Transform t = transform.Find(healthBarPath);
+        Assert.NotNull(t);
+        healthBar = t.GetComponent<Slider>();
+
         health = maxHealth;
+        healthBar.maxValue = maxHealth;
+        healthBar.minValue = 0;
+        healthBar.value = health;
+
     }
 
     // Update is called once per frame
@@ -59,6 +74,7 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        healthBar.value = health;
         if (health <= 0)
         {
             Destroy(gameObject);
