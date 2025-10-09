@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
     Rigidbody2D rb;
     float health = 3;
     float maxHealth = 3;
-    float Speed = 0;
+    float Speed = 1;
     Vector2 TargetPosition;
     Vector2 MoveVec;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

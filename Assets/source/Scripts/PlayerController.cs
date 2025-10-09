@@ -44,7 +44,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     // Update is called once per frame
     void Update()
     {
-        checkAttack();
+        CheckAttack();
         GetInput();
     }
 
@@ -84,7 +84,6 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         }
         if (Attacks.triggered)
         {
-
             AttackFun();
         }
         MoveVec = new Vector2(MoveX, MoveY).normalized;
@@ -106,16 +105,16 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
             isAttacking = true;
         }
     }
-    void checkAttack()
+    void CheckAttack()
     {
         if (isAttacking)
         {
             timer += Time.deltaTime;
             if (timer >= duration)
             {
+                timer = 0f;
                 Swing.SetActive(false);
                 isAttacking = false;
-                timer = 0f;
             }
         }
     }

@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class weapon : MonoBehaviour
 {
     public float damage = 1;
