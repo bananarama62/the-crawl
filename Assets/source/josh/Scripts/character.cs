@@ -7,6 +7,10 @@ public abstract class Character : MonoBehaviour {
   private int max_health; // Effective max health (modifiable by things like armor)
   [SerializeField] private float speed;
 
+  public virtual void die(){ // Called when health is set to 0
+    Destroy(gameObject);
+  }
+
   // Returns the current health
   public int getHealth(){
     return current_health;
@@ -17,6 +21,9 @@ public abstract class Character : MonoBehaviour {
   public bool setHealth(int new_health){
     if (new_health >= 0) {
       current_health = new_health;
+      if (current_health == 0){
+        die();
+      }
       return false;
     } else {
       return true;
@@ -30,6 +37,9 @@ public abstract class Character : MonoBehaviour {
     current_health += modify_health_by;
     if (current_health < 0){
       current_health = 0;
+    }
+    if (current_health == 0){
+      die();
     }
     return current_health;
   }
@@ -52,6 +62,9 @@ public abstract class Character : MonoBehaviour {
     // Applies percentage and gets value to modify health by
     int modify_amount = (health * percentage) / 100; 
     current_health += modify_amount;
+    if (current_health == 0){
+      die();
+    }
     return current_health;
   }
 
@@ -118,6 +131,7 @@ public abstract class Character : MonoBehaviour {
     return max_health;
   }
 
+
   // Returns the speed
   public float getSpeed(){
     return speed;
@@ -168,5 +182,5 @@ public abstract class Character : MonoBehaviour {
 
     setSpeed(speed);
   }
-  
+
 }

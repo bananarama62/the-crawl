@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Boss : EnemyController {
+public abstract class Boss : Enemy {
 
 }
 
