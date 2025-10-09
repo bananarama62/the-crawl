@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public abstract class Enemy : Character
 {
-    bool ChasePlayer = false;
+    protected bool playerInSight = false;
     Rigidbody2D Player;
     Rigidbody2D rb;
 
@@ -34,7 +34,7 @@ public abstract class Enemy : Character
     void FollowPlayer()
     {
         MoveVec = Vector2.zero;
-        if (ChasePlayer)
+        if (playerInSight)
         {
             TargetPosition = Player.position - rb.position;
             MoveVec = TargetPosition.normalized;
@@ -51,7 +51,7 @@ public abstract class Enemy : Character
         if (collision.CompareTag("Player"))
         {
             Player = collision.attachedRigidbody;
-            ChasePlayer = true;
+            playerInSight = true;
         }
     }
 
@@ -59,7 +59,7 @@ public abstract class Enemy : Character
    {
         if (collision.CompareTag("Player"))
         {
-            ChasePlayer = false;
+            playerInSight = false;
         }
    }
 
