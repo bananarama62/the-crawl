@@ -1,4 +1,5 @@
 using UnityEngine;
+using NUnit.Framework;
 
 public abstract class Effect : MonoBehaviour {
   private Cooldown cooldown;
@@ -12,7 +13,10 @@ public abstract class Effect : MonoBehaviour {
     return individualEffect();
   }
 
-  public void init(double cooldown_length, bool set_on_cooldown=false){
-    cooldown.init(cooldown_length,set_on_cooldown);
+  public void init(){
+    Transform t = transform.Find("Cooldown");
+    Assert.NotNull(t);
+    cooldown = t.GetComponent<Cooldown>();
+    Debug.Log(cooldown.getCooldownLength());
   }
 }

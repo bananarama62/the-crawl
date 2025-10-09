@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Cooldown : MonoBehaviour{
 
-  private double cooldown_length;
+  [SerializeField] private double cooldown_length;
   private double cooldown_remaining;
   private bool on_cooldown;
 
