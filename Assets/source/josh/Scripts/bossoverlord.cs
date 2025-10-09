@@ -8,7 +8,9 @@ public class BossOverlord : Boss {
   void FixedUpdate() {
     decideMove();
     move();
-    ability_spawn_minion.use();
+    if (playerInSight){
+      ability_spawn_minion.use();
+    }
   }
   void Awake()
   {
