@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c89478220729db46a522dd28c5cecbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  speed: 0
   healthBar: {fileID: 0}
 --- !u!1 &1699910611393727490
 GameObject:
@@ -388,7 +389,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &8412318592938100874
 MonoBehaviour:

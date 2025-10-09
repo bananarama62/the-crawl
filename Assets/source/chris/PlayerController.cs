@@ -1,7 +1,10 @@
+using System.Collections;
+using System.Xml.Serialization;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class PlayerController : Character // Parent class is in josh/Scripts/character.cs
 {
     Rigidbody2D rb;
@@ -15,11 +18,18 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     public Transform AimDirection;
     float duration = 0.3f;
     float timer = 0f;
+    float damageTime = 0f;
+    float damageDuration = 1f;
     public bool isAttacking = false;
+    bool isTakingIt = false;
+    Slider healthBar;
+    string healthBarPath = "HealthBar/HealthBar";
 
     float MoveX;
     float MoveY;
-    float health = 30f;
+    float maxHealth = 30f;
+    float health = 0f;
+
 
     Vector2 MoveVec;
 
@@ -34,6 +44,15 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         Swing.SetActive(false);
 
         rb = GetComponent<Rigidbody2D>();
+        //Stuff that needs changed --------------
+        Transform t = transform.Find(healthBarPath);
+        Assert.NotNull(t);
+        healthBar = t.GetComponent<Slider>();
+        health = maxHealth;
+        healthBar.maxValue = maxHealth;
+        healthBar.minValue = 0;
+        healthBar.value = health;
+        //Stuff that needs changed ---------------
         Attacks = InputSystem.actions.FindAction("Attacks");
         MoveUp = InputSystem.actions.FindAction("MoveUp");
         MoveDown = InputSystem.actions.FindAction("MoveDown");
@@ -46,6 +65,12 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     {
         CheckAttack();
         GetInput();
+        //---------------------------------
+        if (health <= 0)
+        {
+            playerDeath();
+        }
+        //---------------------------------
     }
 
     void FixedUpdate()
@@ -54,7 +79,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         if (Moving())
         {
             Vector2 aimVec = MoveVec;
-            if (AimDirection != null && aimVec != Vector2.zero)
+            if (AimDirection != null && aimVec != Vector2.zero && !isAttacking)
             {
                 AimDirection.up = -aimVec;
                 AimDirection.localPosition = aimVec;
@@ -118,6 +143,29 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
             }
         }
     }
+
+    //---------------------------------
+    public void takeDamage(float damage)
+    {
+        if (isTakingIt)
+        {
+            return;
+        }
+
+        health -= damage;
+        healthBar.value = health;
+        StartCoroutine(TakeItTimer());
+    }
+
+    private IEnumerator TakeItTimer()
+    {
+        isTakingIt = true;
+        yield return new WaitForSeconds(damageDuration);
+        isTakingIt = false;
+    }
+
+    //---------------------------------
+    
     void playerDeath()
     {
         if(health <= 0 )

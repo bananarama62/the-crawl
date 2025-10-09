@@ -48,12 +48,31 @@ public abstract class Enemy : Character
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+      if (collision.CompareTag("Player"))
+      {
+        Player = collision.attachedRigidbody;
+        playerInSight = true;
+      }
+    }
+    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        PlayerController player = collision.collider.GetComponent<PlayerController>();
+        if (collision.collider.CompareTag("Player"))
         {
-            Player = collision.attachedRigidbody;
-            playerInSight = true;
+            player.takeDamage(1);
         }
     }
+    
+    void OnCollisionStay2D(Collision2D collision)
+   {
+        PlayerController player = collision.collider.GetComponent<PlayerController>();
+        if (collision.collider.CompareTag("Player"))
+        {
+            player.takeDamage(1);
+        }
+
+   }
 
    void OnTriggerExit2D(Collider2D collision)
    {
