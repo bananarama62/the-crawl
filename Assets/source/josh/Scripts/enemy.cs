@@ -13,8 +13,7 @@ public abstract class Enemy : Character
     Vector2 TargetPosition;
     Vector2 MoveVec;
 
-    new public void init(int base_health, int max_health=-1, int health=-1, float speed = 0f) {
-      base.init(base_health,max_health,health,speed);
+    public void initMovement() {
       rb = GetComponent<Rigidbody2D>();
 
       //Path to slider

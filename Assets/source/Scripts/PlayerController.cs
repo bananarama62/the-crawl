@@ -29,7 +29,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     void Awake()
     {
 
-        base.init(set_base_health: 30, speed: 5);
+        initHealthAndSpeed(set_base_health: 30, speed: 5);
         Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
         Swing.SetActive(false);
 

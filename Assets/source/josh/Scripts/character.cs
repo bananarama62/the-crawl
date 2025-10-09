@@ -162,7 +162,7 @@ public abstract class Character : MonoBehaviour {
   // Base health is the only required value. If max health is not supplied, it will
   // be set to base health value. If current health is not supplied, it will
   // be set to the max health value. Speed defaults to 0.
-  public void init(int set_base_health, int set_max_health=-1, int set_current_health=-1,float speed=0f){
+  public void initHealthAndSpeed(int set_base_health, int set_max_health=-1, int set_current_health=-1,float speed=0f){
     if(setBaseHealth(set_base_health)){ // Setting base health resulted in error -- less than 0.
       throw new System.ArithmeticException("Base health must be greater than or equal to 0.");
     }
