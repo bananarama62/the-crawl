@@ -5,7 +5,7 @@ public class weapon : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         EnemyController enemy = collision.GetComponent<EnemyController>();
-        if (enemy != null)
+        if (collision is BoxCollider2D)
         {
             enemy.TakeDamage(damage);
         }
