@@ -1400,6 +1400,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream:Assets/source/jacob/Scenes/Demo.unity
 <<<<<<< Updated upstream:Assets/source/jacob/Scenes/Demo.unity
+<<<<<<< Updated upstream:Assets/source/jacob/Scenes/Demo.unity
 --- !u!1001 &1305042712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1466,6 +1467,8 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67a0baedb87f15dfc9f271d0874068d6, type: 3}
 =======
+=======
+>>>>>>> Stashed changes:Assets/source/Scenes/Demo.unity
 =======
 >>>>>>> Stashed changes:Assets/source/Scenes/Demo.unity
 --- !u!1 &1321364410
@@ -1571,6 +1574,9 @@ Canvas:
   m_SortingOrder: 0
   m_TargetDisplay: 0
 <<<<<<< Updated upstream:Assets/source/jacob/Scenes/Demo.unity
+<<<<<<< Updated upstream:Assets/source/jacob/Scenes/Demo.unity
+>>>>>>> Stashed changes:Assets/source/Scenes/Demo.unity
+=======
 >>>>>>> Stashed changes:Assets/source/Scenes/Demo.unity
 =======
 >>>>>>> Stashed changes:Assets/source/Scenes/Demo.unity
