@@ -13,7 +13,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     InputAction MoveRight;
     InputAction MoveLeft;
     InputAction Attacks;
-
+    public InputAction Skill;
     public GameObject Swing;
     public Transform AimDirection;
     float duration = 0.3f;
@@ -29,8 +29,8 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     float MoveY;
     float maxHealth = 30f;
     float health = 0f;
-
-
+    public Archetype playerClass;  //chris class 
+    public PlayerAim aimCon;
     Vector2 MoveVec;
 
     [SerializeField] float Speed = 5f;
@@ -38,11 +38,11 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-
-        initHealthAndSpeed(set_base_health: 30, speed: 5);
-        Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
+        aimCon = GetComponent<PlayerAim>();
         Swing.SetActive(false);
-
+        playerClass = new Mage();
+        playerClass.Initialize(this);
+        Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
         rb = GetComponent<Rigidbody2D>();
         //Stuff that needs changed --------------
         Transform t = transform.Find(healthBarPath);
@@ -58,8 +58,8 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         MoveDown = InputSystem.actions.FindAction("MoveDown");
         MoveRight = InputSystem.actions.FindAction("MoveRight");
         MoveLeft = InputSystem.actions.FindAction("MoveLeft");
+        Skill = InputSystem.actions.FindAction("Skill");
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -86,7 +86,11 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
             }
         }
     }
-
+    // class setter function that is called by UI when the button is pressed
+    // public void setClass(Archetype chosenClass)
+    // {
+    //     playerClass = chosenClass;
+    // }
     void GetInput()
     {
         MoveY = 0;

@@ -37,7 +37,7 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold",
                     "initialStateCheck": false
@@ -127,6 +127,15 @@
                     "name": "Attacks",
                     "type": "Button",
                     "id": "f2cbf3ac-adff-44bc-883a-c8ba7db25bcf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Skill",
+                    "type": "Button",
+                    "id": "0b4c0da4-3cde-4eb7-a3a7-3ee6e05196da",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -571,6 +580,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Attacks",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f593aead-9000-4622-8844-74c7f57bcd06",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Skill",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
