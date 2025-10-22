@@ -27,11 +27,11 @@ public class PlayerAim : MonoBehaviour
         mousePos.z = 0f;
         direction = (mousePos - player.transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        player.transform.rotation = Quaternion.Euler(0, 0, angle);
+        //player.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
     private void handleSkill()
     {
-        if(controller.Skill.IsPressed())
+        if (controller.Skill.IsPressed())
         {
             controller.playerClass.castSkill();
         }
