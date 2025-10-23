@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public abstract class Usable {
   private string name;

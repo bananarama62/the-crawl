@@ -91,6 +91,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     // {
     //     playerClass = chosenClass;
     // }
+
     void GetInput()
     {
         MoveY = 0;
@@ -177,5 +178,18 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
             string currentScene = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(currentScene);
         }
+    }
+    public void powerUp(Pickup pickup)
+    {
+        pickup.item.Activate(this.gameObject);
+    }
+    public void healPlayer(int healAmount)
+    {
+        health = health+ healAmount;
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        healthBar.value = health;
     }
 }
