@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e553006ee709e1240802c688cde94294, type: 3}
   m_Name: New Weapon Modifier
   m_EditorClassIdentifier: NewAssembly::WeaponModifier
-  damageMultiplier: 0
-  duration: 0
+  damageMultiplier: 1

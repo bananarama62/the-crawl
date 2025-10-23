@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48814551431aea845a36d553f1fcb660, type: 3}
   m_Name: New Health Modifier
   m_EditorClassIdentifier: NewAssembly::HealthModifier
-  healthValue: 0
+  healthValue: 15
