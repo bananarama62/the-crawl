@@ -16,7 +16,7 @@ TagManager:
   - EnemyBody
   - EnemyDetection
   - 
-  - 
+  - RoomCollider
   - 
   - 
   - 
