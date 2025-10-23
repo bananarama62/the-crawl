@@ -27,8 +27,8 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
 
     float MoveX;
     float MoveY;
-    float maxHealth = 30f;
-    float health = 0f;
+    public float maxHealth = 30f;
+    public float health = 0f;
     public Archetype playerClass;  //chris class 
     public PlayerAim aimCon;
     Vector2 MoveVec;
