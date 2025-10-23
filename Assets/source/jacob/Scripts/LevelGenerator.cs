@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Numerics;
 using System.Runtime.InteropServices.WindowsRuntime;
 using NUnit.Framework;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.GameCenter;
 using UnityEngine.UIElements;
