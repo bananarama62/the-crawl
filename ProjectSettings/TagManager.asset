@@ -17,6 +17,8 @@ TagManager:
   - EnemyBody
   - EnemyDetection
   - 
+  - RoomCollider
+  - 
   - PlayerProjectile
   - Walls
   - 
