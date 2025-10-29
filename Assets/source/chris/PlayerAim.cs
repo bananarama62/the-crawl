@@ -5,17 +5,17 @@ using UnityEngine.InputSystem;
 public class PlayerAim : MonoBehaviour
 {
     PlayerController controller;
-    private Vector3 mousePos;
+    private Vector3 MousePos;
     private Vector2 direction;
     [SerializeField] public GameObject player;
-    [SerializeField] public Transform spawnPoint;
+    [SerializeField] public Transform SpawnPoint;
     private void Awake()
     {
         controller = GetComponent<PlayerController>();
     }
     private void Update()
     {
-        if (controller?.playerClass == null) return;
+        if (controller?.PlayerClass == null) return;
         handlePlayerAim();
         handleSkill();
 
@@ -23,9 +23,9 @@ public class PlayerAim : MonoBehaviour
 
     private void handlePlayerAim()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        mousePos.z = 0f;
-        direction = (mousePos - player.transform.position).normalized;
+        MousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        MousePos.z = 0f;
+        direction = (MousePos - player.transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         Quaternion rotation = Quaternion.AngleAxis(angle,Vector3.forward);
@@ -37,7 +37,7 @@ public class PlayerAim : MonoBehaviour
     {
         if (controller.Skill.IsPressed())
         {
-            controller.playerClass.castSkill();
+            controller.PlayerClass.castSkill();
         }
     }
 }

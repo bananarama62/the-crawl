@@ -1,15 +1,14 @@
 using UnityEngine;
 
-public class Fireball : Effect
+public class ArcherTrap : Effect
 {
-    Enemy enemy1;
-    [SerializeField] public GameObject ball;
+    [SerializeField] public GameObject trap;
     [SerializeField] public GameObject player;
     [SerializeField] public Transform spawnPoint;
     public override int individualEffect()
     {
-        Debug.Log("Casting Fireball...");
-        Instantiate(ball, spawnPoint.position, player.transform.rotation);
+        Debug.Log("Deploying Trap ...");
+        Instantiate(trap, spawnPoint.position, player.transform.rotation);
         return 1;
     }
     void Awake()
