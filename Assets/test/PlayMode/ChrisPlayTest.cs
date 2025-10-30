@@ -26,7 +26,7 @@ public class ChrisPlayTest
         yield return null;
 
         // Act — simulate casting skill
-        player.playerClass.castSkill();
+        player.PlayerClass.castSkill();
 
         // Wait for projectile spawn
         yield return new WaitForSeconds(0.1f);
@@ -43,12 +43,12 @@ public class ChrisPlayTest
         Assert.NotNull(player, "PlayerController not found in scene!");
 
         // Cast once (starts cooldown)
-        player.playerClass.castSkill();
+        player.PlayerClass.castSkill();
         yield return null;
 
         // Try to cast again immediately
         var beforeCount = GameObject.FindObjectsOfType<Fireball>().Length;
-        player.playerClass.castSkill();
+        player.PlayerClass.castSkill();
         yield return new WaitForSeconds(0.1f);
         var afterCount = GameObject.FindObjectsOfType<Fireball>().Length;
 

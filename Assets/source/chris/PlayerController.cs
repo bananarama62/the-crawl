@@ -29,8 +29,8 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     float MoveY;
     public float maxHealth = 30f;
     public float health = 0f;
-    public Archetype playerClass;  //chris class 
-    public PlayerAim aimCon;
+    public Archetype PlayerClass;  //chris class 
+    public PlayerAim AimCon;
     Vector2 MoveVec;
 
     [SerializeField] float Speed = 5f;
@@ -38,10 +38,10 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        aimCon = GetComponent<PlayerAim>();
+        AimCon = GetComponent<PlayerAim>();
         Swing.SetActive(false);
-        playerClass = new Mage();
-        playerClass.Initialize(this);
+        PlayerClass = new Archer();
+        PlayerClass.Initialize(this);
         Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
         rb = GetComponent<Rigidbody2D>();
         //Stuff that needs changed --------------

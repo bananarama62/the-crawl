@@ -170,4 +170,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FireballBehaviour
   whatDestroysBall:
     serializedVersion: 2
-    m_Bits: 2176
+    m_Bits: 8192

@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 
 public class LevelGenerator
 {
+   private const int MAX_CELLS = 10; 
    private Room[] rooms;
    private List<Room> placedRooms = new List<Room>();
    Vector2Int WorldBoundsX = new Vector2Int(-30, 30);
@@ -99,6 +100,46 @@ public class LevelGenerator
          return false;
       }
       return true;
+   }
+
+   void RoomCellAlgo()
+   {
+      Vector2Int StartCell = new Vector2Int(0, 0);
+      Vector2Int[] Cells = new Vector2Int[MAX_CELLS];
+      Vector2Int LastCell = new Vector2Int(0, 0);
+      Vector2Int[] Directions = 
+      {
+         new Vector2Int(0, 1), // Up
+         new Vector2Int(0, -1), // Down
+         new Vector2Int(-1, 0), // Left
+         new Vector2Int(1, 0) // Right
+      };
+
+      Cells[0] = StartCell;
+      int ChanceOfSplit;
+      int ChanceOfDirection;
+      
+
+      for (int i = 1; i < MAX_CELLS; i++)
+      {
+         LastCell = Cells[i - 1];
+
+         ChanceOfSplit = UnityEngine.Random.Range(1, 5); // 1 - 4
+         ChanceOfDirection = UnityEngine.Random.Range(1, 4); // 1 - 4
+
+         do
+         {
+            ChanceOfDirection = UnityEngine.Random.Range(1, 5);
+            Cells[i] += Directions[ChanceOfDirection];
+            if(ChanceOfSplit == 1 && i + 1 != MAX_CELLS)
+            {
+               
+            }
+         } while (Cells[i] == LastCell);
+         
+      }
+
+      
    }
    
 }

@@ -3,8 +3,9 @@ using UnityEngine;
 public class FireballBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private float ballSpeed = 15f;
-    [SerializeField] private LayerMask whatDestroysBall;
+    private float BallSpeed = 15f;
+    private float damage = 5;
+    [SerializeField] private LayerMask WhatDestroysBall;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -13,14 +14,20 @@ public class FireballBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if((whatDestroysBall.value & (1 << collision.gameObject.layer)) > 0)
+        Enemy enemy = collision.GetComponent<Enemy>();
+        if ((WhatDestroysBall.value & (1 << collision.gameObject.layer)) > 0)
         {
+            Destroy(gameObject);
+        }
+        if (collision is BoxCollider2D)
+        {
+            enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
     private void setVelocity()
     {
-        rb.linearVelocity = transform.right * ballSpeed;
+        rb.linearVelocity = transform.right * BallSpeed;
     }
 
     private void setDestroyTime()
