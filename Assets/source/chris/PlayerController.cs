@@ -22,13 +22,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     float damageDuration = 1f;
     public bool isAttacking = false;
     bool isTakingIt = false;
-    Slider healthBar;
-    string healthBarPath = "HealthBar/HealthBar";
 
     float MoveX;
     float MoveY;
-    public float maxHealth = 30f;
-    public float health = 0f;
     public Archetype PlayerClass;  //chris class 
     public PlayerAim AimCon;
     Vector2 MoveVec;
@@ -43,9 +39,6 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         PlayerClass = new Archer();
         PlayerClass.Initialize(this);
         rb = GetComponent<Rigidbody2D>();
-        //Stuff that needs changed --------------
-        Transform t = transform.Find(healthBarPath);
-        Assert.NotNull(t);
         initHealthAndSpeed(30);
         Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
         //Stuff that needs changed ---------------
@@ -60,6 +53,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     void Start()
     {
         UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
+        Assert.NotNull(UIHandler.instance);
     }
     // Update is called once per frame
     void Update()
