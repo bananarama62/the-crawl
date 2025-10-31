@@ -42,17 +42,12 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         Swing.SetActive(false);
         PlayerClass = new Archer();
         PlayerClass.Initialize(this);
-        Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
         rb = GetComponent<Rigidbody2D>();
         //Stuff that needs changed --------------
         Transform t = transform.Find(healthBarPath);
         Assert.NotNull(t);
-        healthBar = t.GetComponent<Slider>();
-        health = maxHealth;
-        healthBar.maxValue = maxHealth;
-        healthBar.minValue = 0;
-        healthBar.value = health;
         initHealthAndSpeed(30);
+        Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
         //Stuff that needs changed ---------------
         Attacks = InputSystem.actions.FindAction("Attacks");
         MoveUp = InputSystem.actions.FindAction("MoveUp");
@@ -72,10 +67,12 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         CheckAttack();
         GetInput();
         //---------------------------------
+        /*
         if (health <= 0)
         {
             playerDeath();
         }
+        */
         //---------------------------------
     }
 
@@ -166,8 +163,6 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         modifyHealth(-1 * (int)(damage));
         UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
 
-        //health -= damage;
-        //healthBar.value = health;
         StartCoroutine(TakeItTimer());
     }
 
@@ -180,20 +175,16 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
 
     //---------------------------------
     
+    // Called by various health modification functions in character.cs
+    // when the current health hits 0. Whatever that needs to happen on player player
+    // death should occur here.
     public override void die()
     {
         string currentScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentScene);
     }
     
-    void playerDeath()
-    {
-        if(health <= 0 )
-        {
-            string currentScene = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentScene);
-        }
-    }
+
     public void powerUp(Pickup pickup)
     {
         pickup.item.Activate(this.gameObject);
@@ -202,12 +193,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     public void healPlayer(int healAmount)
     {
         modifyHealth(healAmount);
-        return;
-        health = health+ healAmount;
-        if (health > maxHealth)
-        {
-            health = maxHealth;
-        }
-        healthBar.value = health;
+        UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
+
     }
 }
