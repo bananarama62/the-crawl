@@ -73,6 +73,12 @@ public abstract class Character : MonoBehaviour {
     return getHealth();
   }
 
+  // Returns current health / max health; This is the percentage
+  // of health the player is currently at.
+  public float getCurrentHealthPercentage(){
+    return (float)(current_health)/max_health;
+  }
+
   // Wrapper for setHealth() to adhere to naming convention.
   public bool setCurrentHealth(int new_health){
     return setHealth(new_health);

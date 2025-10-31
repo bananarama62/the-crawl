@@ -52,6 +52,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         healthBar.maxValue = maxHealth;
         healthBar.minValue = 0;
         healthBar.value = health;
+        initHealthAndSpeed(30);
         //Stuff that needs changed ---------------
         Attacks = InputSystem.actions.FindAction("Attacks");
         MoveUp = InputSystem.actions.FindAction("MoveUp");
@@ -59,6 +60,11 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         MoveRight = InputSystem.actions.FindAction("MoveRight");
         MoveLeft = InputSystem.actions.FindAction("MoveLeft");
         Skill = InputSystem.actions.FindAction("Skill");
+    }
+
+    void Start()
+    {
+        UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
     }
     // Update is called once per frame
     void Update()
@@ -84,7 +90,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
                 AimDirection.up = -aimVec;
                 AimDirection.localPosition = aimVec;
             }
-        }
+  }
     }
     // class setter function that is called by UI when the button is pressed
     // public void setClass(Archetype chosenClass)
@@ -157,8 +163,11 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
             return;
         }
 
-        health -= damage;
-        healthBar.value = health;
+        modifyHealth(-1 * (int)(damage));
+        UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
+
+        //health -= damage;
+        //healthBar.value = health;
         StartCoroutine(TakeItTimer());
     }
 
@@ -170,6 +179,12 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     }
 
     //---------------------------------
+    
+    public override void die()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
+    }
     
     void playerDeath()
     {
@@ -183,8 +198,11 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     {
         pickup.item.Activate(this.gameObject);
     }
+
     public void healPlayer(int healAmount)
     {
+        modifyHealth(healAmount);
+        return;
         health = health+ healAmount;
         if (health > maxHealth)
         {
