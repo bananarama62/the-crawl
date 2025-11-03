@@ -1520,7 +1520,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: NewAssembly::ArcherTrap
   trap: {fileID: 2406696307619745297, guid: 1bad06ce7ebc9884b9e261fc36d8e9c2, type: 3}
   player: {fileID: 873378136}
-  spawnPoint: {fileID: 919947453}
   AimDirection: {fileID: 1607979969}
   distance: 2
 --- !u!4 &858199065 stripped
@@ -1739,7 +1738,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAim
   player: {fileID: 873378136}
-  SpawnPoint: {fileID: 0}
   indicator: {fileID: 1607979969}
 --- !u!1 &919947452
 GameObject:
@@ -14832,7 +14830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1607979970}
   m_Layer: 0
-  m_Name: offset
+  m_Name: AimDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
