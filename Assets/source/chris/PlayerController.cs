@@ -30,6 +30,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     Vector2 MoveVec;
 
     [SerializeField] float Speed = 5f;
+    [SerializeField] weapon temporary_test_weapon;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -48,6 +49,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         MoveRight = InputSystem.actions.FindAction("MoveRight");
         MoveLeft = InputSystem.actions.FindAction("MoveLeft");
         Skill = InputSystem.actions.FindAction("Skill");
+
     }
 
     void Start()
@@ -128,8 +130,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     {
         if (!isAttacking)
         {
-            Swing.SetActive(true);
+            //Swing.SetActive(true);
             isAttacking = true;
+            temporary_test_weapon.use();
         }
     }
     void CheckAttack()

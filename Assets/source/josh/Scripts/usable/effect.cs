@@ -19,4 +19,8 @@ public abstract class Effect : MonoBehaviour {
     cooldown = t.GetComponent<Cooldown>();
     Debug.Log(cooldown.getCooldownLength());
   }
+
+  void Start() {
+    init();
+  }
 }
