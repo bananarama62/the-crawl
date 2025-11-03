@@ -4,7 +4,7 @@ public class ArcherTrap : Effect
 {
     [SerializeField] public GameObject trap;
     [SerializeField] public GameObject player;
-    [SerializeField] public Transform spawnPoint; // obsolete
+    //[SerializeField] public Transform spawnPoint; // obsolete
     [SerializeField] private GameObject AimDirection;
     [SerializeField] private float distance; // Distance from player to place trap
     public override int individualEffect()
