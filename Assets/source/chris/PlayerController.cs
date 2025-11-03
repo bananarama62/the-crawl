@@ -52,6 +52,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     void Start()
     {
         UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
+        UIHandler.instance.setIcon(1,temporary_test_weapon.icon);
         Assert.NotNull(UIHandler.instance);
     }
     // Update is called once per frame

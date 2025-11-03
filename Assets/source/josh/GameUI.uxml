@@ -5,4 +5,15 @@
         </ui:VisualElement>
         <ui:VisualElement name="PlayerPortrait" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/source/art/ui/player_icon_default.png?fileID=1955752825804795929&amp;guid=ae02462621f7f9fc0a8174b998de10c9&amp;type=3#player_icon_default_0&quot;); -unity-background-scale-mode: scale-to-fit; width: 232px; height: 147px; position: absolute; top: 91px; left: -10px;" />
     </ui:VisualElement>
+    <ui:VisualElement name="ItemSlotContainer" style="flex-grow: 0; background-size: 100% 100%; width: 25%; height: 10%; bottom: 5%; right: 5%; position: absolute; top: auto; left: auto; flex-direction: row;">
+        <ui:VisualElement name="ItemSlot1" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=8067623408771632383&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_241&quot;); position: relative; left: auto; width: 100%; height: 100%; top: auto;">
+            <ui:VisualElement name="Icon" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: none; width: 90%; height: 90%; left: 5%; top: 5%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ItemSlot2" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=8067623408771632383&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_241&quot;); position: relative; left: auto; width: 100%; height: 100%; top: auto;">
+            <ui:VisualElement name="Icon" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: none; width: 90%; height: 90%; left: 5%; top: 5%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ItemSlot3" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=8067623408771632383&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_241&quot;); position: relative; left: auto; width: 100%; height: 100%; top: auto;">
+            <ui:VisualElement name="Icon" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: none; width: 90%; height: 90%; left: 5%; top: 5%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
 </ui:UXML>
