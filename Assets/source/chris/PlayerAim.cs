@@ -9,6 +9,7 @@ public class PlayerAim : MonoBehaviour
     private Vector2 direction;
     [SerializeField] public GameObject player;
     [SerializeField] public Transform SpawnPoint;
+    [SerializeField] public GameObject indicator;
     private void Awake()
     {
         controller = GetComponent<PlayerController>();
@@ -28,8 +29,11 @@ public class PlayerAim : MonoBehaviour
         direction = (MousePos - player.transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        Quaternion rotation = Quaternion.AngleAxis(angle,Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation,rotation,10*Time.deltaTime);
+        //Quaternion rotation = Quaternion.AngleAxis(angle,Vector3.forward);
+        //transform.rotation = Quaternion.Slerp(transform.rotation,rotation,10*Time.deltaTime);
+
+        float angle_test = Vector2.SignedAngle(Vector2.up, MousePos);
+        indicator.transform.rotation = Quaternion.Euler(0f,0f,angle);
 
 
     }
