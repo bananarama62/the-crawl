@@ -22,13 +22,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     float damageDuration = 1f;
     public bool isAttacking = false;
     bool isTakingIt = false;
-    Slider healthBar;
-    string healthBarPath = "HealthBar/HealthBar";
 
     float MoveX;
     float MoveY;
-    public float maxHealth = 30f;
-    public float health = 0f;
     public Archetype PlayerClass;  //chris class 
     public PlayerAim AimCon;
     Vector2 MoveVec;
@@ -42,16 +38,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         Swing.SetActive(false);
         PlayerClass = new Archer();
         PlayerClass.Initialize(this);
-        Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
         rb = GetComponent<Rigidbody2D>();
-        //Stuff that needs changed --------------
-        Transform t = transform.Find(healthBarPath);
-        Assert.NotNull(t);
-        healthBar = t.GetComponent<Slider>();
-        health = maxHealth;
-        healthBar.maxValue = maxHealth;
-        healthBar.minValue = 0;
-        healthBar.value = health;
+        initHealthAndSpeed(30);
+        Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
         //Stuff that needs changed ---------------
         Attacks = InputSystem.actions.FindAction("Attacks");
         MoveUp = InputSystem.actions.FindAction("MoveUp");
@@ -60,16 +49,24 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         MoveLeft = InputSystem.actions.FindAction("MoveLeft");
         Skill = InputSystem.actions.FindAction("Skill");
     }
+
+    void Start()
+    {
+        UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
+        Assert.NotNull(UIHandler.instance);
+    }
     // Update is called once per frame
     void Update()
     {
         CheckAttack();
         GetInput();
         //---------------------------------
+        /*
         if (health <= 0)
         {
             playerDeath();
         }
+        */
         //---------------------------------
     }
 
@@ -84,7 +81,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
                 AimDirection.up = -aimVec;
                 AimDirection.localPosition = aimVec;
             }
-        }
+  }
     }
     // class setter function that is called by UI when the button is pressed
     // public void setClass(Archetype chosenClass)
@@ -157,8 +154,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
             return;
         }
 
-        health -= damage;
-        healthBar.value = health;
+        modifyHealth(-1 * (int)(damage));
+        UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
+
         StartCoroutine(TakeItTimer());
     }
 
@@ -171,25 +169,25 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
 
     //---------------------------------
     
-    void playerDeath()
+    // Called by various health modification functions in character.cs
+    // when the current health hits 0. Whatever that needs to happen on player player
+    // death should occur here.
+    public override void die()
     {
-        if(health <= 0 )
-        {
-            string currentScene = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentScene);
-        }
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
     }
+    
+
     public void powerUp(Pickup pickup)
     {
         pickup.item.Activate(this.gameObject);
     }
+
     public void healPlayer(int healAmount)
     {
-        health = health+ healAmount;
-        if (health > maxHealth)
-        {
-            health = maxHealth;
-        }
-        healthBar.value = health;
+        modifyHealth(healAmount);
+        UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
+
     }
 }

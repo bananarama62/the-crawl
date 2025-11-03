@@ -35,8 +35,8 @@ public class powerupTests
     public IEnumerator healthModDoesntOverheal()
     {
         var player = FindPlayer();
-        player.maxHealth = 100;
-        player.health = 95;
+        player.setMaxHealth(100);
+        player.setHealth(95);
 
         var heal = ScriptableObject.CreateInstance<HealthModifier>();
         heal.healthValue = 50;
@@ -44,7 +44,7 @@ public class powerupTests
         heal.Activate(player.gameObject);
         yield return null;
 
-        Assert.AreEqual(100, player.health, "Healing should not overheal at maxHealth.");
+        Assert.AreEqual(100, player.getHealth(), "Healing should not overheal at maxHealth.");
         Object.DestroyImmediate(heal);
     }
     [UnityTest]

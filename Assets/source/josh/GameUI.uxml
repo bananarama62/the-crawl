@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="HealthBarBackground" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=3238454098240949206&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_0&quot;); width: 30%; height: 30%; -unity-background-scale-mode: scale-to-fit; position: absolute; top: -52px; left: 11px;">
+        <ui:VisualElement name="HealthBarContainer" style="flex-grow: 1; position: absolute; height: 50px; width: 379px; top: 78px; left: 190px;">
+            <ui:VisualElement name="HealthBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=-7904285823810203936&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_359&quot;); position: relative; width: 376px; rotate: 0; translate: 0 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="PlayerPortrait" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/source/art/ui/player_icon_default.png?fileID=1955752825804795929&amp;guid=ae02462621f7f9fc0a8174b998de10c9&amp;type=3#player_icon_default_0&quot;); -unity-background-scale-mode: scale-to-fit; width: 232px; height: 147px; position: absolute; top: 91px; left: -10px;" />
+    </ui:VisualElement>
+</ui:UXML>

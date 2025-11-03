@@ -41,6 +41,9 @@ public abstract class Character : MonoBehaviour {
     if (current_health == 0){
       die();
     }
+    if (current_health > max_health){
+      current_health = max_health;
+    }
     return current_health;
   }
 
@@ -65,12 +68,21 @@ public abstract class Character : MonoBehaviour {
     if (current_health == 0){
       die();
     }
+    if (current_health > max_health){
+      current_health = max_health;
+    }
     return current_health;
   }
 
   // Wrapper for getHealth() to adhere to naming convention.
   public int getCurrentHealth(){
     return getHealth();
+  }
+
+  // Returns current health / max health; This is the percentage
+  // of health the player is currently at.
+  public float getCurrentHealthPercentage(){
+    return (float)(current_health)/max_health;
   }
 
   // Wrapper for setHealth() to adhere to naming convention.

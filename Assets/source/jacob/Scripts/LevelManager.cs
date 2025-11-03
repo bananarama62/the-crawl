@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
         levelGenerator.SpawnStart(roomDatabase.rooms[0]);
         for(int i = 0; i <= numRooms; i++)
         {
-            levelGenerator.SpawnRoom(roomDatabase.rooms[0]);
+            levelGenerator.RandSpawnRoom(roomDatabase.rooms[0]);
         }
         
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Numerics;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Codice.CM.Common;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.GameCenter;
@@ -9,7 +10,17 @@ using UnityEngine.UIElements;
 
 public class LevelGenerator
 {
-   private const int MAX_CELLS = 10; 
+   private const int MAX_CELLS = 10;
+
+
+   // For Arrow Algo
+   private const int ROWS = 15;
+   private const int COLS = 15;
+   const int MAX_SUR = 2;
+
+   char[,] map = new char[ROWS, COLS];
+
+
    private Room[] rooms;
    private List<Room> placedRooms = new List<Room>();
    Vector2Int WorldBoundsX = new Vector2Int(-30, 30);
@@ -39,7 +50,7 @@ public class LevelGenerator
       return new UnityEngine.Vector3(vec.x / cellSize, vec.y / cellSize, 0);
    }
 
-   public void SpawnRoom(Room room)
+   public void RandSpawnRoom(Room room)
    {
       bool successfullPlace = false;
       Assert.NotNull(room);
@@ -102,42 +113,17 @@ public class LevelGenerator
       return true;
    }
 
-   void RoomCellAlgo()
+   void ArrowSpawnRoom()
    {
-      Vector2Int StartCell = new Vector2Int(0, 0);
-      Vector2Int[] Cells = new Vector2Int[MAX_CELLS];
-      Vector2Int LastCell = new Vector2Int(0, 0);
-      Vector2Int[] Directions = 
+      for (int row = 0; row < ROWS; row++)
       {
-         new Vector2Int(0, 1), // Up
-         new Vector2Int(0, -1), // Down
-         new Vector2Int(-1, 0), // Left
-         new Vector2Int(1, 0) // Right
-      };
-
-      Cells[0] = StartCell;
-      int ChanceOfSplit;
-      int ChanceOfDirection;
-      
-
-      for (int i = 1; i < MAX_CELLS; i++)
-      {
-         LastCell = Cells[i - 1];
-
-         ChanceOfSplit = UnityEngine.Random.Range(1, 5); // 1 - 4
-         ChanceOfDirection = UnityEngine.Random.Range(1, 4); // 1 - 4
-
-         do
+         for (int col = 0; col < COLS; col++)
          {
-            ChanceOfDirection = UnityEngine.Random.Range(1, 5);
-            Cells[i] += Directions[ChanceOfDirection];
-            if(ChanceOfSplit == 1 && i + 1 != MAX_CELLS)
-            {
-               
-            }
-         } while (Cells[i] == LastCell);
-         
+            map[row, col] = ' ';
+         }
       }
+      map[ROWS / 2 + 1, COLS / 2 + 1] = '#';
+      
 
       
    }
