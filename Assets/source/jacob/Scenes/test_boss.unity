@@ -4736,6 +4736,8 @@ MonoBehaviour:
   speed: 3
   healthBar: {fileID: 0}
   max_num_pylons: 3
+  delay_before_chain_lightning: 5
+  delay_before_chain_lightning_end: 15
 --- !u!1 &1357334595
 GameObject:
   m_ObjectHideFlags: 0
@@ -5390,7 +5392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5d75404782ec817bf2fa5563625100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: NewAssembly::ChainLightning
-  pylons: []
 --- !u!4 &1789854527
 Transform:
   m_ObjectHideFlags: 0
