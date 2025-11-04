@@ -1,0 +1,2296 @@
+fileFormatVersion: 2
+guid: 91aa2fdb60b3f63c9b8f073fcb94eb6a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8510908112606375272
+    second: lightning-loop-2_0
+  - first:
+      213: -7109691788587303053
+    second: lightning-loop-2_1
+  - first:
+      213: -3437055627722525591
+    second: lightning-loop-2_2
+  - first:
+      213: 7227339361201974147
+    second: lightning-loop-2_3
+  - first:
+      213: 8696049221441703270
+    second: lightning-loop-2_4
+  - first:
+      213: 122799397680118623
+    second: lightning-loop-2_5
+  - first:
+      213: 332413588933248394
+    second: lightning-loop-2_6
+  - first:
+      213: 2935558516969720995
+    second: lightning-loop-2_7
+  - first:
+      213: 8906756200998032649
+    second: lightning-loop-2_8
+  - first:
+      213: 1420657515914607470
+    second: lightning-loop-2_9
+  - first:
+      213: -5327620836649211520
+    second: lightning-loop-2_10
+  - first:
+      213: 230004348714449139
+    second: lightning-loop-2_11
+  - first:
+      213: -8847651950412998292
+    second: lightning-loop-2_12
+  - first:
+      213: 2675761269282770309
+    second: lightning-loop-2_13
+  - first:
+      213: 6914942422830151207
+    second: lightning-loop-2_14
+  - first:
+      213: -5808310336834293449
+    second: lightning-loop-2_15
+  - first:
+      213: -6476610532942531299
+    second: lightning-loop-2_16
+  - first:
+      213: -5067450317308842333
+    second: lightning-loop-2_17
+  - first:
+      213: -8123621737812851757
+    second: lightning-loop-2_18
+  - first:
+      213: 8037262096436537266
+    second: lightning-loop-2_19
+  - first:
+      213: -7974854511129352025
+    second: lightning-loop-2_20
+  - first:
+      213: -427990048027043825
+    second: lightning-loop-2_21
+  - first:
+      213: -5407625414104918868
+    second: lightning-loop-2_22
+  - first:
+      213: -8966687917093184742
+    second: lightning-loop-2_23
+  - first:
+      213: 6578100561690529086
+    second: lightning-loop-2_24
+  - first:
+      213: -5011980982296587800
+    second: lightning-loop-2_25
+  - first:
+      213: 3259857490908912584
+    second: lightning-loop-2_26
+  - first:
+      213: 3710467270593165455
+    second: lightning-loop-2_27
+  - first:
+      213: -5281460338450790088
+    second: lightning-loop-2_28
+  - first:
+      213: -1270071705399519175
+    second: lightning-loop-2_29
+  - first:
+      213: -4666460801898678349
+    second: lightning-loop-2_30
+  - first:
+      213: 9024889372621453241
+    second: lightning-loop-2_31
+  - first:
+      213: 1469229533632142080
+    second: lightning-loop-2_32
+  - first:
+      213: -1694376308490416218
+    second: lightning-loop-2_33
+  - first:
+      213: 4080471330150059655
+    second: lightning-loop-2_34
+  - first:
+      213: -9082873675963634139
+    second: lightning-loop-2_35
+  - first:
+      213: 4424406673705717977
+    second: lightning-loop-2_36
+  - first:
+      213: 686143292429844502
+    second: lightning-loop-2_37
+  - first:
+      213: -7489172806360805819
+    second: lightning-loop-2_38
+  - first:
+      213: -2667517397458250351
+    second: lightning-loop-2_39
+  - first:
+      213: 2145033869661368583
+    second: lightning-loop-2_40
+  - first:
+      213: 3354432895972002017
+    second: lightning-loop-2_41
+  - first:
+      213: -1481490125508103187
+    second: lightning-loop-2_42
+  - first:
+      213: 2596997587529421288
+    second: lightning-loop-2_43
+  - first:
+      213: 5392527515349072565
+    second: lightning-loop-2_44
+  - first:
+      213: 9172710956106357566
+    second: lightning-loop-2_45
+  - first:
+      213: 2391400612836495658
+    second: lightning-loop-2_46
+  - first:
+      213: -452574797159688531
+    second: lightning-loop-2_47
+  - first:
+      213: -9146604600351503195
+    second: lightning-loop-2_48
+  - first:
+      213: 6307015430265931151
+    second: lightning-loop-2_49
+  - first:
+      213: 3061471108791110493
+    second: lightning-loop-2_50
+  - first:
+      213: -3095411290431186345
+    second: lightning-loop-2_51
+  - first:
+      213: 4798194385847061484
+    second: lightning-loop-2_52
+  - first:
+      213: 7911330666785405279
+    second: lightning-loop-2_53
+  - first:
+      213: 7032917335001297047
+    second: lightning-loop-2_54
+  - first:
+      213: -5790734546606071316
+    second: lightning-loop-2_55
+  - first:
+      213: 4979203848008200720
+    second: lightning-loop-2_56
+  - first:
+      213: 8485375740755038356
+    second: lightning-loop-2_57
+  - first:
+      213: 7444853378051788200
+    second: lightning-loop-2_58
+  - first:
+      213: 4258137949165033183
+    second: lightning-loop-2_59
+  - first:
+      213: -8801764129104183537
+    second: lightning-loop-2_60
+  - first:
+      213: 7166052935410631241
+    second: lightning-loop-2_61
+  - first:
+      213: 1431177227374632247
+    second: lightning-loop-2_62
+  - first:
+      213: -5627321866751161293
+    second: lightning-loop-2_63
+  - first:
+      213: 2251040563709534192
+    second: lightning-loop-2_64
+  - first:
+      213: 7350428191707938104
+    second: lightning-loop-2_65
+  - first:
+      213: 5573425653985606836
+    second: lightning-loop-2_66
+  - first:
+      213: 5550067100558554377
+    second: lightning-loop-2_67
+  - first:
+      213: 6983807137151497782
+    second: lightning-loop-2_68
+  - first:
+      213: 2004469326571818535
+    second: lightning-loop-2_69
+  - first:
+      213: 8709336027562514171
+    second: lightning-loop-2_70
+  - first:
+      213: -8501423865264494501
+    second: lightning-loop-2_71
+  - first:
+      213: 6188530650199009735
+    second: lightning-loop-2_72
+  - first:
+      213: -6158607121335133663
+    second: lightning-loop-2_73
+  - first:
+      213: -299401789459894687
+    second: lightning-loop-2_74
+  - first:
+      213: -7822171157661684980
+    second: lightning-loop-2_75
+  - first:
+      213: -6944356094811429443
+    second: lightning-loop-2_76
+  - first:
+      213: 237640711942818878
+    second: lightning-loop-2_77
+  - first:
+      213: -868033622358274631
+    second: lightning-loop-2_78
+  - first:
+      213: -8946484761406947194
+    second: lightning-loop-2_79
+  - first:
+      213: 252792461561602792
+    second: lightning-loop-2_80
+  - first:
+      213: 1884776356135457512
+    second: lightning-loop-2_81
+  - first:
+      213: 9191994762990138023
+    second: lightning-loop-2_82
+  - first:
+      213: -156794746306229738
+    second: lightning-loop-2_83
+  - first:
+      213: 2940833278049671402
+    second: lightning-loop-2_84
+  - first:
+      213: -2406507052815863965
+    second: lightning-loop-2_85
+  - first:
+      213: 916050045318328309
+    second: lightning-loop-2_86
+  - first:
+      213: -2143468513965662587
+    second: lightning-loop-2_87
+  - first:
+      213: 7561675560321787906
+    second: lightning-loop-2_88
+  - first:
+      213: -7183608638708619730
+    second: lightning-loop-2_89
+  - first:
+      213: -327744176737616525
+    second: lightning-loop-2_90
+  - first:
+      213: -1141693084793451510
+    second: lightning-loop-2_91
+  - first:
+      213: 4921579751650149382
+    second: lightning-loop-2_92
+  - first:
+      213: 4402253646111533124
+    second: lightning-loop-2_93
+  - first:
+      213: -2497984879293623039
+    second: lightning-loop-2_94
+  - first:
+      213: -5677960757394090081
+    second: lightning-loop-2_95
+  - first:
+      213: 2928927791232496303
+    second: lightning-loop-2_96
+  - first:
+      213: 8303054321950030457
+    second: lightning-loop-2_97
+  - first:
+      213: -1807322856491006435
+    second: lightning-loop-2_98
+  - first:
+      213: -7537283359287569126
+    second: lightning-loop-2_99
+  - first:
+      213: -2021799749839063287
+    second: lightning-loop-2_100
+  - first:
+      213: -9063821893429199980
+    second: lightning-loop-2_101
+  - first:
+      213: -3119903208009266725
+    second: lightning-loop-2_102
+  - first:
+      213: -552457923269167334
+    second: lightning-loop-2_103
+  - first:
+      213: -1315440495583462603
+    second: lightning-loop-2_104
+  - first:
+      213: -6913190112610467822
+    second: lightning-loop-2_105
+  - first:
+      213: 4700560222736283810
+    second: lightning-loop-2_106
+  - first:
+      213: 2461154396522181108
+    second: lightning-loop-2_107
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lightning-loop-2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86da4efe5d1dc1670800000000000000
+      internalID: 8510908112606375272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ffdbeacfc455d90800000000000000
+      internalID: -7109691788587303053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964775ced102d40d0800000000000000
+      internalID: -3437055627722525591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b64af5bdaac4460800000000000000
+      internalID: 7227339361201974147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d485971b29ea870800000000000000
+      internalID: 8696049221441703270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5bfa5dc66544b100800000000000000
+      internalID: 122799397680118623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8501eed568fc9400800000000000000
+      internalID: 332413588933248394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac4a5dfae23db820800000000000000
+      internalID: 2935558516969720995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905de7523972b9b70800000000000000
+      internalID: 8906756200998032649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 882
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b3497db7037b310800000000000000
+      internalID: 1420657515914607470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089ed85731d7016b0800000000000000
+      internalID: -5327620836649211520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f87bed8cb3213300800000000000000
+      internalID: 230004348714449139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69575f8d63d63580800000000000000
+      internalID: -8847651950412998292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d095792b6322520800000000000000
+      internalID: 2675761269282770309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726f1132f7fc6ff50800000000000000
+      internalID: 6914942422830151207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73133cbb58cb46fa0800000000000000
+      internalID: -5808310336834293449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d15386be8057e16a0800000000000000
+      internalID: -6476610532942531299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_17
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aeaddfe8cccca9b0800000000000000
+      internalID: -5067450317308842333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3060cf119134f80800000000000000
+      internalID: -8123621737812851757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_19
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 756
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7afc02b471a8f60800000000000000
+      internalID: 8037262096436537266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8a6b02310a35190800000000000000
+      internalID: -7974854511129352025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0812f3a1597f0af0800000000000000
+      internalID: -427990048027043825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4d6e1365144f4b0800000000000000
+      internalID: -5407625414104918868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b9fd1d8dcef8380800000000000000
+      internalID: -8966687917093184742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_24
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d8c5ccb9b1a4b50800000000000000
+      internalID: 6578100561690529086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_25
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1d239e9ddd17ab0800000000000000
+      internalID: -5011980982296587800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_26
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb9504dd175d3d20800000000000000
+      internalID: 3259857490908912584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_27
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f883b6ed25a3e7330800000000000000
+      internalID: 3710467270593165455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8398357fdcb74b6b0800000000000000
+      internalID: -5281460338450790088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_29
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 630
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9381368538ccf5ee0800000000000000
+      internalID: -1270071705399519175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b77b88ef966d3fb0800000000000000
+      internalID: -4666460801898678349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7bc488119de3d70800000000000000
+      internalID: 9024889372621453241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b18adf970c36410800000000000000
+      internalID: 1469229533632142080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af479089bd5c78e0800000000000000
+      internalID: -1694376308490416218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e82c53e0fb0a830800000000000000
+      internalID: 4080471330150059655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_35
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ee07cc38623f180800000000000000
+      internalID: -9082873675963634139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_36
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0d810ad66a66d30800000000000000
+      internalID: 4424406673705717977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_37
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6104c4a60bba58900800000000000000
+      internalID: 686143292429844502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_38
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e495f030d111890800000000000000
+      internalID: -7489172806360805819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_39
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 504
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19593546f031bfad0800000000000000
+      internalID: -2667517397458250351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701f85880f0b4cd10800000000000000
+      internalID: 2145033869661368583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8cb4342f65d8e20800000000000000
+      internalID: 3354432895972002017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de337d28490b07be0800000000000000
+      internalID: -1481490125508103187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_43
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1dc3fdb836a0420800000000000000
+      internalID: 2596997587529421288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bab6e1543b16da40800000000000000
+      internalID: 5392527515349072565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_45
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b9d06f3040c4f70800000000000000
+      internalID: 9172710956106357566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_46
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2155cbef26ff2120800000000000000
+      internalID: 2391400612836495658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_47
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6900dae9128b9f0800000000000000
+      internalID: -452574797159688531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_48
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac4817a39bb01180800000000000000
+      internalID: -9146604600351503195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_49
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 378
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8588e92e15078750800000000000000
+      internalID: 6307015430265931151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b8d99c0c78c7a20800000000000000
+      internalID: 3061471108791110493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a9d10e4d3ea05d0800000000000000
+      internalID: -3095411290431186345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb00bb3f5c969240800000000000000
+      internalID: 4798194385847061484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_53
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59f56e4351bacd60800000000000000
+      internalID: 7911330666785405279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_54
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790707fdd01f99160800000000000000
+      internalID: 7032917335001297047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_55
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce166f84c9d23afa0800000000000000
+      internalID: -5790734546606071316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_56
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01279c0d48fa91540800000000000000
+      internalID: 4979203848008200720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_57
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490db6d574c12c570800000000000000
+      internalID: 8485375740755038356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_58
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8adc4abe3be615760800000000000000
+      internalID: 7444853378051788200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_59
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 252
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd6979877e1f71b30800000000000000
+      internalID: 4258137949165033183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f38f7882ad9d580800000000000000
+      internalID: -8801764129104183537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_61
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 942cbc86d2fe27360800000000000000
+      internalID: 7166052935410631241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_62
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d1b480b109cd310800000000000000
+      internalID: 1431177227374632247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_63
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c4287b39cb7e1b0800000000000000
+      internalID: -5627321866751161293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_64
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffd6e6577d4d3f10800000000000000
+      internalID: 2251040563709534192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_65
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83db4c10f77f10660800000000000000
+      internalID: 7350428191707938104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_66
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc7cdf5a19c85d40800000000000000
+      internalID: 5573425653985606836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_67
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905ff585f9cc50d40800000000000000
+      internalID: 5550067100558554377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_68
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636b0c5e6977be060800000000000000
+      internalID: 6983807137151497782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_69
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 126
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72eca7d7b3e41db10800000000000000
+      internalID: 2004469326571818535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6106819f6cdd870800000000000000
+      internalID: 8709336027562514171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_71
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58a1e97900e40a80800000000000000
+      internalID: -8501423865264494501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_72
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c9aabe86d312e550800000000000000
+      internalID: 6188530650199009735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_73
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ad0ade37b388aa0800000000000000
+      internalID: -6158607121335133663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_74
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e6026a8af48dbf0800000000000000
+      internalID: -299401789459894687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_75
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0be44796c0127390800000000000000
+      internalID: -7822171157661684980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_76
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db522feace0b0af90800000000000000
+      internalID: -6944356094811429443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_77
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3cc58be7f44c4300800000000000000
+      internalID: 237640711942818878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_78
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd4d3ef40024f3f0800000000000000
+      internalID: -868033622358274631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightning-loop-2_79
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 126
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680c4ef8283b7d380800000000000000
+      internalID: -8946484761406947194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1dd37f54747e358b1afbe50eefff7964
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":8.0},"gridSpriteSize":{"x":128.0,"y":126.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":4,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      lightning-loop-2_0: 8510908112606375272
+      lightning-loop-2_1: -7109691788587303053
+      lightning-loop-2_10: -5327620836649211520
+      lightning-loop-2_11: 230004348714449139
+      lightning-loop-2_12: -8847651950412998292
+      lightning-loop-2_13: 2675761269282770309
+      lightning-loop-2_14: 6914942422830151207
+      lightning-loop-2_15: -5808310336834293449
+      lightning-loop-2_16: -6476610532942531299
+      lightning-loop-2_17: -5067450317308842333
+      lightning-loop-2_18: -8123621737812851757
+      lightning-loop-2_19: 8037262096436537266
+      lightning-loop-2_2: -3437055627722525591
+      lightning-loop-2_20: -7974854511129352025
+      lightning-loop-2_21: -427990048027043825
+      lightning-loop-2_22: -5407625414104918868
+      lightning-loop-2_23: -8966687917093184742
+      lightning-loop-2_24: 6578100561690529086
+      lightning-loop-2_25: -5011980982296587800
+      lightning-loop-2_26: 3259857490908912584
+      lightning-loop-2_27: 3710467270593165455
+      lightning-loop-2_28: -5281460338450790088
+      lightning-loop-2_29: -1270071705399519175
+      lightning-loop-2_3: 7227339361201974147
+      lightning-loop-2_30: -4666460801898678349
+      lightning-loop-2_31: 9024889372621453241
+      lightning-loop-2_32: 1469229533632142080
+      lightning-loop-2_33: -1694376308490416218
+      lightning-loop-2_34: 4080471330150059655
+      lightning-loop-2_35: -9082873675963634139
+      lightning-loop-2_36: 4424406673705717977
+      lightning-loop-2_37: 686143292429844502
+      lightning-loop-2_38: -7489172806360805819
+      lightning-loop-2_39: -2667517397458250351
+      lightning-loop-2_4: 8696049221441703270
+      lightning-loop-2_40: 2145033869661368583
+      lightning-loop-2_41: 3354432895972002017
+      lightning-loop-2_42: -1481490125508103187
+      lightning-loop-2_43: 2596997587529421288
+      lightning-loop-2_44: 5392527515349072565
+      lightning-loop-2_45: 9172710956106357566
+      lightning-loop-2_46: 2391400612836495658
+      lightning-loop-2_47: -452574797159688531
+      lightning-loop-2_48: -9146604600351503195
+      lightning-loop-2_49: 6307015430265931151
+      lightning-loop-2_5: 122799397680118623
+      lightning-loop-2_50: 3061471108791110493
+      lightning-loop-2_51: -3095411290431186345
+      lightning-loop-2_52: 4798194385847061484
+      lightning-loop-2_53: 7911330666785405279
+      lightning-loop-2_54: 7032917335001297047
+      lightning-loop-2_55: -5790734546606071316
+      lightning-loop-2_56: 4979203848008200720
+      lightning-loop-2_57: 8485375740755038356
+      lightning-loop-2_58: 7444853378051788200
+      lightning-loop-2_59: 4258137949165033183
+      lightning-loop-2_6: 332413588933248394
+      lightning-loop-2_60: -8801764129104183537
+      lightning-loop-2_61: 7166052935410631241
+      lightning-loop-2_62: 1431177227374632247
+      lightning-loop-2_63: -5627321866751161293
+      lightning-loop-2_64: 2251040563709534192
+      lightning-loop-2_65: 7350428191707938104
+      lightning-loop-2_66: 5573425653985606836
+      lightning-loop-2_67: 5550067100558554377
+      lightning-loop-2_68: 6983807137151497782
+      lightning-loop-2_69: 2004469326571818535
+      lightning-loop-2_7: 2935558516969720995
+      lightning-loop-2_70: 8709336027562514171
+      lightning-loop-2_71: -8501423865264494501
+      lightning-loop-2_72: 6188530650199009735
+      lightning-loop-2_73: -6158607121335133663
+      lightning-loop-2_74: -299401789459894687
+      lightning-loop-2_75: -7822171157661684980
+      lightning-loop-2_76: -6944356094811429443
+      lightning-loop-2_77: 237640711942818878
+      lightning-loop-2_78: -868033622358274631
+      lightning-loop-2_79: -8946484761406947194
+      lightning-loop-2_8: 8906756200998032649
+      lightning-loop-2_9: 1420657515914607470
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
