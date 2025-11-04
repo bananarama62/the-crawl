@@ -3,13 +3,13 @@ using NUnit.Framework;
 
 public class BossOverlord : Boss {
 
-   private SpawnMinion ability_spawn_minion;
+   private SpawnMinion AbilitySpawnMinion;
 
    void FixedUpdate() {
       decideMove();
       move();
       if (playerInSight){
-         ability_spawn_minion.use();
+         AbilitySpawnMinion.use();
       }
    }
    void Awake()
@@ -18,7 +18,7 @@ public class BossOverlord : Boss {
       initMovement();
       Transform t = transform.Find("SpawnMinion");
       Assert.NotNull(t);
-      ability_spawn_minion = t.GetComponent<SpawnMinion>();
+      AbilitySpawnMinion = t.GetComponent<SpawnMinion>();
    }
 
 }
