@@ -33,6 +33,7 @@ public class BossDave : Boss {
           time_since_last_pylon_placed += Time.deltaTime;
           if(time_since_last_pylon_placed > delay_before_chain_lightning){
             ability_chain_lightning.setPylons(pylons);
+            ability_chain_lightning.setOrigin(gameObject);
             ability_chain_lightning.use();
             chain_lightning_elapsed_time = 0;
             chain_lightning_active = true;
