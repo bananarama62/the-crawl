@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0414c3c0c199b5639a9a7bbc98ef8673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::camera
-  target: {fileID: 1591592101}
+  Target: {fileID: 1591592101}
 --- !u!114 &162569320
 MonoBehaviour:
   m_ObjectHideFlags: 0

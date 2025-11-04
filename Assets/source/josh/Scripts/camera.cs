@@ -2,22 +2,17 @@ using UnityEngine;
 
 public class camera : MonoBehaviour
 {
-   [SerializeField] private GameObject target;
-   private Vector3 relCameraPos;
-   // Start is called once before the first execution of Update after the MonoBehaviour is created
-   void Start()
-   {
-
-   }
+   [SerializeField] private GameObject Target;
+   private Vector3 RelCameraPos;
 
    void Awake()
    {
-      relCameraPos = target.transform.position - transform.position;
+      RelCameraPos = Target.transform.position - transform.position;
    }
 
    // Update is called once per frame
    void Update()
    {
-      transform.position = target.transform.position - relCameraPos; 
+      transform.position = Target.transform.position - RelCameraPos; 
    }
 }
