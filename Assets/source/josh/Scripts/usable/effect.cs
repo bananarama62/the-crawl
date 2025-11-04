@@ -17,7 +17,6 @@ public abstract class Effect : MonoBehaviour {
     Transform t = transform.Find("Cooldown");
     Assert.NotNull(t);
     cooldown = t.GetComponent<Cooldown>();
-    Debug.Log(cooldown.getCooldownLength());
   }
 
   void Start() {
