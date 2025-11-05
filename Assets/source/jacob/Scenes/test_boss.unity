@@ -5075,6 +5075,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912531243709061166, guid: c186a43b85fe4099f9eab61480689d8e, type: 3}
+      propertyPath: DelayBeforeChainLightning
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3248562225990074590, guid: c186a43b85fe4099f9eab61480689d8e, type: 3}
       propertyPath: m_Name
       value: Dave

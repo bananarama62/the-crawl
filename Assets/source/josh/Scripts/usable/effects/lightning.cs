@@ -3,19 +3,20 @@ using NUnit.Framework;
 using UnityEditor.Animations;
 using System.Collections;
 public class Lightning : MonoBehaviour {
-
-   [SerializeField] private float timeToLive; // seconds to live for
-   [SerializeField] private int damage;
    [SerializeField] private AnimatorController animation_loop_1;
    [SerializeField] private AnimatorController animation_loop_2;
    [SerializeField] private AnimatorController animation_loop_3;
    [SerializeField] private AnimatorController animation_loop_4;
    [SerializeField] private AnimatorController animation_loop_5;
    [SerializeField] private AnimatorController animation_loop_6;
+   [SerializeField] private float timeToLive; // seconds to live for
+   [SerializeField] private int damage;
    private float elapsed_time;
+   private AnimatorBase AnimationControl = new AnimatorType();
 
    void Start(){
       elapsed_time = 0;
+      //AnimationControl = new AnimatorType();
    }
 
    void Update(){
@@ -25,8 +26,9 @@ public class Lightning : MonoBehaviour {
       }
    }
 
-   public void setAnimation(int num){
+   public void setAnimation(int x){
       AnimatorController ChangeTo = null;
+      int num = AnimationControl.getAnimation(x);
       if(num == 1){
          ChangeTo = animation_loop_1;
       } else if(num == 2){
