@@ -8,7 +8,8 @@ public class PlayerAim : MonoBehaviour
     private Vector3 MousePos;
     private Vector2 direction;
     [SerializeField] public GameObject player;
-    [SerializeField] public Transform SpawnPoint;
+    //[SerializeField] public Transform SpawnPoint;
+    [SerializeField] public GameObject indicator;
     private void Awake()
     {
         controller = GetComponent<PlayerController>();
@@ -23,13 +24,12 @@ public class PlayerAim : MonoBehaviour
 
     private void handlePlayerAim()
     {
+        // Will likely have to change when we port to another system
         MousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         MousePos.z = 0f;
-        direction = (MousePos - player.transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        Quaternion rotation = Quaternion.AngleAxis(angle,Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation,rotation,10*Time.deltaTime);
+        direction = (MousePos - player.transform.position).normalized; // Creates a Vector3 pointing from the player's location to the mouse position
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Converts Vector3 to an angle
+        indicator.transform.rotation = Quaternion.Euler(0f,0f,angle);
 
 
     }

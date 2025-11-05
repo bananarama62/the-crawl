@@ -14,10 +14,8 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     InputAction MoveLeft;
     InputAction Attacks;
     public InputAction Skill;
-    public GameObject Swing;
     public Transform AimDirection;
     float duration = 0.3f;
-    float timer = 0f;
     float damageTime = 0f;
     float damageDuration = 1f;
     public bool isAttacking = false;
@@ -30,12 +28,12 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     Vector2 MoveVec;
 
     [SerializeField] float Speed = 5f;
+    [SerializeField] weapon temporary_test_weapon;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         AimCon = GetComponent<PlayerAim>();
-        Swing.SetActive(false);
         PlayerClass = new Archer();
         PlayerClass.Initialize(this);
         rb = GetComponent<Rigidbody2D>();
@@ -48,26 +46,19 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         MoveRight = InputSystem.actions.FindAction("MoveRight");
         MoveLeft = InputSystem.actions.FindAction("MoveLeft");
         Skill = InputSystem.actions.FindAction("Skill");
+
     }
 
     void Start()
     {
         UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
+        UIHandler.instance.setIcon(1,temporary_test_weapon.icon);
         Assert.NotNull(UIHandler.instance);
     }
     // Update is called once per frame
     void Update()
     {
-        CheckAttack();
         GetInput();
-        //---------------------------------
-        /*
-        if (health <= 0)
-        {
-            playerDeath();
-        }
-        */
-        //---------------------------------
     }
 
     void FixedUpdate()
@@ -126,24 +117,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     }
     void AttackFun()
     {
-        if (!isAttacking)
-        {
-            Swing.SetActive(true);
-            isAttacking = true;
-        }
-    }
-    void CheckAttack()
-    {
-        if (isAttacking)
-        {
-            timer += Time.deltaTime;
-            if (timer >= duration)
-            {
-                timer = 0f;
-                Swing.SetActive(false);
-                isAttacking = false;
-            }
-        }
+        temporary_test_weapon.use();
     }
 
     //---------------------------------

@@ -2,6 +2,13 @@ using UnityEngine;
 public class weapon : MonoBehaviour
 {
     public float damage = 1;
+    private Cooldown cooldown;
+    [SerializeField] private Effect effect;
+    public Sprite icon;
+    
+    public int use(){
+        return effect.use();
+    }
 
     public void BoostDamage(float multiplier)
     {
