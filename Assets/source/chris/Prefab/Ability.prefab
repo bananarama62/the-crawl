@@ -47,7 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Fireball
   ball: {fileID: 8497186015850408475, guid: 8065f95cd6146ab46a2048fe97303cf7, type: 3}
   player: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  AimDirection: {fileID: 0}
+  distance: 0
+  clip: {fileID: 0}
 --- !u!1 &4662439672903869229
 GameObject:
   m_ObjectHideFlags: 0

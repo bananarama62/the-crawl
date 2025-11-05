@@ -48416,9 +48416,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 873378136}
     - target: {fileID: 8806222483963539625, guid: 78bc9d9271d07934fbdf83593b9ce72c, type: 3}
+      propertyPath: distance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806222483963539625, guid: 78bc9d9271d07934fbdf83593b9ce72c, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 919947453}
+    - target: {fileID: 8806222483963539625, guid: 78bc9d9271d07934fbdf83593b9ce72c, type: 3}
+      propertyPath: AimDirection
+      value: 
+      objectReference: {fileID: 1607979969}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

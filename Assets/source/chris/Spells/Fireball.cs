@@ -5,11 +5,13 @@ public class Fireball : Effect
     Enemy enemy1;
     [SerializeField] public GameObject ball;
     [SerializeField] public GameObject player;
-    [SerializeField] public Transform spawnPoint;
+    [SerializeField] private GameObject AimDirection;
+    [SerializeField] private float distance; // Distance from player to place ability
     public override int individualEffect()
     {
         Debug.Log("Casting Fireball...");
-        Instantiate(ball, spawnPoint.position, player.transform.rotation);
+        Vector3 location = player.transform.position + AimDirection.transform.rotation*new Vector3(distance,0f,distance);
+        Instantiate(ball, location, AimDirection.transform.rotation);
         return 1;
     }
     void Awake()

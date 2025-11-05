@@ -35,6 +35,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     {
         AimCon = GetComponent<PlayerAim>();
         PlayerClass = new Archer();
+        //PlayerClass = new Mage();
         PlayerClass.Initialize(this);
         rb = GetComponent<Rigidbody2D>();
         initHealthAndSpeed(30);

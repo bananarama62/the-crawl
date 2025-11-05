@@ -6,6 +6,8 @@ public class TrapBehavior : MonoBehaviour
     private float BallSpeed = 15f;
     private float damage = 5;
     [SerializeField] private LayerMask WhatDestroysTrap;
+    //[SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clip;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,6 +18,7 @@ public class TrapBehavior : MonoBehaviour
         Enemy enemy = collision.GetComponent<Enemy>();
         if (collision is BoxCollider2D && collision.CompareTag("Enemy"))
         {
+            AudioSource.PlayClipAtPoint(clip, transform.position);
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
