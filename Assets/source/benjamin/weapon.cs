@@ -16,11 +16,15 @@ public class weapon : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy enemy = collision.GetComponent<Enemy>();
-        if (collision is BoxCollider2D)
-        {
-            enemy.TakeDamage(damage);
-        }
+       if(collision.CompareTag("Player")){
+          collision.GetComponent<PlayerController>().takeDamage(damage);
+       } else if(collision.CompareTag("Enemy")){
+           Enemy enemy = collision.GetComponent<Enemy>();
+           if (collision is BoxCollider2D)
+           {
+               enemy.TakeDamage(damage);
+           }
+       }
     }
 }
 
