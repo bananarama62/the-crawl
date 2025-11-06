@@ -1,35 +1,52 @@
 using UnityEngine;
 
 public class Swing : Effect {
-   public GameObject ItemPreFab; // Prefab of item to spawn
+   // Models an object swinging in an arc.
    public float SwingSpeed;
-   private Quaternion targetRotation;
-   private bool isActive;
-   public GameObject AimDirection;
-   private BoxCollider2D collision;
-   private SpriteRenderer sprite;
+   private Quaternion TargetRotation;
+   [SerializeField] private GameObject AimDirection;
+   [SerializeField] private bool SwingFromLeft;
+   [SerializeField] private int StartSwingDegreesFromCenter;
+   [SerializeField] private int DegreesOfArc;
+   private BoxCollider2D Collision;
+   private SpriteRenderer Sprite;
+
+
    void enable(bool value){
-      sprite.enabled = value;
-      collision.enabled = value;
+      Sprite.enabled = value;
+      Collision.enabled = value;
    }
 
    public override int individualEffect(){
-      transform.rotation = AimDirection.transform.rotation * Quaternion.Euler(0,0,45);
-      targetRotation = transform.rotation * Quaternion.Euler(0,0,-90);
+      Quaternion StartingRotationOffset;
+      Quaternion EndingRotation;
+      if(SwingFromLeft){
+         StartingRotationOffset = Quaternion.Euler(0,0,StartSwingDegreesFromCenter);
+         EndingRotation = Quaternion.Euler(0,0,-DegreesOfArc);
+      } else {
+         StartingRotationOffset = Quaternion.Euler(0,0,-StartSwingDegreesFromCenter);
+         EndingRotation = Quaternion.Euler(0,0,DegreesOfArc);
+      }
+      transform.rotation = AimDirection.transform.rotation * StartingRotationOffset;
+      TargetRotation = transform.rotation * EndingRotation;
       enable(true);
       return 1;
    }
 
    void Awake(){
-      collision = GetComponent<BoxCollider2D>();
-      sprite = GameObject.Find("image").GetComponent<SpriteRenderer>();
+      // Gets the collider and Sprite renderer objects and disables them
+      Collision = GetComponent<BoxCollider2D>();
+      Sprite = GameObject.Find("image").GetComponent<SpriteRenderer>();
       enable(false);
    }
 
    void Update(){
-      transform.rotation = Quaternion.Slerp(transform.rotation,targetRotation,Time.deltaTime * SwingSpeed);
-      if(transform.rotation == targetRotation){
-         enable(false);
+      if(Collision.enabled){
+         transform.rotation = Quaternion.Slerp(transform.rotation,TargetRotation,Time.deltaTime * SwingSpeed);
+         // Checks if near the end of rotation and ends early to prevent stalling.
+         if(Mathf.Abs(transform.rotation.eulerAngles.z - TargetRotation.eulerAngles.z) <= 2f){
+            enable(false);
+         }
       }
    }
 }

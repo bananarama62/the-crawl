@@ -184,9 +184,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf0849f3bc10217686b31ddbab484ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: NewAssembly::Swing
-  ItemPreFab: {fileID: 0}
   SwingSpeed: 3
   AimDirection: {fileID: 0}
+  SwingFromLeft: 1
+  StartSwingDegreesFromCenter: 45
+  DegreesOfArc: 90
 --- !u!114 &2684082022270308063
 MonoBehaviour:
   m_ObjectHideFlags: 0
