@@ -5,15 +5,14 @@ using UnityEngine.UI;
 public abstract class Enemy : Character
 {
    protected bool playerInSight = false;
-   Rigidbody2D Player;
-   Rigidbody2D rb;
+   protected Rigidbody2D Player;
+   protected Rigidbody2D rb;
 
    public Slider healthBar;
    string healthBarPath = "Canvas/HealthBar";
-   Vector2 TargetPosition;
-   Vector2 MoveVec;
-
-   public void initMovement() {
+   protected Vector2 TargetPosition;
+   protected Vector2 MoveVec;
+    public void initMovement() {
       rb = GetComponent<Rigidbody2D>();
 
       //Path to slider
@@ -31,7 +30,7 @@ public abstract class Enemy : Character
    }
 
 
-   void FollowPlayer()
+   protected void FollowPlayer()
    {
       MoveVec = Vector2.zero;
       if (playerInSight)
