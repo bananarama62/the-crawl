@@ -15,15 +15,7 @@ public class Lightning : MonoBehaviour {
    private AnimatorBase AnimationControl = new AnimatorType();
 
    void Start(){
-      elapsed_time = 0;
-      //AnimationControl = new AnimatorType();
-   }
-
-   void Update(){
-      elapsed_time += Time.deltaTime;
-      if(elapsed_time > timeToLive){
-         Destroy(gameObject);
-      }
+      Destroy(gameObject,timeToLive);
    }
 
    public void setAnimation(int x){
