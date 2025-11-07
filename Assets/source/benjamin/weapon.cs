@@ -5,6 +5,7 @@ public class weapon : MonoBehaviour
     private Cooldown cooldown;
     [SerializeField] private Effect effect;
     public Sprite icon;
+    public string Caster;
     
     public int use(){
         return effect.use();
@@ -16,9 +17,9 @@ public class weapon : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-       if(collision.CompareTag("Player")){
+       if(Caster != "Player" && collision.CompareTag("Player")){
           collision.GetComponent<PlayerController>().takeDamage(damage);
-       } else if(collision.CompareTag("Enemy")){
+       } else if(Caster != "Enemy" && collision.CompareTag("Enemy")){
            Enemy enemy = collision.GetComponent<Enemy>();
            if (collision is BoxCollider2D)
            {

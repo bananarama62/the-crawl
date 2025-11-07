@@ -75,6 +75,7 @@ public abstract class Enemy : Character
 
    void OnTriggerExit2D(Collider2D collision)
    {
+      Debug.Log("Trigger Exit");
       if (collision.CompareTag("Player"))
       {
          playerInSight = false;
