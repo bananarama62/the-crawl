@@ -2,7 +2,7 @@ using UnityEngine;
 using NUnit.Framework;
 
 public abstract class Effect : MonoBehaviour {
-   private Cooldown cooldown;
+   protected Cooldown cooldown;
 
    public abstract int individualEffect();
 
@@ -11,6 +11,10 @@ public abstract class Effect : MonoBehaviour {
          return 1;
       }
       return individualEffect();
+   }
+
+   public bool onCooldown(){
+      return cooldown.onCooldown();
    }
 
    public void init(){
