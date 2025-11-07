@@ -1,3 +1,17 @@
+/*   Author: Josh Gillum              .
+ *   Date: 6 November 2025           ":"         __ __
+ *                                  __|___       \ V /
+ *                                .'      '.      | |
+ *                                |  O       \____/  |
+ *~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~
+ * This file stores the character class, which provides basic functionality
+ * for all entities that are a type of character. Functions as a super class
+ * for both the player and all enemies. The most notable features are health
+ * and speed related and provide interfaces for setting, getting, and modifying
+ * them.
+ *~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~
+ */
+
 using UnityEngine;
 using System;
 
