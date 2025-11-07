@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: NewAssembly::SpinningWeapon
   MovementSpeed: 5
-  RotationSpeed: 20
+  RotationSpeed: 30
   Walls:
     serializedVersion: 2
     m_Bits: 8192
@@ -249,3 +249,4 @@ MonoBehaviour:
   damage: 1
   effect: {fileID: 0}
   icon: {fileID: -6422505731692599065, guid: 87ec66f6d440f7b2091d40791ed2b782, type: 3}
+  Caster: 
