@@ -20,6 +20,8 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     float damageDuration = 1f;
     public bool isAttacking = false;
     bool isTakingIt = false;
+    private bool FacingRight = true;
+    private Transform Image;
 
     float MoveX;
     float MoveY;
@@ -47,6 +49,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         MoveRight = InputSystem.actions.FindAction("MoveRight");
         MoveLeft = InputSystem.actions.FindAction("MoveLeft");
         Skill = InputSystem.actions.FindAction("Skill");
+        Image = transform.Find("PlayerImage");
 
     }
 
@@ -60,6 +63,13 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     void Update()
     {
         GetInput();
+        if(MoveVec.x < 0 && FacingRight){
+            FacingRight = false;
+            FlipAnimation();
+        } else if(MoveVec.x > 0 && !FacingRight){
+            FacingRight = true;
+            FlipAnimation();
+        } 
     }
 
     void FixedUpdate()
@@ -112,6 +122,13 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     {
         rb.MovePosition(rb.position + (MoveVec * Speed * Time.fixedDeltaTime));
     }
+
+    void FlipAnimation(){
+      Vector3 CurrentScale = Image.localScale;
+      CurrentScale.x *= -1;
+      Image.localScale = CurrentScale;
+    }
+
     public bool Moving()
     {
         return MoveVec != Vector2.zero;
