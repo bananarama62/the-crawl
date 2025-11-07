@@ -8,12 +8,16 @@ public class BossChampion : Boss {
    private weapon AxeRight;
    private DetectRange WithinMeleeRange;
    private DetectRange WithinAbilityRange;
+   private DetectRange WithinSightRange;
    private Transform AimDirection;
    private WeaponProjectile AbilityThrownWeapon;
 
    
 
    void Update() {
+      if(WithinSightRange.playerInSight){
+         move();
+      }
       if(WithinMeleeRange.playerInSight){
          AxeLeft.use();
          AxeRight.use();
@@ -29,7 +33,8 @@ public class BossChampion : Boss {
    }
 
    void FixedUpdate() {
-      if (playerInSight){
+      if (WithinSightRange.playerInSight){
+         decideMove();
          Vector2 direction = (Player.transform.position - transform.position).normalized;
          float angle = Mathf.Atan2(direction.y,direction.x) * Mathf.Rad2Deg;
          AimDirection.rotation = Quaternion.Euler(0f,0f,angle);
@@ -45,6 +50,7 @@ public class BossChampion : Boss {
       AxeRight = transform.Find("axe_right").GetComponent<weapon>();
       WithinMeleeRange = transform.Find("MeleeDetector").GetComponent<DetectRange>();
       WithinAbilityRange = transform.Find("AbilityDetector").GetComponent<DetectRange>();
+      WithinSightRange = transform.Find("SightDetector").GetComponent<DetectRange>();
       AimDirection = transform.Find("AimDirection");
 
       AbilityThrownWeapon = transform.Find("AbilityThrownWeapon").GetComponent<WeaponProjectile>();
