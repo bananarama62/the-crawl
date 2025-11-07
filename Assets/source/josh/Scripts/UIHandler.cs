@@ -9,6 +9,10 @@ public class UIHandler : MonoBehaviour
    private VisualElement icon2;
    private VisualElement icon3;
 
+   private VisualElement BossInfo;
+   private VisualElement BossHealthBar;
+   private Label BossName;
+
    private void Awake()
    {
       instance = this;
@@ -17,6 +21,11 @@ public class UIHandler : MonoBehaviour
       icon1 = uiDocument.rootVisualElement.Q<VisualElement>("ItemSlot1").Q<VisualElement>("Icon");
       icon2 = uiDocument.rootVisualElement.Q<VisualElement>("ItemSlot2").Q<VisualElement>("Icon");
       icon3 = uiDocument.rootVisualElement.Q<VisualElement>("ItemSlot3").Q<VisualElement>("Icon");
+
+      BossInfo = uiDocument.rootVisualElement.Q<VisualElement>("BossInfo");
+      BossHealthBar = BossInfo.Q<VisualElement>("HealthBar");
+      BossName = BossInfo.Q<Label>("BossName");
+      BossInfo.visible = false;
    }
 
 
@@ -47,5 +56,21 @@ public class UIHandler : MonoBehaviour
          return 0;
       }
       return 1;
+   }
+
+   public void EnterBossEncounter(string name, float health = 1.0f){
+      BossName.text = name;
+      SetBossHealth(health);
+      BossInfo.visible = true;
+      Debug.Log("Entering boss encounter");
+   }
+
+   public void ExitBossEncounter(){
+      BossInfo.visible = false;
+      Debug.Log("Exiting boss encounter");
+   }
+
+   public void SetBossHealth(float value){
+      BossHealthBar.style.width = Length.Percent(value * 100.0f);
    }
 }

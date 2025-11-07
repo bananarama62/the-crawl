@@ -8,7 +8,6 @@ public class BossChampion : Boss {
    private weapon AxeRight;
    private DetectRange WithinMeleeRange;
    private DetectRange WithinAbilityRange;
-   private BossEncounter WithinSightRange;
    private Transform AimDirection;
    private WeaponProjectile AbilityThrownWeapon;
    private FourDirectionSprite AnimationControl;

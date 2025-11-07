@@ -30,7 +30,6 @@ public class SpinningWeapon : MonoBehaviour {
 
    void OnTriggerEnter2D(Collider2D collision)
    {
-      Debug.Log(collision.tag);
       if(collision.CompareTag(TargetTag) ){
          Destroy(gameObject);
       }

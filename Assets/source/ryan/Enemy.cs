@@ -75,14 +75,13 @@ public abstract class Enemy : Character
 
    void OnTriggerExit2D(Collider2D collision)
    {
-      Debug.Log("Trigger Exit");
       if (collision.CompareTag("Player"))
       {
          playerInSight = false;
       }
    }
 
-   public void TakeDamage(float damage)
+   public virtual void TakeDamage(float damage)
    {
       healthBar.value = modifyHealth((int)(-1*damage));
    }
