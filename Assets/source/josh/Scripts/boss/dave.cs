@@ -13,10 +13,12 @@ public class BossDave : Boss {
    private float ChainLightningElapsedTime;
    [SerializeField] float TimeUntilCleanupPylons;
    private bool ChainLightningIsActive;
+   private FourDirectionSprite AnimationControl;
 
 
    void FixedUpdate() {
       if (playerInSight){
+         decideMove();
          if(Pylons.Count < MaxNumPylons){
             ChainLightningIsActive = false;
             int Status;
@@ -30,7 +32,7 @@ public class BossDave : Boss {
             }
          } else {
             if(!ChainLightningIsActive){
-               TimeSinceFinalPylonPlaced += Time.deltaTime;
+TimeSinceFinalPylonPlaced += Time.deltaTime;
                if(TimeSinceFinalPylonPlaced > DelayBeforeChainLightning){
                   AbilityChainLightning.setPylons(Pylons);
                   AbilityChainLightning.setOrigin(gameObject);
@@ -49,7 +51,15 @@ public class BossDave : Boss {
                }
             }
          }
+      } else {
+         MoveVec = Vector2.zero;
       }
+   }
+
+   void Update(){
+      move();
+      AnimationControl.UpdateDirection(MoveVec);
+      Debug.Log(MoveVec);
    }
 
    void Awake()
@@ -64,6 +74,7 @@ public class BossDave : Boss {
       t = transform.Find("SpawnPylon");
       Assert.NotNull(t);
       AbilitySpawnPylon = t.GetComponent<SpawnPylon>();
+      AnimationControl = GetComponent<FourDirectionSprite>();
    }
 
 }
