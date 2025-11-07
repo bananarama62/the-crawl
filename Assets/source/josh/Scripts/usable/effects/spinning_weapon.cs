@@ -18,6 +18,7 @@ public class SpinningWeapon : MonoBehaviour {
       TargetTag = tag;
    }
 
+
    void FixedUpdate(){
       //transform.position += new Vector3(MovementDirection.x * MovementSpeed,MovementDirection.y * MovementSpeed,0);
       if(Moving){
@@ -29,11 +30,11 @@ public class SpinningWeapon : MonoBehaviour {
 
    void OnTriggerEnter2D(Collider2D collision)
    {
-      Debug.Log(collision.gameObject.layer);
+      Debug.Log(collision.tag);
       if(collision.CompareTag(TargetTag) ){
          Destroy(gameObject);
       }
-      if (Walls.value == collision.gameObject.layer || collision.CompareTag("Walls"))
+      else if (Walls.value == collision.gameObject.layer || collision.CompareTag("Walls"))
         {
             Moving = false;
         }
