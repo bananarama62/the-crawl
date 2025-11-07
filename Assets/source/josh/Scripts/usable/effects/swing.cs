@@ -36,7 +36,7 @@ public class Swing : Effect {
    void Awake(){
       // Gets the collider and Sprite renderer objects and disables them
       Collision = GetComponent<BoxCollider2D>();
-      Sprite = GameObject.Find("image").GetComponent<SpriteRenderer>();
+      Sprite = transform.Find("image").GetComponent<SpriteRenderer>();
       enable(false);
    }
 
