@@ -1,0 +1,20 @@
+:root {
+}
+
+.header {
+    font-size: 40px;
+    -unity-text-outline-color: rgb(253, 253, 253);
+    color: rgb(255, 255, 255);
+}
+
+.button {
+    font-size: 20px;
+    width: 220px;
+    height: 60px;
+    align-self: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url("project://database/Assets/source/art/ui/Mediavel.png?fileID=-5216735785913309417&guid=7b42ec45e5e7c9a85ba30dcd888760c5&type=3#Mediavel_10");
+}
