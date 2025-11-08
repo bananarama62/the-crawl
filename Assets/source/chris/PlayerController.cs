@@ -36,9 +36,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     void Awake()
     {
         AimCon = GetComponent<PlayerAim>();
-        PlayerClass = new Archer();
+        //PlayerClass = new Archer();
         //PlayerClass = new Mage();
-        PlayerClass.Initialize(this);
+        //PlayerClass.Initialize(this);
         rb = GetComponent<Rigidbody2D>();
         initHealthAndSpeed(30);
         Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
@@ -86,10 +86,11 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
   }
     }
     // class setter function that is called by UI when the button is pressed
-    // public void setClass(Archetype chosenClass)
-    // {
-    //     playerClass = chosenClass;
-    // }
+    public void setClass(Archetype chosenClass)
+     {
+        PlayerClass = chosenClass;
+        PlayerClass.Initialize(this);
+     }
 
     void GetInput()
     {
