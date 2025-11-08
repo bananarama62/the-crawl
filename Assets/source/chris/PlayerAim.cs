@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+//using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerAim : MonoBehaviour
@@ -17,7 +18,7 @@ public class PlayerAim : MonoBehaviour
     private void Update()
     {
         if (controller?.PlayerClass == null) return;
-        handlePlayerAim();
+        handlePlayerAimStick();
         handleSkill();
 
     }
@@ -29,9 +30,19 @@ public class PlayerAim : MonoBehaviour
         MousePos.z = 0f;
         direction = (MousePos - player.transform.position).normalized; // Creates a Vector3 pointing from the player's location to the mouse position
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Converts Vector3 to an angle
-        indicator.transform.rotation = Quaternion.Euler(0f,0f,angle);
-
-
+        indicator.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
+    private void handlePlayerAimStick()
+    {
+        // Will likely have to change when we port to another system
+        Vector2 stickInput = Gamepad.current.rightStick.ReadValue();
+        MousePos.z = 0f;
+        direction = stickInput.normalized;
+        if(direction.sqrMagnitude > 0.01f)
+        {
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // Converts Vector3 to an angle
+            indicator.transform.rotation = Quaternion.Euler(0f,0f,angle);
+        }
     }
     private void handleSkill()
     {

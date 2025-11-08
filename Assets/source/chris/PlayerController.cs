@@ -1,4 +1,5 @@
 using System.Collections;
+//using System.Numerics;
 using System.Xml.Serialization;
 using NUnit.Framework;
 using UnityEngine;
@@ -25,9 +26,11 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
 
     float MoveX;
     float MoveY;
-    public Archetype PlayerClass;  //chris class 
+    public Archetype PlayerClass;
     public PlayerAim AimCon;
     Vector2 MoveVec;
+    //mobile stuff
+    public float TiltSens = 90f;
 
     [SerializeField] float Speed = 5f;
     [SerializeField] weapon temporary_test_weapon;
@@ -74,7 +77,14 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
 
     void FixedUpdate()
     {
-        HandleMovement();
+        Vector2 tilt = Input.acceleration;
+        Vector2 tilmove = new Vector2(tilt.x,tilt.y);
+        Vector2 NewPos = rb.position + tilmove * Speed * Time.fixedDeltaTime;
+        rb.MovePosition(NewPos);
+        float tiltangle = tilt.x * TiltSens;
+        float TargetRotation = Mathf.LerpAngle(rb.rotation, tiltangle, 5f * Time.fixedDeltaTime);
+        rb.MoveRotation(TargetRotation);
+        //HandleMovement();
         if (Moving())
         {
             Vector2 aimVec = MoveVec;
