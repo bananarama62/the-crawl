@@ -1377,7 +1377,7 @@ Transform:
   m_GameObject: {fileID: 782463470}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.175, y: 0.364, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1689,7 +1689,7 @@ GameObject:
   - component: {fileID: 1017271725}
   - component: {fileID: 1017271728}
   - component: {fileID: 1017271727}
-  - component: {fileID: 1017271726}
+  - component: {fileID: 1017271729}
   m_Layer: 0
   m_Name: dagger
   m_TagString: Untagged
@@ -1705,32 +1705,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017271724}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.40157998, w: 0.915824}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.049506072, y: 0.027638283, z: 0.0051245876, w: 0.9983782}
+  m_LocalPosition: {x: 0.256, y: -0.042, z: -0.06}
   m_LocalScale: {x: 3.0038965, y: 3.0038965, z: 3.0038965}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 782463471}
   - {fileID: 1927932373}
   m_Father: {fileID: 873378141}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -47.354}
---- !u!114 &1017271726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017271724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf0849f3bc10217686b31ddbab484ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: NewAssembly::Swing
-  SwingSpeed: 3
-  AimDirection: {fileID: 1607979969}
-  SwingFromLeft: 1
-  StartSwingDegreesFromCenter: 45
-  DegreesOfArc: 90
+  m_LocalEulerAnglesHint: {x: 5.657, y: 3.208, z: 0.747}
 --- !u!114 &1017271727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1744,7 +1727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: NewAssembly::weapon
   damage: 1
-  effect: {fileID: 1017271726}
+  effect: {fileID: 0}
   icon: {fileID: -5738971199571768900, guid: 89337317f9c09b2a985c4831d36f162e, type: 3}
   Caster: Player
 --- !u!61 &1017271728
@@ -1781,7 +1764,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0073147863, y: 0.0060818866}
+  m_Offset: {x: 0.3333142, y: 0.012366258}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1791,8 +1774,25 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.25761452, y: 0.26931638}
+  m_Size: {x: 0.6693533, y: 0.17924948}
   m_EdgeRadius: 0
+--- !u!114 &1017271729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017271724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81b251b554027c4fb4e026c88de8403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  SwingSpeed: 3
+  AimDirection: {fileID: 1607979969}
+  SwingFromLeft: 1
+  StartSwingDegreesFromCenter: 30
+  DegreesOfArc: 45
 --- !u!1 &1027570597
 GameObject:
   m_ObjectHideFlags: 0
@@ -15405,13 +15405,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927932372}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.018, y: -0.009, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.015057897, y: -0.00026602668, z: -0.3999136, w: 0.91642916}
+  m_LocalPosition: {x: 0.323, y: 0.018, z: -0.085}
+  m_LocalScale: {x: 1.9962872, y: 2.0938985, z: 1.9634968}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1017271725}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.569, y: -0.718, z: -47.161}
 --- !u!212 &1927932374
 SpriteRenderer:
   m_ObjectHideFlags: 0
