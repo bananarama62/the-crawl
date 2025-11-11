@@ -10,5 +10,6 @@ public abstract class Archetype
     public abstract void setBaseStats();
     public abstract string getSprite();
     public abstract void setItems();
+    public abstract weapon getItems();
     public abstract void castSkill();
 }

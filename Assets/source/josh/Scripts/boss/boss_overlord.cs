@@ -16,6 +16,7 @@ using NUnit.Framework;
 public class BossOverlord : Boss {
 
    private SpawnMinion AbilitySpawnMinion; // The ability for spawning minions
+   [SerializeField] private WinScript EndZone;
 
    void FixedUpdate() {
       // Moves and spawns minions
@@ -27,7 +28,7 @@ public class BossOverlord : Boss {
    }
    void Awake()
    {
-      initHealthAndSpeed(5,speed:3); // Sets current and max health to 5 and speed to 3
+      initHealthAndSpeed(5, speed: 3); // Sets current and max health to 5 and speed to 3
       initMovement();
       // Finds the Spawn minion ability.
       Transform t = transform.Find("SpawnMinion");
@@ -35,4 +36,9 @@ public class BossOverlord : Boss {
       AbilitySpawnMinion = t.GetComponent<SpawnMinion>();
    }
 
+   public override void die()
+   {
+        EndZone.enable(true);
+        Destroy(gameObject);
+    }
 }

@@ -33,16 +33,14 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     public float TiltSens = 90f;
 
     [SerializeField] float Speed = 5f;
-    [SerializeField] weapon temporary_test_weapon;
+    weapon temporary_test_weapon;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         AimCon = GetComponent<PlayerAim>();
-        //PlayerClass = new Archer();
-        //PlayerClass = new Mage();
-        //PlayerClass.Initialize(this);
         rb = GetComponent<Rigidbody2D>();
+        temporary_test_weapon = transform.Find("Spear").GetComponent<weapon>();
         initHealthAndSpeed(30);
         Debug.Log("Base: " + getBaseHealth() + " Max: " + getMaxHealth() + " current: " + getHealth() + " Speed: " + getSpeed());
         //Stuff that needs changed ---------------
@@ -100,6 +98,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
      {
         PlayerClass = chosenClass;
         PlayerClass.Initialize(this);
+        temporary_test_weapon = PlayerClass.getItems();
+        UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
+        UIHandler.instance.setIcon(1, temporary_test_weapon.icon);
      }
 
     void GetInput()
