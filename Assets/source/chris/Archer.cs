@@ -3,11 +3,13 @@ using UnityEngine;
 public class Archer : Archetype
 {
     private ArcherTrap trap1;
+    private weapon weap1;
     public override void Initialize(PlayerController player)
     {
         base.Initialize(player);
         trap1 = player.transform.Find("Ability").GetComponent<ArcherTrap>();
         setBaseStats();
+        setItems();
     }
     public override void setBaseStats()
     {
@@ -20,7 +22,11 @@ public class Archer : Archetype
     }
     public override void setItems()
     {
-        //items go here
+        weap1 = player.transform.Find("spear").GetComponent<weapon>();
+    }
+    public override weapon getItems()
+    {
+        return weap1;
     }
     public override void castSkill()
     {
