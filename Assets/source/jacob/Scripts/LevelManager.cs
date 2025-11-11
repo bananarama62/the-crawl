@@ -1,55 +1,105 @@
+using System.Collections.Generic;
 using System.Numerics;
+using Codice.Client.BaseCommands;
 using log4net.Core;
+using Mono.Cecil.Cil;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public RoomDatabase roomDatabase;
-    public Transform LevelRoot;
-    private LevelGenerator LevelGen;
-    public LayerMask RoomMask;
 
-    const int ROWS = 15;
-    const int COLS = 15;
+   public RoomDatabase roomDatabase;
+   public Transform LevelRoot;
+   private LevelGenerator LevelGen;
+   public LayerMask RoomMask;
 
-    const int CELL_SIZE = 32;
+   public GameObject VerticalHall;
+   public GameObject HorizontalHall;
 
-    const int RoomCount = 1;
-    int MaxSur = 2;
-    char[,] Map = new char[ROWS, COLS];
+   const int ROWS = 15;
+   const int COLS = 15;
 
-    void Start()
-    {
-        /* int numRooms = 10;
-        levelGenerator = new LevelGenerator(numRooms, 1, roomMask, levelRoot);
-        levelGenerator.SpawnStart(roomDatabase.rooms[0]);
-        for(int i = 0; i <= numRooms; i++)
-        {
-            levelGenerator.RandSpawnRoom(roomDatabase.rooms[0]);
-        } */
-        int NumRooms = 10;
-        LevelGen = new LevelGenerator(NumRooms, 1, RoomMask, LevelRoot);
-        LevelGen.ArrowSpawnRoom(Map, ROWS, COLS, MaxSur);
+   const int CELL_SIZE = 32;
 
-        // TODO: Get random room
-        for (int i = 0; i < ROWS; i++)
-        {
-            for (int j = 0; j < COLS; j++)
+   const int RoomCount = 1;
+   int MaxSur = 2;
+   char[,] Map = new char[ROWS, COLS];
+
+   List<Room> Rooms = new List<Room>();
+
+   public struct Surround
+   {
+      public Surround(bool up = false, bool down = false, bool left = false, bool right = false)
+      {
+         Up = up;
+         Down = down;
+         Left = left;
+         Right = right;
+      }
+      public bool Up;
+      public bool Down;
+      public bool Left;
+      public bool Right;
+
+   }
+
+   void Start()
+   {
+
+      int NumRooms = 10;
+      LevelGen = new LevelGenerator(NumRooms, 1, RoomMask, LevelRoot);
+      LevelGen.ArrowSpawnRoom(Map, ROWS, COLS, MaxSur);
+
+      // TODO: Get random room
+      for (int i = 0; i < ROWS; i++)
+      {
+         for (int j = 0; j < COLS; j++)
+         {
+            if (Map[j, i] == '#')
             {
-                if(Map[j,i] == '#')
-                {
-                    roomDatabase.rooms[0].Location = new Vector2Int(i * CELL_SIZE, j * CELL_SIZE);
-                    UnityEngine.Vector2 Position = new UnityEngine.Vector3(roomDatabase.rooms[0].Location.x, roomDatabase.rooms[0].Location.y, 0);
-                    UnityEngine.Object.Instantiate(roomDatabase.rooms[0], Position, UnityEngine.Quaternion.identity, LevelRoot);
-                }
-                
+               roomDatabase.rooms[0].Location = new Vector2Int(i * CELL_SIZE, j * CELL_SIZE);
+               UnityEngine.Vector2 Position = new UnityEngine.Vector3(roomDatabase.rooms[0].Location.x, roomDatabase.rooms[0].Location.y, 0);
+               UnityEngine.Object.Instantiate(roomDatabase.rooms[0], Position, UnityEngine.Quaternion.identity, LevelRoot);
+               Rooms.Add(roomDatabase.rooms[0]);
+
             }
-        }
+         }
+      }
+   }
 
-    }
+   Surround GetSurrounded(char[,] Map, Vector2Int Location)
+   {
+      Surround Surrounded = default;
 
-    /* room.Location = new Vector2Int(0, 0);
-    UnityEngine.Vector3 position = new UnityEngine.Vector3(room.Location.x, room.Location.y, 0);
-    UnityEngine.Object.Instantiate(room, position, UnityEngine.Quaternion.identity, Root);
-    PlacedRooms.Add(room); */
+      for (int i = 0; i < ROWS; i++)
+      {
+         for (int j = 0; j < COLS; j++)
+         {
+            if (Map[j, i] == '#')
+            {
+               if (j + 1 < COLS && Map[j + 1, i] == '#')
+               {
+                  Surrounded.Up = true;
+               }
+               if (j - 1 > 0 && Map[j - 1, i] == '#')
+               {
+                  Surrounded.Down = true;
+               }
+               if (i - 1 > 0 && Map[j, i - 1] == '#')
+               {
+                  Surrounded.Left = true;
+               }
+               if (i + 1 < ROWS && Map[j, i + 1] == '#')
+               {
+                  Surrounded.Right = true;
+               }
+            }
+         }
+      }
+      return Surrounded;
+   }
+
+   if(Map[Location.x, Location.y])
+
 }
+
