@@ -66,40 +66,5 @@ public class LevelManager : MonoBehaviour
          }
       }
    }
-
-   Surround GetSurrounded(char[,] Map, Vector2Int Location)
-   {
-      Surround Surrounded = default;
-
-      for (int i = 0; i < ROWS; i++)
-      {
-         for (int j = 0; j < COLS; j++)
-         {
-            if (Map[j, i] == '#')
-            {
-               if (j + 1 < COLS && Map[j + 1, i] == '#')
-               {
-                  Surrounded.Up = true;
-               }
-               if (j - 1 > 0 && Map[j - 1, i] == '#')
-               {
-                  Surrounded.Down = true;
-               }
-               if (i - 1 > 0 && Map[j, i - 1] == '#')
-               {
-                  Surrounded.Left = true;
-               }
-               if (i + 1 < ROWS && Map[j, i + 1] == '#')
-               {
-                  Surrounded.Right = true;
-               }
-            }
-         }
-      }
-      return Surrounded;
-   }
-
-   if(Map[Location.x, Location.y])
-
 }
 

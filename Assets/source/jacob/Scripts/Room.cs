@@ -9,6 +9,10 @@ public class Room : MonoBehaviour
     [SerializeField] private string roomID;
     [SerializeField] private Vector2Int roomSize;
     private Vector2Int location;
+    public GameObject LeftHall;
+    public GameObject RightHall;
+    public GameObject UpHall;
+    public GameObject BottomHall;
 
     public string RoomID => roomID;
     public Vector2Int RoomSize => roomSize;
