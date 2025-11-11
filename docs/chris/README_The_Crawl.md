@@ -11,7 +11,7 @@
 This README provides simple steps to **run the executable** on any Windows PC with minimal setup.
 Download the executable for pc from https://github.com/bananarama62/the-crawl/tree/main
 OR
-Download the executable for mobile from https://outlook.office365.com/host/377c982d-9686-450e-9a7c-22aeaf1bc162/7211f19f-262a-42eb-a02e-289956491741
+Download the executable for mobile from https://vandalsuidaho-my.sharepoint.com/:u:/g/personal/soto8290_vandals_uidaho_edu/EYWCzvtXMUVBgB1BFgLYYjgBWBFBoFPDpPgH__iZ29E_oA?e=76dSGb
 Unzip download file
 ## Running the Game
 run executable from downloaded folder
