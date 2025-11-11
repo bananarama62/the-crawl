@@ -7,14 +7,14 @@
 
 ---
 
-## Overview
-
-*The Crawl* is a top-down, roguelike RPG built in Unity. where you clear room by room to find the boss and defeat them using abilities and weapons to proceed to the next floor.
-
+## Download Instructions
 This README provides simple steps to **run the executable** on any Windows PC with minimal setup.
 Download the executable for pc from https://github.com/bananarama62/the-crawl/tree/main
 OR
 Download the executable for mobile from https://github.com/bananarama62/the-crawl/tree/mobile
+Unzip download file
+## Running the Game
+run executable from downloaded folder
 
 ---
 
