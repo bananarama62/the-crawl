@@ -65,7 +65,7 @@ public class ChainLightning : Effect {
             Vector3 position = rotated_length + previous_position;
             current_bolt = Instantiate(LightningBoltPreFab, position, Quaternion.Euler(0f,0f,angle));
             current_bolt.transform.localScale = new Vector3(3f,3f,1f);
-            current_bolt.transform.localScale = new Vector3(ration,ration,1f);
+            //current_bolt.transform.localScale = new Vector3(ration,ration,1f);
             current_bolt.GetComponent<Lightning>().setAnimation((j+1)%6);
             previous_position = current_bolt.transform.position;
          }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: bow
   m_EditorClassIdentifier: NewAssembly::HotBar
   ItemType: 1
-  Icon: {fileID: 4919756649285413506, guid: 92e87823481ec1d4785ce08f283de469, type: 3}
+  Icon: {fileID: -467125811306107802, guid: 77d8fd6a21598334d9c40ce22f13c546, type: 3}

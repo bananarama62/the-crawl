@@ -47,7 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07b445d9f9e3484094348c36fa3ff29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: NewAssembly::arrow
-  Speed: 2
   Duration: 2
   damage: 2
   Owner: Player

@@ -3,8 +3,8 @@ using UnityEngine;
 public class Bow : Effect
 {
     [SerializeField] private GameObject ArrowPrefab;
-    [SerializeField] private Transform StartPos;     // socket on player
-    [SerializeField] private GameObject AimDirection;  // rotation source
+    [SerializeField] private Transform StartPos;
+    [SerializeField] private GameObject AimDirection;   
     [SerializeField] private float ArrowSpeed;
     [SerializeField] private string Caster = "Player";
     private SpriteRenderer Sprite;

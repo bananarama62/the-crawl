@@ -22,7 +22,7 @@ public class Archer : Archetype
     }
     public override void setItems()
     {
-        weap1 = player.transform.Find("spear").GetComponent<weapon>();
+        weap1 = player.transform.Find("bow").GetComponent<weapon>();
     }
     public override weapon getItems()
     {
