@@ -1,12 +1,27 @@
+/*   Author: Josh Gillum              .
+ *   Date: 11 November 2025           ":"         __ __
+ *                                  __|___       \ V /
+ *                                .'      '.      | |
+ *                                |  O       \____/  |
+ *~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~
+ * This file stores the Cooldown class, which handles cooldowns. The length of
+ * the cooldown should be set within the editor.
+ *~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~
+ */
+
+
 using UnityEngine;
 
 public class Cooldown : MonoBehaviour{
+   // Models a cooldown and includes functions for interacting with and
+   // following the restrictions it imposes.
 
-   [SerializeField] private double cooldown_length;
-   private double cooldown_remaining;
-   private bool on_cooldown;
+   [SerializeField] private double cooldown_length; // Total length of the cooldown
+   private double cooldown_remaining; // Time until cooldown is over
+   private bool on_cooldown; // Boolean as to whether the cooldown is still active
 
    public void init(double set_cooldown_length, bool set_on_cooldown=false){
+      // Sets the length of the cooldown and can optionally start it.
       if (setCooldownLength(set_cooldown_length)){
          throw new System.ArithmeticException("Cooldown length must be greater than or equal to 0.");
       }
