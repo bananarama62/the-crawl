@@ -1277,6 +1277,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: NewAssembly::PauseHandler
   backgroundMusic: {fileID: 115073242}
+--- !u!1 &715806462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8684158681347928519, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
+  m_PrefabInstance: {fileID: 2057639914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &742920594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1435,6 @@ MonoBehaviour:
   isAttacking: 0
   AimCon: {fileID: 0}
   Speed: 5
-  temporary_test_weapon: {fileID: 0}
 --- !u!50 &873378138
 Rigidbody2D:
   serializedVersion: 5
@@ -1611,11 +1615,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bb6306fcb1d4d4db9a1c6efd961646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: NewAssembly::NewMonoBehaviourScript
-  inventoryList: []
+  inventoryList:
+  - {fileID: 11400000, guid: ff6033b614b45824b9ab8681167c16cc, type: 2}
+  - {fileID: 11400000, guid: 72ee709d0d256f94e84c192109e3f8ed, type: 2}
+  - {fileID: 11400000, guid: 18da2c59456299943a682ca8b75bc4aa, type: 2}
+  - {fileID: 11400000, guid: 92ae4a85d3cdb3349b25631563cbe6c1, type: 2}
   selectedItem: 0
   sword: {fileID: 454108336}
   dagger: {fileID: 1591542876}
-  bow: {fileID: 0}
+  bow: {fileID: 715806462}
   spear: {fileID: 1585340518}
   player: {fileID: 873378137}
 --- !u!1 &919947452
@@ -15330,6 +15338,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 873378141}
     m_Modifications:
+    - target: {fileID: 2190470868263078594, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
+      propertyPath: cooldown_length
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369778969778618376, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
+      propertyPath: ArrowSpeed
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369778969778618376, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
+      propertyPath: AimDirection
+      value: 
+      objectReference: {fileID: 1607979969}
     - target: {fileID: 8684158681347928519, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
       propertyPath: m_Name
       value: bow
