@@ -7,6 +7,7 @@ public class Bow : Effect
     [SerializeField] private GameObject AimDirection;  // rotation source
     [SerializeField] private float ArrowSpeed;
     [SerializeField] private string Caster = "Player";
+    private SpriteRenderer Sprite;
     private void Update()
     {
         transform.rotation = AimDirection.transform.rotation;

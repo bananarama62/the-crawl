@@ -170,7 +170,11 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         string currentScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentScene);
     }
-    
+    public void EquipWeapon(weapon w)
+    {
+        temporary_test_weapon = w;
+
+    }
 
     public void powerUp(Pickup pickup)
     {
