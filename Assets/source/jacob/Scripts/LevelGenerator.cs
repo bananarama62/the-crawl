@@ -171,7 +171,7 @@ public class LevelGenerator
             break;
          }
 
-         for (int i = ROWS-1; i >= 0; i--)
+         for (int i = ROWS - 1; i >= 0; i--)
          {
             if (i != ROWS)
             {
@@ -179,7 +179,7 @@ public class LevelGenerator
             }
             else
             {
-               PrevPosition = ROWS-1;
+               PrevPosition = ROWS - 1;
             }
 
             if (Map[i, BottomArrowPosition] == '#')
@@ -237,15 +237,15 @@ public class LevelGenerator
             break;
          }
 
-         for (int i = COLS-1; i >= 0; i--)
+         for (int i = COLS - 1; i >= 0; i--)
          {
-            if (i != COLS-1)
+            if (i != COLS - 1)
             {
                PrevPosition = i + 1;
             }
             else
             {
-               PrevPosition = COLS-1;
+               PrevPosition = COLS - 1;
             }
 
             if (Map[RightArrowPosition, i] == '#')
@@ -309,10 +309,10 @@ public class LevelGenerator
 
       Debug.Log(sb.ToString());
    }
-   
+
    private void SpawnArrowRooms(char[,] Map)
    {
-      
+
    }
 }
 
