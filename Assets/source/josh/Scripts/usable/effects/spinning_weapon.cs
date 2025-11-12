@@ -1,9 +1,20 @@
+/*   Author: Josh Gillum              .
+ *   Date: 11 November 2025           ":"         __ __
+ *                                  __|___       \ V /
+ *                                .'      '.      | |
+ *                                |  O       \____/  |
+ *~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~
+ * This file stores the SpinningWeapon class, which is any weapon that spins
+ * while traveling in a direction (thrown weapon).
+ *~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~^~~
+ */
 using UnityEngine;
 
 public class SpinningWeapon : MonoBehaviour {
+   // Causes the weapon to move while spinning.
    private Vector3 MovementDirection;
-   [SerializeField] private float MovementSpeed;
-   [SerializeField] private float RotationSpeed;
+   [SerializeField] private float MovementSpeed; // Linear movement speed of object
+   [SerializeField] private float RotationSpeed; // Rotational movement speed of object
    [SerializeField] private LayerMask Walls;
    private string TargetTag;
    private bool Moving;
