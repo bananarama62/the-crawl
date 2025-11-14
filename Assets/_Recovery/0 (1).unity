@@ -1532,28 +1532,6 @@ MonoBehaviour:
   bow: {fileID: 715806462}
   spear: {fileID: 1585340518}
   player: {fileID: 873378137}
---- !u!1 &893168015 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 756889282354444611, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
-  m_PrefabInstance: {fileID: 1123618815}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &893168021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893168015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9007f8a10a96fc04fa7c8dbc31b76d5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: NewAssembly::SkeletonArcher
-  speed: 0
-  healthBar: {fileID: 0}
-  projectilePrefab: {fileID: 4000465426006509967, guid: 2871f8ae573396340b9ca38b64405229, type: 3}
-  shootInterval: 2
-  followSpeedMultiplier: 0.5
 --- !u!1 &919947452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,14 +1774,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8722602156368577066, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
-      propertyPath: m_Value
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722602156368577066, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
-      propertyPath: m_MaxValue
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8997404222196439637, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
       propertyPath: m_Size.x
       value: 2.5
@@ -1814,19 +1784,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8997404222196439637, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8997404222196439637, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.3
+      value: 2.125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 756889282354444611, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 893168021}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
 --- !u!1001 &1123939184
 PrefabInstance:
@@ -48934,14 +48901,6 @@ PrefabInstance:
     - target: {fileID: 7487984738957477732, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722602156368577066, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
-      propertyPath: m_Value
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722602156368577066, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
-      propertyPath: m_MaxValue
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8997404222196439637, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
       propertyPath: m_Size.x
