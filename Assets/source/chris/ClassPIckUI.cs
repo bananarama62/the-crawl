@@ -1,5 +1,10 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+/// <summary>
+/// Author: Christopher Soto
+/// Date: November 14, 2025
+/// This file stores UI script for class picker ui
+/// </summary>
 public class ClassPIckUI : MonoBehaviour
 {
     private UIDocument doc;
@@ -7,9 +12,11 @@ public class ClassPIckUI : MonoBehaviour
     private Button buttonArcher;
     private Button buttonMage;
     [SerializeField] private PlayerController PlayerCon;
+    /// <summary>
+    /// sets necessary components and establishes what function each button calls when pressed
+    /// </summary>
     private void Awake()
     {
-        //PlayerCon = GetComponent<PlayerController>();
         doc = GetComponent<UIDocument>();
         ClassMenu = doc.rootVisualElement;
         buttonArcher = ClassMenu.Q<Button>("Archer");
@@ -25,12 +32,16 @@ public class ClassPIckUI : MonoBehaviour
                 ClassMenu.visible = false;
             };
         }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    /// <summary>
+    /// sets classmenu visibility to false on startup, if not done it will draw over other menus
+    /// </summary>
     void Start()
     {
         ClassMenu.visible = false;
     }
-
+    /// <summary>
+    /// function necessary for inter menu communication
+    /// </summary>
     public void ShowMenu()
     {
         ClassMenu.visible = true;
