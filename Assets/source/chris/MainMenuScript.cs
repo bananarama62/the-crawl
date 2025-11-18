@@ -30,4 +30,9 @@ public class MainMenuScript : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
+
+    public void setScene(bool input)
+    {
+        menu.visible = input;
+    }
 }

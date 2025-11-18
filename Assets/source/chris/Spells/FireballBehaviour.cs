@@ -34,4 +34,14 @@ public class FireballBehaviour : MonoBehaviour
     {
         Destroy(gameObject,3f);
     }
+
+    public void TestDamage(Enemy enemy)
+    {
+        enemy.TakeDamage(damage);
+    }
+
+    public void setDamage(float damage1)
+    {
+        damage = damage1;
+    }
 }

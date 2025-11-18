@@ -27,4 +27,14 @@ public class TrapBehavior : MonoBehaviour
     {
         Destroy(gameObject,9f);
     }
+
+    public void TestDamage(Enemy enemy)
+    {
+        enemy.TakeDamage(damage);
+    }
+
+    public void setDamage(float damage1)
+    {
+        damage = damage1;
+    }
 }

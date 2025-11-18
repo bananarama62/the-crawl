@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Fireball : Effect
 {
-    Enemy enemy1;
     [SerializeField] public GameObject ball;
     [SerializeField] public GameObject player;
     [SerializeField] private GameObject AimDirection;

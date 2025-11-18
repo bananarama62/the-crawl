@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Mage : Archetype
 {
-    private Fireball fire1;
+    public Fireball fire1;
     private weapon weap1;
     public override void Initialize(PlayerController player)
     {
