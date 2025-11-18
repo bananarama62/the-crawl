@@ -309,11 +309,6 @@ public class LevelGenerator
 
       Debug.Log(sb.ToString());
    }
-
-   private void SpawnArrowRooms(char[,] Map)
-   {
-
-   }
 }
 
 
