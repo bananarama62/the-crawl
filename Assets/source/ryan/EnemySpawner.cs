@@ -1,40 +1,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner
+public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private GameObject spawnPoint; // Assign the spawn object in the Inspector
+    [SerializeField] private int maxMeleeEnemies = 5; // Maximum number of melee enemies to spawn
+    [SerializeField] private int maxRangedEnemies = 5; // Maximum number of ranged enemies to spawn
+
     private IEnemyFactory meleeFactory;
     private IEnemyFactory rangedFactory;
 
-    public EnemySpawner(IEnemyFactory meleeFactory, IEnemyFactory rangedFactory)
+    void Start()
     {
-        this.meleeFactory = meleeFactory;
-        this.rangedFactory = rangedFactory;
+        // Initialize the factories
+        meleeFactory = new OrcFactory();
+        rangedFactory = new ArcherFactory();
+
+        // Spawn enemies once
+        SpawnRandomEnemies();
     }
 
-    public List<Enemy> SpawnEnemies(int meleeCount, int rangedCount)
+    private void SpawnRandomEnemies()
     {
         List<Enemy> spawnedEnemies = new List<Enemy>();
 
+        // Randomly decide the number of melee and ranged enemies to spawn
+        int meleeCount = Random.Range(0, maxMeleeEnemies + 1); // Random count between 0 and maxMeleeEnemies
+        int rangedCount = Random.Range(0, maxRangedEnemies + 1); // Random count between 0 and maxRangedEnemies
+
         for (int i = 0; i < meleeCount; i++)
         {
-            Vector2 position = GetRandomPosition();
+            Vector2 position = GetSpawnPosition();
             spawnedEnemies.Add(meleeFactory.CreateEnemy(position));
         }
 
         for (int i = 0; i < rangedCount; i++)
         {
-            Vector2 position = GetRandomPosition();
+            Vector2 position = GetSpawnPosition();
             spawnedEnemies.Add(rangedFactory.CreateEnemy(position));
         }
-
-        return spawnedEnemies;
     }
 
-    private Vector2 GetRandomPosition()
+    private Vector2 GetSpawnPosition()
     {
-        float x = Random.Range(-10f, 10f);
-        float y = Random.Range(-10f, 10f);
-        return new Vector2(x, y);
+        return spawnPoint.transform.position; // Use the spawn object's position
     }
 }
