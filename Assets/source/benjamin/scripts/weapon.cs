@@ -6,11 +6,15 @@ public class weapon : MonoBehaviour
     [SerializeField] private Effect effect;
     public Sprite icon;
     public string Caster;
-    
+
+    public AudioClip swingSound;
     public int use(){
+        PlaySfx();
         return effect.use();
     }
-
+    public void PlaySfx(){
+        AudioSource.PlayClipAtPoint(swingSound, transform.position);
+    }
     public void BoostDamage(float multiplier)
     {
             damage += multiplier;

@@ -65,7 +65,6 @@ public class SwingDagger : Effect
             {
                 if (SlashNum == 0)
                 {
-                    // Start the second slash in the opposite direction
                     SlashNum = 1;
                     SwingFromLeft = !SwingFromLeft;
                     Vector3 scale = transform.localScale;
@@ -75,7 +74,6 @@ public class SwingDagger : Effect
                 }
                 else
                 {
-                    // End after the second slash
                     Enable(false);
                 }
             }

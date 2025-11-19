@@ -22,7 +22,34 @@ public class Mage : Archetype
     }
     public override void setItems()
     {
-        weap1 = player.transform.Find("sword").GetComponent<weapon>();
+        Transform Wep;
+
+        Wep = player.transform.Find("bow");
+        if (Wep != null) Wep.gameObject.SetActive(false);
+
+        Wep = player.transform.Find("sword");
+        if (Wep != null) Wep.gameObject.SetActive(false);
+
+        Wep = player.transform.Find("spear");
+        if (Wep != null) Wep.gameObject.SetActive(false);
+
+        Transform bowTransform = player.transform.Find("dagger");
+        if (bowTransform != null)
+        {
+            bowTransform.gameObject.SetActive(true);
+            weap1 = bowTransform.GetComponent<weapon>();
+            if (weap1 != null)
+            {
+                // Make the player use this weapon immediately
+                player.EquipWeapon(weap1);
+
+                // Update UI icon if UIHandler is available
+                if (UIHandler.instance != null)
+                {
+                    UIHandler.instance.setIcon(1, weap1.icon);
+                }
+            }
+        }
     }
     public override weapon getItems()
     {

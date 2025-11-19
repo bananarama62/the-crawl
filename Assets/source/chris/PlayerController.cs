@@ -31,6 +31,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
 
     [SerializeField] float Speed = 5f;
     weapon temporary_test_weapon;
+    public Item HotBarItem;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -137,7 +138,21 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     }
     void AttackFun()
     {
-        temporary_test_weapon.use();
+        if (HotBarItem != null)
+        {
+            var action = HotBarItem.CreateAction();
+            if (action != null)
+            {
+                action.Activate(this.gameObject);
+                var inventory = GetComponent<PlayerInventory>();
+                inventory.ConsumeHotbarItem(HotBarItem);
+            }
+            return;
+        }
+        if (temporary_test_weapon != null)
+        {
+            temporary_test_weapon.use();
+        }
     }
 
     //---------------------------------
@@ -175,11 +190,6 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     {
         temporary_test_weapon = w;
 
-    }
-
-    public void powerUp(Pickup pickup)
-    {
-        pickup.item.Activate(this.gameObject);
     }
 
     public void healPlayer(int healAmount)

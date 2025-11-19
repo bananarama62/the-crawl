@@ -7,6 +7,7 @@ public class HotBar : ScriptableObject
 {
     public HotBarSlot ItemType;
     public Sprite Icon;
+
 }
 
 public enum HotBarSlot
