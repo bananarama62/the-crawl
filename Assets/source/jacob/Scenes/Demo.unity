@@ -473,6 +473,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5062619798095156539, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
   m_PrefabInstance: {fileID: 1123939184}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &170029603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 170029604}
+  m_Layer: 0
+  m_Name: RoomRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &170029604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170029603}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &181867731
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,10 +762,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   roomDatabase: {fileID: 11400000, guid: f4fdd7bcb06e0a241bf9450452b1ef71, type: 2}
-  LevelRoot: {fileID: 0}
+  LevelRoot: {fileID: 170029604}
   RoomMask:
     serializedVersion: 2
     m_Bits: 1024
+  PlayerObject: {fileID: 873378136}
+  Exit: {fileID: 0}
 --- !u!4 &397806653
 Transform:
   m_ObjectHideFlags: 0
@@ -49081,4 +49114,6 @@ SceneRoots:
   - {fileID: 724983324834249979}
   - {fileID: 1730164695}
   - {fileID: 1443104936}
-  - {fileID: 1691367589}
+  - {fileID: 432806925}
+  - {fileID: 397806653}
+  - {fileID: 170029604}

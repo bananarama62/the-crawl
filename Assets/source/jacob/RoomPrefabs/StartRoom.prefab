@@ -170,7 +170,6 @@ MonoBehaviour:
   TopDoor: {fileID: 1781961990137806549}
   BottomHall: {fileID: 3718882621335585558}
   BottomDoor: {fileID: 8864359908078602524}
-  EndCollider: {fileID: 0}
   HasTopHall: 0
   HasBottomHall: 0
   HasLeftHall: 0
@@ -24327,6 +24326,14 @@ PrefabInstance:
     - target: {fileID: 4605721396157070630, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
       propertyPath: m_Name
       value: randomItem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872682198552672120, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872682198552672120, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6872682198552672120, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57658,6 +57665,14 @@ PrefabInstance:
       value: randomItem
       objectReference: {fileID: 0}
     - target: {fileID: 6872682198552672120, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872682198552672120, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872682198552672120, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
       objectReference: {fileID: 0}
@@ -65653,6 +65668,14 @@ PrefabInstance:
     - target: {fileID: 4605721396157070630, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
       propertyPath: m_Name
       value: randomItem (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872682198552672120, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872682198552672120, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6872682198552672120, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
       propertyPath: m_LocalPosition.x
