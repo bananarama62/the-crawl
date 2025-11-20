@@ -13,7 +13,7 @@ public class Orc : EnemyController
 
     protected override void Awake()
     {
-        initHealthAndSpeed(health, speed: 1);
+        initHealthAndSpeed(health, speed: 2);
 
         initMovement();
 
@@ -26,6 +26,16 @@ public class Orc : EnemyController
         {
             animator.SetBool("isChasing", true);
             FollowPlayer();
+
+            // Flip sprite based on player's position
+            if (Player.position.x < transform.position.x)
+            {
+                GetComponent<SpriteRenderer>().flipX = true; // Face left
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().flipX = false; // Face right
+            }
         }
         else
         {

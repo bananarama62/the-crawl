@@ -34,6 +34,16 @@ public class SkeletonArcher : EnemyController
 
                 shootTimer = shootInterval;
             }
+
+            // Flip sprite based on player's position
+            if (Player.position.x < transform.position.x)
+            {
+                GetComponent<SpriteRenderer>().flipX = true; // Face left
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().flipX = false; // Face right
+            }
         }
         else if (Player != null)
         {
@@ -42,6 +52,16 @@ public class SkeletonArcher : EnemyController
 
             animator.SetBool("isChasing", true);
             animator.SetBool("isAttacking", false);
+
+            // Flip sprite based on player's position
+            if (Player.position.x < transform.position.x)
+            {
+                GetComponent<SpriteRenderer>().flipX = true; // Face left
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().flipX = false; // Face right
+            }
         }
         else
         {
