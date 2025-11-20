@@ -76,6 +76,7 @@ MonoBehaviour:
   TopDoor: {fileID: 1781961990137806549}
   BottomHall: {fileID: 3718882621335585558}
   BottomDoor: {fileID: 8864359908078602524}
+  EndCollider: {fileID: 0}
   HasTopHall: 0
   HasBottomHall: 0
   HasLeftHall: 0

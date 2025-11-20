@@ -190,7 +190,6 @@ public class LevelGenerator
 
                if (SurroundCount <= MaxSur && Cells <= MaxCells)
                {
-                  Debug.Log("BottomArrow");
                   Map[Position.y, Position.x] = '#';
                   LogMap(Map);
                   Cells++;
@@ -256,7 +255,6 @@ public class LevelGenerator
 
                if (SurroundCount <= MaxSur && Cells <= MaxCells)
                {
-                  Debug.Log("RightArrow");
                   Map[Position.y, Position.x] = '#';
                   LogMap(Map);
                   Cells++;
@@ -291,7 +289,7 @@ public class LevelGenerator
       return Count;
    }
 
-   void LogMap(char[,] map)
+   public void LogMap(char[,] map)
    {
       int rows = map.GetLength(0);
       int cols = map.GetLength(1);

@@ -3,6 +3,7 @@ using UnityEngine.Assertions;
 using UnityEngine;
 using System.Numerics;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Room : MonoBehaviour
 {
@@ -21,11 +22,7 @@ public class Room : MonoBehaviour
     public bool HasBottomHall = false;
     public bool HasLeftHall = false;
     public bool HasRightHall = false;
-
-
-
-
-    public string RoomID => roomID;
+	public string RoomID => roomID;
     public Vector2Int RoomSize => roomSize;
     public Vector2Int Location {get { return location; } set{ location = value; }}
 }

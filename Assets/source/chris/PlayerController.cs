@@ -232,4 +232,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
         UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
 
     }
+
+    public void SetPosition(Vector2 Position)
+	{
+		rb.position = Position;
+	}
 }
