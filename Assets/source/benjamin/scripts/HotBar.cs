@@ -2,6 +2,9 @@ using Codice.Client.BaseCommands.Merge.Xml;
 using NUnit.Framework;
 using UnityEngine;
 
+/**
+    * HotBar class represents an item or weapon that can be equipped in the player's hotbar.
+*/
 [CreateAssetMenu(fileName = "New HotBar Item", menuName = "HotBar Item")]
 public class HotBar : ScriptableObject
 {
@@ -10,6 +13,7 @@ public class HotBar : ScriptableObject
 
 }
 
+// Enum for different hotbar slots
 public enum HotBarSlot
 {
     sword,

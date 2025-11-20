@@ -1,4 +1,7 @@
 using UnityEngine;
+/**
+    * weapon class handles the weapon behavior and damage application.
+*/
 public class weapon : MonoBehaviour
 {
     public float damage = 1;
@@ -7,6 +10,7 @@ public class weapon : MonoBehaviour
     public Sprite icon;
     public string Caster;
 
+    // Start is called before the first frame update
     public AudioClip swingSound;
     public int use(){
         PlaySfx();
@@ -19,6 +23,7 @@ public class weapon : MonoBehaviour
     {
             damage += multiplier;
     }
+    // Handles collision detection and damage application
     void OnTriggerEnter2D(Collider2D collision)
     {
        if(Caster != "Player" && collision.CompareTag("Player")){

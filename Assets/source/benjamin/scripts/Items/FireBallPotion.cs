@@ -1,8 +1,12 @@
 using UnityEngine;
 
+/**
+    * FireballPotionItem class represents a fireball potion that can be used to launch a fireball.
+*/
 [CreateAssetMenu(menuName = "Items/Potions/FireballPotion")]
 public class FireballPotionItem : Item
 {
+    // Prefab of the fireball to be instantiated
     public GameObject FireBall;
     public float DistanceFromPlayer = 1.0f;
     public override IItemAction CreateAction()
@@ -10,6 +14,9 @@ public class FireballPotionItem : Item
         return new FireballPotionAction(FireBall, DistanceFromPlayer);
     }
 }
+/**
+    * FireballPotionAction class defines the action taken when a fireball potion is used.
+*/
 public class FireballPotionAction : IItemAction
 {
     private readonly GameObject _ballPrefab;

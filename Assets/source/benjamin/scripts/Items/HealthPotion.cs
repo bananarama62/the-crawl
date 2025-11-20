@@ -1,5 +1,7 @@
 using UnityEngine;
-
+/**
+    * HealthPotionItem class represents a health potion that can be used to heal the player.
+*/
 [CreateAssetMenu(menuName = "Items/Potions/HealthPotion")]
 public class HealthPotionItem : Item
 {
@@ -10,7 +12,9 @@ public class HealthPotionItem : Item
         return new HealthPotionAction(HealAmount);
     }
 }
-
+/**
+    * HealthPotionAction class defines the action taken when a health potion is used.
+*/
 public class HealthPotionAction : IItemAction
 {
     private readonly int _amount;
