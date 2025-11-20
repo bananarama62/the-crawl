@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public interface IEnemyFactory
+public interface EnemyFactory
 {
     Enemy CreateEnemy(Vector2 position);
 }
 
-public class OrcFactory : IEnemyFactory
+public class OrcFactory : EnemyFactory
 {
     public Enemy CreateEnemy(Vector2 position)
     {
@@ -23,7 +23,7 @@ public class OrcFactory : IEnemyFactory
     }
 }
 
-public class ArcherFactory : IEnemyFactory
+public class ArcherFactory : EnemyFactory
 {
     public Enemy CreateEnemy(Vector2 position)
     {
