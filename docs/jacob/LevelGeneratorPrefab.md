@@ -1,6 +1,6 @@
 # Level Generator Prefab
 
-![](https://github.com/bananarama62/the-crawl/blob/main/docs/benjamin/benGif.gif)
+![](https://github.com/bananarama62/the-crawl/blob/main/docs/jacob/PrefabGif.gif)
 
 **Engine:** Unity (Version [6000.2.1f1])  
 **Date:** 11/20/25  
