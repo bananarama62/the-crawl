@@ -168,7 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81fb6204fd6cdd41ba2b270f5f31922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: NewAssembly::randomItem
-  possibleItems: []
+  possibleItems:
+  - {fileID: 11400000, guid: b6594ee984d88a44e82c1e41dce388c7, type: 2}
+  - {fileID: 11400000, guid: 82c04b9440fe59b47bfcec380ffa3ac5, type: 2}
   possibleWeapons:
   - {fileID: 11400000, guid: 72ee709d0d256f94e84c192109e3f8ed, type: 2}
   - {fileID: 11400000, guid: 18da2c59456299943a682ca8b75bc4aa, type: 2}

@@ -2,6 +2,12 @@ using UnityEngine;
 /**
     * Bow class handles the bow behavior and arrow firing.
 */
+/**
+ * Utilized asset is the bow sound effect from Minecraft. The sound has been altered by pitching it higher, this falls under transformative. Although there is a legal implication for reusing the sound,
+ * it is being used here for educational purposes only, and no profit will be generated. 
+ * However, even if we consider this as a commerical use, it still falls under fair use as it is a transformative use.
+ * 
+ */
 public class Bow : Effect
 {
 
