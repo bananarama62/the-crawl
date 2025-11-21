@@ -117,7 +117,7 @@ public class PlayerInventory : MonoBehaviour
         {
             spear.SetActive(false);
         }
-
+        DetectActiveWeaponAndRegister();
         UpdateUI();
         ItemSelected();
     }
@@ -273,6 +273,95 @@ public class PlayerInventory : MonoBehaviour
                 return;
             }
         }
+    }
+    // Try to detect an active weapon GameObject (sword/dagger/bow/spear) and register a matching HotBar entry.
+    // This helps when an Archetype activates a weapon GameObject at startup but the InventoryList/FilledSlots
+    // wasn't populated with it.
+    private void DetectActiveWeaponAndRegister()
+    {
+        if (itemSetActive == null || InventoryList == null) return;
+
+        foreach (var kvp in itemSetActive)
+        {
+            var slot = kvp.Key;
+            var go = kvp.Value;
+            if (go != null && go.activeSelf)
+            {
+                // If we already have that weapon registered, skip.
+                if (HasWeapon(slot)) continue;
+
+                // Try to find a HotBar asset that corresponds to this slot
+                HotBar found = null;
+                foreach (var hb in InventoryList)
+                {
+                    if (hb != null && hb.ItemType == slot)
+                    {
+                        found = hb;
+                        break;
+                    }
+                }
+
+                if (found != null)
+                {
+                    AddHotbarWeapon(found);
+                }
+                else
+                {
+                    // fallback to Resources
+                    var all = Resources.LoadAll<HotBar>("");
+                    foreach (var hb in all)
+                    {
+                        if (hb != null && hb.ItemType == slot)
+                        {
+                            found = hb;
+                            break;
+                        }
+                    }
+                    if (found != null) AddHotbarWeapon(found);
+                }
+            }
+        }
+    }
+    // PUBLIC UTILITY: ensure a weapon of the given slot is registered in the hotbar (used when classes equip a weapon at start)
+    public void EnsureHasWeaponHotbar(HotBarSlot slot)
+    {
+        if (HasWeapon(slot)) return;
+
+        // first try to find a HotBar asset already present in InventoryList
+        HotBar found = null;
+        if (InventoryList != null)
+        {
+            foreach (var hb in InventoryList)
+            {
+                if (hb != null && hb.ItemType == slot)
+                {
+                    found = hb;
+                    break;
+                }
+            }
+        }
+
+        // if not found in the saved list, try to load from Resources (optional fallback)
+        if (found == null)
+        {
+            var all = Resources.LoadAll<HotBar>("");
+            foreach (var hb in all)
+            {
+                if (hb != null && hb.ItemType == slot)
+                {
+                    found = hb;
+                    break;
+                }
+            }
+        }
+
+        if (found != null)
+        {
+            AddHotbarWeapon(found);
+            return;
+        }
+
+        Debug.LogWarning($"PlayerInventory: Could not find HotBar asset for slot {slot}. Add the HotBar to InventoryList or call AddHotbarWeapon explicitly.");
     }
     // Handle the selection of an item in the hotbar
     private void ItemSelected()
