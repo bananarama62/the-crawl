@@ -4,6 +4,7 @@ using UnityEngine;
 */
 public class Bow : Effect
 {
+
     // Arrow prefab to be instantiated when firing
     [SerializeField] private GameObject ArrowPrefab;
     // Starting position for arrow spawn
@@ -15,13 +16,21 @@ public class Bow : Effect
     // Identifier for the entity that fired the arrow
     [SerializeField] private string Caster = "Player";
     // Reference to the sprite renderer for visual representation
-    private SpriteRenderer Sprite;
+    [SerializeField] private Sprite yourDefaultSprite;
+    [SerializeField] private Sprite badSprite;
+    private ArrowSprite bowSprite;
     // Track the bow's rotation to match the aim direction
     private void Update()
     {
         transform.rotation = AimDirection.transform.rotation;
     }
 
+    private void Awake()
+    {
+        bowSprite = new ActualArrowSprite(gameObject);
+        bowSprite.SetSprite(yourDefaultSprite, badSprite);
+
+    }
     // Method to execute the individual effect of firing an arrow
     public override int individualEffect()
     {
@@ -37,6 +46,8 @@ public class Bow : Effect
         aw.Owner = Caster;
         aw.Speed = ArrowSpeed;
         aw.Fire(Rotation);
+
+        
         return 1;
     }
 }

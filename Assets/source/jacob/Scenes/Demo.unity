@@ -15216,13 +15216,25 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3369778969778618376, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
+      propertyPath: badSprite
+      value: 
+      objectReference: {fileID: -1420869352781472879, guid: fd8ae6647a2281341a20b4f2f80338d8, type: 3}
+    - target: {fileID: 3369778969778618376, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
       propertyPath: ArrowSpeed
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3369778969778618376, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
+      propertyPath: pinkSprite
+      value: 
+      objectReference: {fileID: 4919756649285413506, guid: 92e87823481ec1d4785ce08f283de469, type: 3}
+    - target: {fileID: 3369778969778618376, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
       propertyPath: AimDirection
       value: 
       objectReference: {fileID: 1607979969}
+    - target: {fileID: 3369778969778618376, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
+      propertyPath: yourDefaultSprite
+      value: 
+      objectReference: {fileID: 4919756649285413506, guid: 92e87823481ec1d4785ce08f283de469, type: 3}
     - target: {fileID: 7876103908089620237, guid: 720c4c162a874ec4a8679a2a88c33661, type: 3}
       propertyPath: icon
       value: 

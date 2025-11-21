@@ -1,4 +1,4 @@
-    using UnityEngine;
+using UnityEngine;
 
 /**
     * Arrow class handles the behavior of the arrow projectile.
@@ -34,6 +34,12 @@ public class Arrow : MonoBehaviour
         // Ignore collisions with the owner of the arrow
         if (collision.gameObject.CompareTag(Owner))
         {
+            return;
+        }   
+        
+        if (collision.gameObject.name.ToLower().Contains("walls"))
+        {
+            Destroy(gameObject);
             return;
         }
 
