@@ -37,7 +37,7 @@ public class Arrow : MonoBehaviour
             return;
         }   
         
-        if (collision.gameObject.name.ToLower().Contains("walls"))
+        if (collision.gameObject.name.Contains("Walls"))
         {
             Destroy(gameObject);
             return;

@@ -234,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: NewAssembly::BossChampion
   speed: 3
   healthBar: {fileID: 0}
+  SwingSound: {fileID: 8300000, guid: 7534f59637c999f419c9bae558bf9cda, type: 3}
 --- !u!95 &8605347434700599713
 Animator:
   serializedVersion: 7
@@ -550,6 +551,7 @@ MonoBehaviour:
   effect: {fileID: 4382314833725330523}
   icon: {fileID: -6422505731692599065, guid: 87ec66f6d440f7b2091d40791ed2b782, type: 3}
   Caster: Enemy
+  swingSound: {fileID: 0}
 --- !u!1 &2672196974132211516
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +871,7 @@ MonoBehaviour:
   effect: {fileID: 157459702707268957}
   icon: {fileID: -6422505731692599065, guid: 87ec66f6d440f7b2091d40791ed2b782, type: 3}
   Caster: Enemy
+  swingSound: {fileID: 0}
 --- !u!1 &4352533164682637194
 GameObject:
   m_ObjectHideFlags: 0

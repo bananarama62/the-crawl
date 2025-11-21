@@ -250,3 +250,4 @@ MonoBehaviour:
   effect: {fileID: 0}
   icon: {fileID: -6422505731692599065, guid: 87ec66f6d440f7b2091d40791ed2b782, type: 3}
   Caster: 
+  swingSound: {fileID: 8300000, guid: 4bf1040714df5314888067a7f897fcc1, type: 3}
