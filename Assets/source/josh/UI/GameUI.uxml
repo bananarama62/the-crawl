@@ -1,0 +1,25 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="HealthBarBackground" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=3238454098240949206&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_0&quot;); width: 30%; height: 20%; -unity-background-scale-mode: scale-to-fit; position: relative; top: 3%; left: 3%; flex-direction: column;">
+        <ui:VisualElement name="HealthBarContainer" style="flex-grow: 1; position: relative; height: 2%; width: 367px; top: 14%; left: 35%; background-size: 100% 5%; flex-direction: row; flex-shrink: 1;">
+            <ui:VisualElement name="HealthBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=-7904285823810203936&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_359&quot;); position: absolute; width: 100%; rotate: 0; translate: 0 0; height: 17%; top: 0%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="PlayerPortrait" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/source/art/ui/player_icon_default.png?fileID=1955752825804795929&amp;guid=ae02462621f7f9fc0a8174b998de10c9&amp;type=3#player_icon_default_0&quot;); -unity-background-scale-mode: scale-to-fit; width: 232px; height: 147px; position: absolute; top: 20%; left: 0%;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="ItemSlotContainer" style="flex-grow: 0; background-size: 100% 100%; width: 25%; height: 10%; bottom: 5%; right: 5%; position: absolute; top: auto; left: auto; flex-direction: row;">
+        <ui:VisualElement name="ItemSlot1" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=8067623408771632383&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_241&quot;); position: relative; left: auto; width: 100%; height: 100%; top: auto;">
+            <ui:VisualElement name="Icon" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: none; width: 90%; height: 90%; left: 5%; top: 5%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ItemSlot2" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=8067623408771632383&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_241&quot;); position: relative; left: auto; width: 100%; height: 100%; top: auto;">
+            <ui:VisualElement name="Icon" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: none; width: 90%; height: 90%; left: 5%; top: 5%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ItemSlot3" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=8067623408771632383&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_241&quot;); position: relative; left: auto; width: 100%; height: 100%; top: auto;">
+            <ui:VisualElement name="Icon" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; background-image: none; width: 90%; height: 90%; left: 5%; top: 5%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="BossInfo" style="flex-grow: 0; -unity-background-scale-mode: scale-to-fit; width: 50%; height: 10%; position: absolute; top: 5%; left: 25%; flex-direction: column;">
+        <ui:VisualElement name="HealthBarContainer" style="flex-grow: 0; position: absolute; height: 50px; width: 50%; top: 0%; left: 25%; -unity-background-scale-mode: stretch-to-fill;">
+            <ui:VisualElement name="HealthBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/source/art/ui/Mediavel.png?fileID=-7904285823810203936&amp;guid=7b42ec45e5e7c9a85ba30dcd888760c5&amp;type=3#Mediavel_359&quot;); position: relative; width: 100%; rotate: 0; translate: 0 0;" />
+        </ui:VisualElement>
+        <ui:Label text="Label" name="BossName" style="top: 50%; -unity-text-align: upper-center; font-size: 32px;" />
+    </ui:VisualElement>
+</ui:UXML>

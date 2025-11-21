@@ -1,3 +1,0 @@
-# Links to Presentations by various teamleads 
-[Making a Platformer](https://drive.google.com/drive/folders/1TBLJAZcswSUXlKsAX05K_59Aaww5Zbnu) \
-[Systems Analysis Presentation / Git](https://vandalsuidaho-my.sharepoint.com/personal/weav0256_vandals_uidaho_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fweav0256%5Fvandals%5Fuidaho%5Fedu%2FDocuments%2FTL1%20Presentation%20Video%20%2D%20CS%203833%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ecaffa7ce%2D0375%2D43b2%2Dab87%2D794096c84ce3)

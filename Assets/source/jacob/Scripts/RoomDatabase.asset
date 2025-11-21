@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37e310b1a80b9147a43a25d140714cb, type: 3}
+  m_Name: RoomDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::RoomDatabase
+  rooms:
+  - {fileID: 4923357267644857155, guid: d041ccb5550226549a418decb30b9cfa, type: 3}
+  - {fileID: 7869085657451423934, guid: 53d8b034320aa4741a6efddb2f248730, type: 3}
+  - {fileID: 6288940712967369495, guid: fc3d9429cf570d849bf3d1ec253ffc39, type: 3}
+  - {fileID: 2335849922738599036, guid: c0dd84a1f6976f542836263478cbf803, type: 3}
+  - {fileID: 7567252005749120248, guid: dafc318088123cc438128852545d5ba8, type: 3}
+  - {fileID: 7241978201844708661, guid: a59f7d6cc41092c4e93535c4c780169c, type: 3}
+  - {fileID: 4923357267644857155, guid: 3dccb8770ca50bd4c9bb3ac291a51265, type: 3}
+  - {fileID: 4923357267644857155, guid: 759b5a6fe7fab274cb7ce27e6d939abc, type: 3}

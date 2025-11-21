@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-5575821199576878354
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: world_on_fire_reverb_{-5575821199576878354}
+  m_AudioClip: {fileID: 8300000, guid: 218daba7f60f57e2cbc5b44246e617d5, type: 3}
+  m_Volume: -25
+  m_Enabled: 1
+--- !u!1233149941 &-4361224696316235521
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Daler Mehndi - Tunak Tunak Tun _{-4361224696316235521}
+  m_AudioClip: {fileID: 8300000, guid: 62058047e2f825e1cb066d762b1bbb19, type: 3}
+  m_Volume: -20
+  m_Enabled: 0
+--- !u!1233149941 &1534743216937907830
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lose_yourself_pitched_{1534743216937907830}
+  m_AudioClip: {fileID: 8300000, guid: 2c99fcd269c0ffca08d98dec4255aeb2, type: 3}
+  m_Volume: -25
+  m_Enabled: 1
+--- !u!1233149941 &2401305847272343804
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Yi Jian Mei (xue hua piao piao bei feng xiao xiao)_{2401305847272343804}
+  m_AudioClip: {fileID: 8300000, guid: 3ca4407a2fa85ad2abed0a9fd96dad5b, type: 3}
+  m_Volume: -25
+  m_Enabled: 0
+--- !u!1233149941 &5458047648719801099
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: boombastic_reverb_{5458047648719801099}
+  m_AudioClip: {fileID: 8300000, guid: f9782af9286640c64b4c3e4163d00aba, type: 3}
+  m_Volume: -20
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: background music
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -4361224696316235521}
+  - {fileID: 2401305847272343804}
+  - {fileID: 5458047648719801099}
+  - {fileID: 9134438017761447129}
+  - {fileID: 7378430849363660707}
+  - {fileID: 1534743216937907830}
+  - {fileID: -5575821199576878354}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 1
+  m_TriggerMode: 1
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 0
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &7378430849363660707
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: crank_that_boosted_{7378430849363660707}
+  m_AudioClip: {fileID: 8300000, guid: 502e5914cc14fbb78818f4e197ec4a3c, type: 3}
+  m_Volume: -25
+  m_Enabled: 1
+--- !u!1233149941 &9134438017761447129
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: broccoli_boosted_{9134438017761447129}
+  m_AudioClip: {fileID: 8300000, guid: 2a9f5b0204bbacf69a21005628a626ec, type: 3}
+  m_Volume: -25
+  m_Enabled: 1
