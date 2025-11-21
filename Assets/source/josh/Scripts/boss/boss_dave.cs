@@ -36,8 +36,6 @@ public class BossDave : Boss {
    private FourDirectionSprite AnimationControl; // Controls sprite animations
 
    void FixedUpdate() {
-      AbilityChainLightning.setOrigin(gameObject);
-      AbilityChainLightning.setPylons(Pylons);
       if (playerInSight){
          decideMove();
          // Casts pylons if the max amount aren't out
