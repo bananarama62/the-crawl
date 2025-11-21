@@ -6,7 +6,8 @@ using UnityEngine;
  * Utilized asset is the bow sound effect from Minecraft. The sound has been altered by pitching it higher, this falls under transformative. Although there is a legal implication for reusing the sound,
  * it is being used here for educational purposes only, and no profit will be generated. 
  * However, even if we consider this as a commerical use, it still falls under fair use as it is a transformative use.
- * 
+ * Although the sound is creative, the actual useage of the sound would probably be considered factual.
+ * This wouldn't affect the market for the original sound effect as it is being used in a different type of game, and with Minecraft already having a dominant market.
  */
 public class Bow : Effect
 {
