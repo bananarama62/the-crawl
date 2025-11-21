@@ -1,0 +1,63 @@
+using System.Collections;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.TestTools;
+public class BensPlayModeTests
+{
+    [UnitySetUp]
+    public IEnumerator LoadScene()
+    {
+        SceneManager.LoadScene("Demo");
+        yield return null;
+    }
+    private static PlayerController FindPlayer()
+    {
+        var player = GameObject.FindFirstObjectByType<PlayerController>();
+        Assert.NotNull(player, "PlayerController not found in scene 'Demo'.");
+        return player;
+    }
+    private static weapon findWeapon(PlayerController player)
+    {
+        var weap = player.GetComponentInChildren<weapon>(includeInactive: true);
+        if (weap == null)
+        {
+            var child = new GameObject("TestWeapon");
+            child.transform.SetParent(player.transform, false);
+            weap = child.AddComponent<weapon>();
+            // Give it a stable baseline; Awake likely sets damage=baseDamage
+            weap.damage = 1;
+        }
+        return weap;
+    }
+    [UnityTest]
+    public IEnumerator HealthPotionHeals()
+    {
+        var player = FindPlayer();
+        player.setMaxHealth(100);
+        player.setHealth(50); // current = 50
+
+        var potion = ScriptableObject.CreateInstance<HealthPotionItem>();
+        potion.HealAmount = 30;
+
+        potion.Activate(player.gameObject);
+        yield return null;
+
+        Assert.AreEqual(80, player.getHealth(), "Player should be healed by potion amount.");
+        // Heal beyond max should cap � test by healing more
+        potion.HealAmount = 50;
+        potion.Activate(player.gameObject);
+        yield return null;
+        Assert.AreEqual(100, player.getHealth(), "Health should not exceed max health.");
+    }
+    // 2) HealthPotionAction safely handles null target (no exception)
+    [UnityTest]
+    public IEnumerator HealthPotion_NullTarget_NoThrow()
+    {
+        var potion = ScriptableObject.CreateInstance<HealthPotionItem>();
+        potion.HealAmount = 10;
+        // Should not throw when Activate receives null
+        Assert.DoesNotThrow(() => potion.Activate(null));
+        yield return null;
+    }
+}
