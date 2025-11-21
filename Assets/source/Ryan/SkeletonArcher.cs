@@ -5,6 +5,8 @@ public class SkeletonArcher : EnemyController
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float shootInterval = 2f;
     [SerializeField] private float followSpeedMultiplier = 0.5f;
+    [SerializeField] private AudioClip attackSound; // Reference to the attack sound
+    private AudioSource audioSource; // AudioSource component
     private float shootTimer;
     private Animator animator;
 
@@ -12,6 +14,13 @@ public class SkeletonArcher : EnemyController
     {
         base.Awake();
         animator = GetComponent<Animator>();
+
+        // Initialize AudioSource
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     public override void decideMove()
@@ -103,6 +112,12 @@ public class SkeletonArcher : EnemyController
             if (projectileRb != null)
             {
                 projectileRb.linearVelocity = direction * 5f;
+            }
+
+            // Play attack sound
+            if (attackSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(attackSound);
             }
         }
         animator.SetBool("isAttacking", false);
