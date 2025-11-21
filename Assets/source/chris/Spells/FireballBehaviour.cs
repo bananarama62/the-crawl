@@ -26,9 +26,10 @@ public class FireballBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.GetComponent<Enemy>();
-        if ((WhatDestroysBall.value & (1 << collision.gameObject.layer)) > 0)
+        if (collision.gameObject.name.Contains("Walls"))
         {
             Destroy(gameObject);
+            return;
         }
         if (collision is BoxCollider2D)
         {
