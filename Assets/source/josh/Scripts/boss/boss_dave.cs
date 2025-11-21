@@ -27,7 +27,7 @@ public class BossDave : Boss {
    //
    // The number of pylons that will be spawned before chain lighting is cast
    [SerializeField] int MaxNumPylons; 
-   private List<GameObject> Pylons = new(); // Stores spawned pylons
+   private List<GameObject> Pylons; // Stores spawned pylons
    private float TimeSinceFinalPylonPlaced; // Stores the time elapsed since the final pylon is placed before chain lightning
    [SerializeField] float DelayBeforeChainLightning; // Delay to wait after final pylon before casting chain lightning
    private float ChainLightningElapsedTime; // Elapsed time since chain lightning was cast.
@@ -36,6 +36,8 @@ public class BossDave : Boss {
    private FourDirectionSprite AnimationControl; // Controls sprite animations
 
    void FixedUpdate() {
+      AbilityChainLightning.setOrigin(gameObject);
+      AbilityChainLightning.setPylons(Pylons);
       if (playerInSight){
          decideMove();
          // Casts pylons if the max amount aren't out
@@ -78,6 +80,15 @@ TimeSinceFinalPylonPlaced += Time.deltaTime;
       }
    }
 
+   public override void die(){
+      foreach (var Pylon in Pylons){
+         Destroy(Pylon);
+      }
+      AbilityChainLightning.Cleanup();
+
+      Destroy(gameObject);
+   }
+
    void Update(){
       // Moves the boss and updates the animation
       move();
@@ -97,6 +108,8 @@ TimeSinceFinalPylonPlaced += Time.deltaTime;
       Assert.NotNull(t);
       AbilitySpawnPylon = t.GetComponent<SpawnPylon>();
       AnimationControl = GetComponent<FourDirectionSprite>();
+      Pylons = new List<GameObject>();
+      Debug.Log(Pylons);
    }
 
 }

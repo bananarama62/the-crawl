@@ -17,6 +17,14 @@ public class ChainLightning : Effect {
    private List<GameObject> pylons;
    [SerializeField] private GameObject LightningBoltPreFab;
    private GameObject origin;
+      
+   private List<GameObject> LightningBolts = new();
+
+   public void Cleanup(){
+      foreach (var Bolt in LightningBolts){
+         Destroy(Bolt);
+      }
+   }
 
    public override int individualEffect(){
       // SetPylons must be called before this spell is used.
@@ -59,6 +67,7 @@ public class ChainLightning : Effect {
          direction = Vector3.Normalize(direction);
          Vector3 previous_position = current_bolt.transform.position;
          Vector3 rotated_length = Vector3.Scale(direction,new Vector3(size.x,size.y,0f)); // Multiplies direction by size to find amount to add to each bolt to get starting point of next bolt.
+         LightningBolts.Add(current_bolt);
          // Repeats above process for remaining bolts in strand.
          for(int j = 1; j < count; ++j){
             Debug.Log(direction);
@@ -67,6 +76,7 @@ public class ChainLightning : Effect {
             current_bolt.transform.localScale = new Vector3(3f,3f,1f);
             //current_bolt.transform.localScale = new Vector3(ration,ration,1f);
             current_bolt.GetComponent<Lightning>().setAnimation((j+1)%6);
+            LightningBolts.Add(current_bolt);
             previous_position = current_bolt.transform.position;
          }
       }
@@ -76,6 +86,7 @@ public class ChainLightning : Effect {
    public void setPylons(List<GameObject> pylons_list){
       // Sets the list of objects that the lightning will string between
       pylons = pylons_list;
+      LightningBolts.Clear();
    }
 
    public void setOrigin(GameObject o){
