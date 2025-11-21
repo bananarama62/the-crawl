@@ -24,16 +24,16 @@ public class JoshPlayModeTestsHealth
         var player = FindPlayer();
         player.initHealthAndSpeed(50);
         yield return null;
-        Assert.AreEqual(player.getHealth(),50,"initHealthAndSpeed() is messed up.");
+        Assert.AreEqual(50,player.getHealth(),"initHealthAndSpeed() is messed up.");
         player.setHealth(75);
         yield return null;
-        Assert.AreEqual(player.getHealth(),75,"setHealth() is messed up.");
+        Assert.AreEqual(75,player.getHealth(),"setHealth() is messed up.");
         player.setBaseHealth(100);
         yield return null;
-        Assert.AreEqual(player.getBaseHealth(),100,"setBaseHealth() is messed up.");
+        Assert.AreEqual(100,player.getBaseHealth(),"setBaseHealth() is messed up.");
         player.setMaxHealth(125);
         yield return null;
-        Assert.AreEqual(player.getMaxHealth(),125,"setMaxHealth() is messed up.");
+        Assert.AreEqual(125,player.getMaxHealth(),"setMaxHealth() is messed up.");
     }
 
     [UnityTest] // Cannot set health values to a negative number
@@ -42,11 +42,11 @@ public class JoshPlayModeTestsHealth
         var player = FindPlayer();
         player.initHealthAndSpeed(50);
         yield return null;
-        Assert.AreEqual(player.getHealth(),50,"initHealthAndSpeed() is messed up.");
-        Assert.AreEqual(player.setBaseHealth(-1),true,"setBaseHealth() is messed up. Should not be able to set to negative.");
-        Assert.AreEqual(player.setMaxHealth(-1),true,"setMaxHealth() is messed up. Should not be able to set to negative.");
-        Assert.AreEqual(player.setHealth(-1),true,"setHealth() is messed up. Should not be able to set to negative.");
-        Assert.AreEqual(player.setHealth(0),false,"setHealth() is messed up. Should be able to set to zero.");
+        Assert.AreEqual(50,player.getHealth(),"initHealthAndSpeed() is messed up.");
+        Assert.AreEqual(true,player.setBaseHealth(-1),"setBaseHealth() is messed up. Should not be able to set to negative.");
+        Assert.AreEqual(true,player.setMaxHealth(-1),"setMaxHealth() is messed up. Should not be able to set to negative.");
+        Assert.AreEqual(true,player.setHealth(-1),"setHealth() is messed up. Should not be able to set to negative.");
+        Assert.AreEqual(false,player.setHealth(0),"setHealth() is messed up. Should be able to set to zero.");
     }
 
     [UnityTest] // Various modifyHealth functions work
@@ -55,9 +55,27 @@ public class JoshPlayModeTestsHealth
         var player = FindPlayer();
         player.initHealthAndSpeed(50);
         yield return null;
-        Assert.AreEqual(player.modifyHealth(-10),40,"modifyHealth() with a negative number is messed up.");
-        Assert.AreEqual(player.modifyHealth(10),50,"modifyHealth() with a positive number is messed up.");
-        Assert.AreEqual(player.modifyHealth(10),50,"modifyHealth() with a positive number to be greater than maxHealth is messed up.");
-        Assert.AreEqual(player.modifyHealth(-60),0,"modifyHealth() down to or below zero is messed up.");
+        Assert.AreEqual(40,player.modifyHealth(-10),"modifyHealth() with a negative number is messed up.");
+        Assert.AreEqual(50,player.modifyHealth(10),"modifyHealth() with a positive number is messed up.");
+        Assert.AreEqual(50,player.modifyHealth(10),"modifyHealth() with a positive number to be greater than maxHealth is messed up.");
+        Assert.AreEqual(0,player.modifyHealth(-60),"modifyHealth() down to or below zero is messed up.");
+    }
+
+    [UnityTest] // Various modifyHealthByPercentage functions work
+    public IEnumerator ModifyHealthByPercentage()
+    {
+        var player = FindPlayer();
+        player.initHealthAndSpeed(100);
+        yield return null;
+        Assert.AreEqual(40,player.modifyHealthByPercentage(-60),"modifyHealthByPercentage() with a negative number is messed up.");
+        Assert.AreEqual(50,player.modifyHealthByPercentage(10),"modifyHealthByPercentage() with a positive number is messed up.");
+        Assert.AreEqual(60,player.modifyHealthByPercentage(20,false),"modifyHealthByPercentage() with a positive number and ofMaxHealth=false is messed up.");
+        Assert.AreEqual(54,player.modifyHealthByPercentage(-10,false),"modifyHealthByPercentage() with a negative number and ofMaxHealth=false is messed up.");
+        Assert.AreEqual(100,player.modifyHealthByPercentage(100),"modifyHealthByPercentage() with a positive number to be greater than maxHealth is messed up.");
+        player.modifyHealthByPercentage(-20);
+        Assert.AreEqual(100,player.modifyHealthByPercentage(200),"modifyHealthByPercentage() with a percentage greater than 100% is messed up.");
+        player.modifyHealthByPercentage(-20);
+        Assert.AreEqual(100,player.modifyHealthByPercentage(30,false),"modifyHealthByPercentage() with a positive number and ofMaxHealth=false to be greater than maxHealth is messed up.");
+        Assert.AreEqual(0,player.modifyHealthByPercentage(-120),"modifyHealthByPercentage() down to or below zero is messed up.");
     }
 }
