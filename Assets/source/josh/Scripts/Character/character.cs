@@ -78,14 +78,7 @@ public abstract class Character : MonoBehaviour {
       }
       // Applies percentage and gets value to modify health by
       int modify_amount = (health * percentage) / 100; 
-      current_health += modify_amount;
-      if (current_health == 0){
-         die();
-      }
-      if (current_health > max_health){
-         current_health = max_health;
-      }
-      return current_health;
+      return modifyHealth(modify_amount);
    }
 
    // Wrapper for getHealth() to adhere to naming convention.
