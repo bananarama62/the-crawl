@@ -6,6 +6,8 @@ public class Orc : EnemyController
     [SerializeField] private int health = 5;
     [SerializeField] private float attackCooldown = 2f; // Time interval between attacks
     [SerializeField] private float attackDelay = 0.5f; // Delay before dealing damage during attack animation
+    [SerializeField] private AudioClip attackSound; // Reference to the attack sound
+    private AudioSource audioSource; // AudioSource component
     private Animator animator;
     private float attackTimer = 0f;
     private float attackDelayTimer = 0f; // Timer for attack delay
@@ -18,6 +20,13 @@ public class Orc : EnemyController
         initMovement();
 
         animator = GetComponent<Animator>();
+
+        // Initialize AudioSource
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     public override void decideMove()
@@ -80,6 +89,12 @@ public class Orc : EnemyController
     {
         if (player != null && attackTimer <= 0 && !isAttacking)
         {
+            // Play attack sound
+            if (attackSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(attackSound);
+            }
+
             // Trigger the "Attack" animation
             animator.SetTrigger("Player");
 
