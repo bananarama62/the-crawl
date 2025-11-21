@@ -3,12 +3,11 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
-public class powerupTests
+public class BensPlayModeTests
 {
     [UnitySetUp]
     public IEnumerator LoadScene()
     {
-
         SceneManager.LoadScene("Demo");
         yield return null;
     }
@@ -32,36 +31,33 @@ public class powerupTests
         return weap;
     }
     [UnityTest]
-    public IEnumerator healthModDoesntOverheal()
+    public IEnumerator HealthPotionHeals()
     {
         var player = FindPlayer();
         player.setMaxHealth(100);
-        player.setHealth(100);
+        player.setHealth(50); // current = 50
 
-        ////var heal = ScriptableObject.CreateInstance<HealthModifier>();
-        //heal.healthValue = 50;
+        var potion = ScriptableObject.CreateInstance<HealthPotionItem>();
+        potion.HealAmount = 30;
 
-        //heal.Activate(player.gameObject);
+        potion.Activate(player.gameObject);
         yield return null;
 
-        Assert.AreEqual(100, player.getHealth(), "Healing should not overheal at maxHealth.");
-        //Object.DestroyImmediate(heal);
+        Assert.AreEqual(80, player.getHealth(), "Player should be healed by potion amount.");
+        // Heal beyond max should cap — test by healing more
+        potion.HealAmount = 50;
+        potion.Activate(player.gameObject);
+        yield return null;
+        Assert.AreEqual(100, player.getHealth(), "Health should not exceed max health.");
     }
+    // 2) HealthPotionAction safely handles null target (no exception)
     [UnityTest]
-    public IEnumerator WeaponModifier_MultipliesDamage_OnChildWeapon()
+    public IEnumerator HealthPotion_NullTarget_NoThrow()
     {
-        var player = FindPlayer();
-        var weap = findWeapon(player);
-        weap.damage = 1;
+        var potion = ScriptableObject.CreateInstance<HealthPotionItem>();
+        potion.HealAmount = 10;
+        // Should not throw when Activate receives null
+        Assert.DoesNotThrow(() => potion.Activate(null));
         yield return null;
-
-        //var mod = ScriptableObject.CreateInstance<WeaponModifier>();
-        //mod.damageMultiplier = 2f;
-
-        //mod.Activate(player.gameObject);
-        yield return null;
-
-        Assert.AreEqual(3f, weap.damage, 1e-5, "Damage should be baseDamage + multiplier.");
-        //Object.DestroyImmediate(mod);
     }
 }

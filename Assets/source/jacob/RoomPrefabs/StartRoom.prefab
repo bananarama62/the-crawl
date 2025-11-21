@@ -24323,10 +24323,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2999985866403597500}
     m_Modifications:
-    - target: {fileID: 2237232573571601411, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
-      propertyPath: possibleItems.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4605721396157070630, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
       propertyPath: m_Name
       value: randomItem (1)
@@ -57664,10 +57660,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2999985866403597500}
     m_Modifications:
-    - target: {fileID: 2237232573571601411, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
-      propertyPath: possibleItems.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4605721396157070630, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
       propertyPath: m_Name
       value: randomItem
@@ -65673,10 +65665,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2999985866403597500}
     m_Modifications:
-    - target: {fileID: 2237232573571601411, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
-      propertyPath: possibleItems.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4605721396157070630, guid: b47fc9040a2e1374fa3068e259f926b2, type: 3}
       propertyPath: m_Name
       value: randomItem (2)

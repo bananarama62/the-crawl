@@ -23,8 +23,8 @@ public class BossChampion : Boss {
    private Transform AimDirection; // The direction that points from the boss towards the player
    private WeaponProjectile AbilityThrownWeapon; // Ability object for the thrown weapon
    private FourDirectionSprite AnimationControl; // Controller for the four direction sprite
-
-   void Update() {
+   public AudioClip SwingSound;
+    void Update() {
       // Moves towards the player if the player is within the encounter area.
       if(WithinSightRange.inSight()){
          playerInSight = true;
@@ -79,6 +79,11 @@ public class BossChampion : Boss {
       AnimationControl = GetComponent<FourDirectionSprite>();
       WithinSightRange = GameObject.Find("BossEncounterBounds").GetComponent<BossEncounter>();
       Player = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-   }
+        if (SwingSound != null)
+        {
+            if (AxeLeft != null) AxeLeft.swingSound = SwingSound;
+            if (AxeRight != null) AxeRight.swingSound = SwingSound;
+        }
+    }
 
 }
