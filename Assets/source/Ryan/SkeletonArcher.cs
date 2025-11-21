@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class SkeletonArcher : EnemyController
 {
-    [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private float shootInterval = 2f;
-    [SerializeField] private float followSpeedMultiplier = 0.5f;
+    [SerializeField] private GameObject projectilePrefab; // Prefab for the arrow projectile
+    [SerializeField] private float shootInterval = 2f; // Time interval between shots
+    [SerializeField] private float followSpeedMultiplier = 0.5f; // Speed multiplier when following the player
     [SerializeField] private AudioClip attackSound; // Reference to the attack sound
     private AudioSource audioSource; // AudioSource component
     private float shootTimer;
     private Animator animator;
 
+    // Initializes movement, animator, and audio source
     protected override void Awake()
     {
         base.Awake();
@@ -23,6 +24,7 @@ public class SkeletonArcher : EnemyController
         }
     }
 
+    // Decides movement and behavior based on player's position
     public override void decideMove()
     {
         float originalSpeed = getSpeed();
@@ -79,6 +81,7 @@ public class SkeletonArcher : EnemyController
         }
     }
 
+    // Handles damage taken by the Skeleton Archer and updates animations
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
@@ -88,6 +91,7 @@ public class SkeletonArcher : EnemyController
         animator.SetFloat("Health", getCurrentHealth());
     }
 
+    // Handles death logic and triggers death animation
     public override void die()
     {
         base.die();
@@ -95,6 +99,7 @@ public class SkeletonArcher : EnemyController
         animator.SetTrigger("Die");
     }
 
+    // Fires an arrow projectile towards the player
     public void FireArrow()
     {
         if (projectilePrefab != null)

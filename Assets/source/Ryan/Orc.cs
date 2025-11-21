@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Orc : EnemyController
 {
-    [SerializeField] private int damage = 2;
-    [SerializeField] private int health = 5;
+    [SerializeField] private int damage = 2; // Damage dealt by the Orc
+    [SerializeField] private int health = 5; // Initial health of the Orc
     [SerializeField] private float attackCooldown = 2f; // Time interval between attacks
     [SerializeField] private float attackDelay = 0.5f; // Delay before dealing damage during attack animation
     [SerializeField] private AudioClip attackSound; // Reference to the attack sound
@@ -13,6 +13,7 @@ public class Orc : EnemyController
     private float attackDelayTimer = 0f; // Timer for attack delay
     private bool isAttacking = false;
 
+    // Initializes health, movement, animator, and audio source
     protected override void Awake()
     {
         initHealthAndSpeed(health, speed: 2);
@@ -29,6 +30,7 @@ public class Orc : EnemyController
         }
     }
 
+    // Decides movement and behavior based on player's position
     public override void decideMove()
     {
         if (playerInSight && !isAttacking)
@@ -75,16 +77,19 @@ public class Orc : EnemyController
         }
     }
 
+    // Handles collision with the player and triggers the attack
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         base.OnCollisionEnter2D(collision); // Call base method for collision detection
     }
 
+    // Continuously attacks the player while in collision
     protected override void OnCollisionStay2D(Collision2D collision)
     {
         base.OnCollisionStay2D(collision); // Call base method for collision detection
     }
 
+    // Executes the attack logic, including animations and sound
     protected override void Attack(PlayerController player)
     {
         if (player != null && attackTimer <= 0 && !isAttacking)
@@ -107,6 +112,7 @@ public class Orc : EnemyController
         }
     }
 
+    // Deals damage to the player
     private void DealDamage()
     {
         if (Player != null)
@@ -119,6 +125,7 @@ public class Orc : EnemyController
         }
     }
 
+    // Handles damage taken by the Orc and updates animations
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);

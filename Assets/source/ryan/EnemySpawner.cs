@@ -17,6 +17,7 @@ public class EnemySpawner : MonoBehaviour
         SpawnRandomEnemy();
     }
 
+    // Spawns a random enemy using one of the factories
     private void SpawnRandomEnemy()
     {
         EnemyFactory selectedFactory = Random.Range(0, 2) == 0 ? meleeFactory : rangedFactory; // Randomly select a factory
@@ -24,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
         selectedFactory.CreateEnemy(position); // Use the factory to create and spawn the enemy
     }
 
+    // Gets the position of the spawn point
     private Vector2 GetSpawnPosition()
     {
         return spawnPoint.transform.position; // Use the spawn object's position
