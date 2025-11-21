@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 4608176363918909745}
   - component: {fileID: 3205319207851300421}
   - component: {fileID: 7230869124294567419}
+  - component: {fileID: 146000041652684475}
   m_Layer: 0
   m_Name: spinning_axe
   m_TagString: Projectile
@@ -251,3 +252,17 @@ MonoBehaviour:
   icon: {fileID: -6422505731692599065, guid: 87ec66f6d440f7b2091d40791ed2b782, type: 3}
   Caster: 
   swingSound: {fileID: 8300000, guid: 4bf1040714df5314888067a7f897fcc1, type: 3}
+--- !u!114 &146000041652684475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3812101520780163155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4267fc40997d3a418a37a5c8bb9d3681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NewAssembly::SelfDestruction
+  TimeToLive: 10
+  OnStartup: 1
