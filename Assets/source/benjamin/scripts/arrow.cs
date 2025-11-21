@@ -42,10 +42,9 @@ public class Arrow : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         // Apply damage to player or enemy based on the owner of the arrow
         Enemy enemy = collision.GetComponent<Enemy>();
-        if (collision is BoxCollider2D)
+        if (collision is BoxCollider2D && !collision.gameObject.name.Contains("axe"))
         {
             enemy.TakeDamage(damage);
             Destroy(gameObject);
