@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public abstract class Enemy : Character
@@ -19,10 +20,15 @@ public abstract class Enemy : Character
     protected Vector2 TargetPosition;
     protected Vector2 MoveVec;
 
+    private NavMeshAgent NavAgent;
+
     // Initializes movement-related components and health bar
     public void initMovement()
     {
         rb = GetComponent<Rigidbody2D>();
+        NavAgent = GetComponent<NavMeshAgent>();
+        NavAgent.updateRotation = false;
+        NavAgent.updateUpAxis = false;
 
         // Locate and initialize the health bar
         Transform t = transform.Find(healthBarPath);
@@ -43,11 +49,12 @@ public abstract class Enemy : Character
     // Calculates movement vector to follow the player if in sight
     protected void FollowPlayer()
     {
-        MoveVec = Vector2.zero;
+        //MoveVec = Vector2.zero;
         if (playerInSight)
         {
-            TargetPosition = Player.position - rb.position;
-            MoveVec = TargetPosition.normalized;
+            TargetPosition = Player.position;
+            //MoveVec = TargetPosition.normalized;
+            NavAgent.SetDestination(TargetPosition);
         }
     }
 

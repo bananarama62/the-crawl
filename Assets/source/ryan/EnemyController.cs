@@ -8,7 +8,7 @@ public class EnemyController : Enemy
     void FixedUpdate()
     {
         decideMove();
-        move();
+        //move();
     }
 
     // Initializes movement and health bar on object creation
