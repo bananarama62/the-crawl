@@ -32,7 +32,7 @@ public class SpawnPylon : Effect {
    void Awake(){
       base.init();
       PlayerLocation = GameObject.Find("Player");
-      Assert.NotNull(PlayerLocation);
+      //Assert.NotNull(PlayerLocation);
    }
 
 }

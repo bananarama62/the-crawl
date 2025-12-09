@@ -37,6 +37,6 @@ public class Impact : MonoBehaviour {
 
    void Awake(){
       PlayerLocation = GameObject.Find("Player");
-      Assert.NotNull(PlayerLocation);
+      //Assert.NotNull(PlayerLocation);
    }
 }

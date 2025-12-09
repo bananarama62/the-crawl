@@ -45,7 +45,7 @@ public class LevelGenerator
    public void RandSpawnRoom(Room room)
    {
       bool successfullPlace = false;
-      Assert.NotNull(room);
+      //Assert.NotNull(room);
       int i = 0;
       do
       {

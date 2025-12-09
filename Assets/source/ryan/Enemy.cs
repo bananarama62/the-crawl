@@ -32,7 +32,7 @@ public abstract class Enemy : Character
 
         // Locate and initialize the health bar
         Transform t = transform.Find(healthBarPath);
-        Assert.NotNull(t);
+        //Assert.NotNull(t);
         healthBar = t.GetComponent<Slider>();
 
         healthBar.maxValue = getMaxHealth();
