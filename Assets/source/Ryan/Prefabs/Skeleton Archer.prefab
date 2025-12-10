@@ -288,7 +288,6 @@ GameObject:
   - component: {fileID: 113635077193611311}
   - component: {fileID: 4368389779991047433}
   - component: {fileID: 2912626804870547655}
-  - component: {fileID: 8238166369244158860}
   - component: {fileID: 3608860292354656485}
   - component: {fileID: 6140026965299569327}
   - component: {fileID: -2074364946548158669}
@@ -482,20 +481,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 15
---- !u!114 &8238166369244158860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6207233443068661978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c89478220729db46a522dd28c5cecbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  speed: 1
-  healthBar: {fileID: 0}
 --- !u!114 &3608860292354656485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,6 +499,8 @@ MonoBehaviour:
   shootInterval: 2
   followSpeedMultiplier: 0.5
   attackSound: {fileID: 8300000, guid: 2240bb6a4abc62e448962391d832cd95, type: 3}
+  health: 3
+  moveSpeed: 2
 --- !u!95 &6140026965299569327
 Animator:
   serializedVersion: 7

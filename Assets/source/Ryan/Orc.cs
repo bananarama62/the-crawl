@@ -17,7 +17,6 @@ public class Orc : EnemyController
     protected override void Awake()
     {
         initHealthAndSpeed(health, speed: 2);
-
         initMovement();
 
         animator = GetComponent<Animator>();
@@ -33,19 +32,16 @@ public class Orc : EnemyController
     // Decides movement and behavior based on player's position
     public override void decideMove()
     {
-        if (playerInSight && !isAttacking)
+        if (playerInSight && !isAttacking && Player != null)
         {
             animator.SetBool("isChasing", true);
-            FollowPlayer();
+            FollowPlayer(); // sets MoveVec
 
             // Flip sprite based on player's position
-            if (Player.position.x < transform.position.x)
+            var sr = GetComponent<SpriteRenderer>();
+            if (sr != null)
             {
-                GetComponent<SpriteRenderer>().flipX = true; // Face left
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().flipX = false; // Face right
+                sr.flipX = Player.position.x < transform.position.x;
             }
         }
         else
@@ -128,17 +124,43 @@ public class Orc : EnemyController
     // Handles damage taken by the Orc and updates animations
     public override void TakeDamage(float damage)
     {
-        base.TakeDamage(damage);
+        int intDamage = Mathf.Max(1, Mathf.RoundToInt(damage));
+        int newHealth = modifyHealth(-intDamage);
 
-        animator.SetBool("damageTaken", true);
+        if (healthBar != null)
+        {
+            healthBar.value = newHealth;
+        }
 
-        animator.SetInteger("health", getCurrentHealth());
-
-        if (getCurrentHealth() <= 0)
+        if (newHealth > 0)
+        {
+            animator.SetTrigger("Hurt");
+        }
+        else
         {
             animator.SetTrigger("Die");
         }
+    }
 
-        animator.SetBool("damageTaken", false);
+    public override void die()
+    {
+        // Stop AI logic on this enemy
+        this.enabled = false;  // stops Orc.Update / decideMove from running
+
+        // Stop physics movement
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            // or: rb.simulated = false;
+        }
+
+        // Disable colliders so it no longer collides or takes damage
+        foreach (var c in GetComponents<Collider2D>())
+            c.enabled = false;
+
+        // Let the death animation play, then destroy the object
+        Destroy(gameObject, 1.5f); // match your Die clip length
     }
 }

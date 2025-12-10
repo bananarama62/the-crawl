@@ -2,112 +2,128 @@ using UnityEngine;
 
 public class SkeletonArcher : EnemyController
 {
-    [SerializeField] private GameObject projectilePrefab; // Prefab for the arrow projectile
-    [SerializeField] private float shootInterval = 2f; // Time interval between shots
+    [SerializeField] private GameObject projectilePrefab;   // Prefab for the arrow projectile
+    [SerializeField] private float shootInterval = 2f;      // Time interval between shots
     [SerializeField] private float followSpeedMultiplier = 0.5f; // Speed multiplier when following the player
-    [SerializeField] private AudioClip attackSound; // Reference to the attack sound
-    private AudioSource audioSource; // AudioSource component
+    [SerializeField] private AudioClip attackSound;         // Reference to the attack sound
+
+    [SerializeField] private int health = 3;                // Archer HP
+    [SerializeField] private float moveSpeed = 2f;          // Movement speed
+
+    private AudioSource audioSource;
     private float shootTimer;
     private Animator animator;
 
-    // Initializes movement, animator, and audio source
     protected override void Awake()
     {
-        base.Awake();
+        // 1) Initialize health & speed
+        initHealthAndSpeed(health, speed: moveSpeed);
+
+        // 2) Set up movement/health bar
+        initMovement();
+
+        // 3) Get animator
         animator = GetComponent<Animator>();
 
-        // Initialize AudioSource
+        // 4) Get or create AudioSource
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
-        {
             audioSource = gameObject.AddComponent<AudioSource>();
-        }
     }
 
-    // Decides movement and behavior based on player's position
     public override void decideMove()
     {
         float originalSpeed = getSpeed();
 
-        if (playerInSight && Player != null)
+        if (Player == null)
         {
-            setSpeed(0);
+            animator.SetBool("isChasing", false);
+            animator.SetBool("isAttacking", false);
+            MoveVec = Vector2.zero;
+            return;
+        }
+
+        if (playerInSight)
+        {
+            // Stop to shoot
+            setSpeed(0f);
             shootTimer -= Time.deltaTime;
 
             animator.SetBool("isChasing", false);
 
-            if (shootTimer <= 0)
+            if (shootTimer <= 0f)
             {
-                if (!animator.GetBool("isAttacking"))
-                {
-                    animator.SetBool("isAttacking", true);
-                }
-
+                animator.SetBool("isAttacking", true);
                 shootTimer = shootInterval;
-            }
-
-            // Flip sprite based on player's position
-            if (Player.position.x < transform.position.x)
-            {
-                GetComponent<SpriteRenderer>().flipX = true; // Face left
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().flipX = false; // Face right
-            }
-        }
-        else if (Player != null)
-        {
-            setSpeed(originalSpeed * followSpeedMultiplier);
-            FollowPlayer();
-
-            animator.SetBool("isChasing", true);
-            animator.SetBool("isAttacking", false);
-
-            // Flip sprite based on player's position
-            if (Player.position.x < transform.position.x)
-            {
-                GetComponent<SpriteRenderer>().flipX = true; // Face left
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().flipX = false; // Face right
             }
         }
         else
         {
-            animator.SetBool("isChasing", false);
+            // Follow player slowly
+            setSpeed(originalSpeed * followSpeedMultiplier);
+            FollowPlayer(); // sets MoveVec based on Player
+
+            animator.SetBool("isChasing", true);
             animator.SetBool("isAttacking", false);
+        }
+
+        // Flip sprite based on player's position
+        var sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.flipX = Player.position.x < transform.position.x;
         }
     }
 
-    // Handles damage taken by the Skeleton Archer and updates animations
     public override void TakeDamage(float damage)
     {
-        base.TakeDamage(damage);
+        int intDamage = Mathf.Max(1, Mathf.RoundToInt(damage));
+        int newHealth = modifyHealth(-intDamage);
 
-        animator.SetTrigger("takenDamage");
+        if (healthBar != null)
+            healthBar.value = newHealth;
 
-        animator.SetFloat("Health", getCurrentHealth());
+        animator.SetInteger("health", newHealth);
+
+        if (newHealth > 0)
+        {
+            animator.SetTrigger("Hurt");
+        }
+        else
+        {
+            animator.SetTrigger("Die");
+        }
     }
 
-    // Handles death logic and triggers death animation
     public override void die()
     {
-        base.die();
+        // Stop AI logic
+        this.enabled = false;
 
-        animator.SetTrigger("Die");
+        // Stop physics movement
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            // or: rb.simulated = false;
+        }
+
+        // Disable colliders
+        foreach (var c in GetComponents<Collider2D>())
+            c.enabled = false;
+
+        // Allow death animation to play out
+        Destroy(gameObject, 2f); // whatever your Skeleton Die length is
     }
 
-    // Fires an arrow projectile towards the player
     public void FireArrow()
     {
-        if (projectilePrefab != null)
+        if (projectilePrefab != null && Player != null)
         {
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
             Vector2 lastPlayerPosition = Player.position;
-
             Vector2 direction = (lastPlayerPosition - rb.position).normalized;
 
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -125,6 +141,7 @@ public class SkeletonArcher : EnemyController
                 audioSource.PlayOneShot(attackSound);
             }
         }
+
         animator.SetBool("isAttacking", false);
     }
 }

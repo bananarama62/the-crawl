@@ -36,6 +36,11 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     weapon temporary_test_weapon;
     public Item HotBarItem;
 
+    public bool IsInDemoMode { get; set; } = false;
+
+    private Vector2 demoMoveVec = Vector2.zero;
+    private bool demoAttackRequested = false;
+
     /// <summary>
     /// sets necessary components and default parameters of the player in case class picker fails
     /// </summary>
@@ -113,6 +118,19 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     /// </summary>
     void GetInput()
     {
+        if (IsInDemoMode)
+        {
+            MoveVec = demoMoveVec;
+
+            if (demoAttackRequested)
+            {
+                AttackFun();
+                demoAttackRequested = false;
+            }
+
+            return;
+        }
+
         MoveY = 0;
         MoveX = 0;
         if (MoveUp.IsPressed())
@@ -237,4 +255,10 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
 	{
 		rb.position = Position;
 	}
+
+    public void SetDemoInput(Vector2 move, bool attack)
+    {
+        demoMoveVec = move;
+        demoAttackRequested = attack;
+    }
 }

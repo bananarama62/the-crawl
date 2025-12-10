@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
 
 public abstract class Enemy : Character
@@ -14,26 +13,31 @@ public abstract class Enemy : Character
 
     // Health bar UI element
     public Slider healthBar;
-    string healthBarPath = "Canvas/HealthBar"; // Path to the health bar in the hierarchy
+    // If you assign the Slider in the Inspector, you can remove this path
+    string healthBarPath = "Canvas/healthbar"; // Path to the health bar in the hierarchy
 
     // Movement-related variables
     protected Vector2 TargetPosition;
     protected Vector2 MoveVec;
 
-    private NavMeshAgent NavAgent;
+    private void Start()
+    {
+        initMovement(); // Call initMovement at the start
+    }
 
     // Initializes movement-related components and health bar
     public void initMovement()
     {
         rb = GetComponent<Rigidbody2D>();
-        NavAgent = GetComponent<NavMeshAgent>();
-        NavAgent.updateRotation = false;
-        NavAgent.updateUpAxis = false;
+        Assert.NotNull(rb, "Enemy requires a Rigidbody2D.");
 
-        // Locate and initialize the health bar
-        Transform t = transform.Find(healthBarPath);
-        Assert.NotNull(t);
-        healthBar = t.GetComponent<Slider>();
+        // If you prefer to assign healthBar in Inspector, you can skip this lookup
+        if (healthBar == null)
+        {
+            Transform t = transform.Find(healthBarPath);
+            Assert.NotNull(t, $"HealthBar not found at path '{healthBarPath}'");
+            healthBar = t.GetComponent<Slider>();
+        }
 
         healthBar.maxValue = getMaxHealth();
         healthBar.minValue = 0;
@@ -43,18 +47,27 @@ public abstract class Enemy : Character
     // Moves the enemy based on the calculated movement vector
     public virtual void move()
     {
+        if (rb == null) return;
+
         rb.MovePosition(rb.position + (MoveVec * getSpeed() * Time.fixedDeltaTime));
     }
 
-    // Calculates movement vector to follow the player if in sight
+    // Simple "chase the player" logic without NavMesh
     protected void FollowPlayer()
     {
-        //MoveVec = Vector2.zero;
-        if (playerInSight)
+        if (playerInSight && Player != null)
         {
             TargetPosition = Player.position;
-            //MoveVec = TargetPosition.normalized;
-            NavAgent.SetDestination(TargetPosition);
+            Vector2 dir = (TargetPosition - rb.position);
+
+            if (dir.sqrMagnitude > 0.0001f)
+                MoveVec = dir.normalized;
+            else
+                MoveVec = Vector2.zero;
+        }
+        else
+        {
+            MoveVec = Vector2.zero;
         }
     }
 
@@ -71,6 +84,16 @@ public abstract class Enemy : Character
         {
             Player = collision.attachedRigidbody;
             playerInSight = true;
+        }
+    }
+
+    // Detects when the player exits the enemy's trigger collider
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            playerInSight = false;
+            Player = null;
         }
     }
 
@@ -92,15 +115,6 @@ public abstract class Enemy : Character
         }
     }
 
-    // Detects when the player exits the enemy's trigger collider
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            playerInSight = false;
-        }
-    }
-
     // Default attack method to be overridden by derived classes
     protected virtual void Attack(PlayerController player)
     {
@@ -110,6 +124,12 @@ public abstract class Enemy : Character
     // Handles damage taken by the enemy and updates the health bar
     public virtual void TakeDamage(float damage)
     {
-        healthBar.value = modifyHealth((int)(-1 * damage));
+        int intDamage = Mathf.Max(1, Mathf.RoundToInt(damage));
+        int newHealth = modifyHealth(-intDamage);
+
+        if (healthBar != null)
+        {
+            healthBar.value = newHealth;
+        }
     }
 }

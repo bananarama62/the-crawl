@@ -399,6 +399,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::camera
   Target: {fileID: 873378136}
+--- !u!4 &150319027 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4572461959406906541, guid: 67a0baedb87f15dfc9f271d0874068d6, type: 3}
+  m_PrefabInstance: {fileID: 1305042712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &154599204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1168,6 +1173,7 @@ GameObject:
   - component: {fileID: 873378137}
   - component: {fileID: 873378142}
   - component: {fileID: 873378143}
+  - component: {fileID: 873378144}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1389,6 +1395,79 @@ MonoBehaviour:
   bow: {fileID: 715806462}
   spear: {fileID: 1585340518}
   player: {fileID: 873378137}
+--- !u!114 &873378144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873378136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14bb457b9aa9cdc49a419184a833e016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NewAssembly::DemoPlayerAI
+  overlordTarget: {fileID: 150319027}
+  successMoveSpeedFactor: 1
+  successAttackInterval: 0.7
+  failedMoveSpeedFactor: 0.4
+  failedAttackInterval: 2.5
+  failedRunDurationBeforeDeath: 15
+  outcome: 0
+  player: {fileID: 0}
+  attackTimer: 0
+  demoTimer: 0
+  runningDemo: 0
+  currentMoveSpeedFactor: 0
+  currentAttackInterval: 0
+--- !u!1 &886955938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886955940}
+  - component: {fileID: 886955939}
+  m_Layer: 0
+  m_Name: DemoStarter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &886955939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886955938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a19c8f4e8abcb48b95177f92e293af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: NewAssembly::DemoAutoStarter
+  idleTimeBeforeDemo: 3
+  demoSceneName: DEMOTEST
+  idleTimer: 0
+  lastMousePosition: {x: 0, y: 0, z: 0}
+--- !u!4 &886955940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886955938}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.39697, y: 38.45076, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &919947452
 GameObject:
   m_ObjectHideFlags: 0
@@ -14732,6 +14811,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5062619798095156539, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
   m_PrefabInstance: {fileID: 541671445}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1559095928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7591677414456779351, guid: b8b42d290fd374345a69e3c2edd98824, type: 3}
+  m_PrefabInstance: {fileID: 345322808448192542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!4 &1572966280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5062619798095156539, guid: f0a07e4d5529b33448b5a4d8a07eec92, type: 3}
@@ -45250,6 +45340,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4157416400349456600, guid: b8b42d290fd374345a69e3c2edd98824, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1559095928}
     - target: {fileID: 4406343179267199971, guid: b8b42d290fd374345a69e3c2edd98824, type: 3}
       propertyPath: m_Name
       value: Orc
@@ -45583,9 +45677,29 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3608860292354656485, guid: 40bbfcbd9a1df5b4fb183bed5b998f42, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3608860292354656485, guid: 40bbfcbd9a1df5b4fb183bed5b998f42, type: 3}
+      propertyPath: lineOfSightMask.m_Bits
+      value: 8192
+      objectReference: {fileID: 0}
     - target: {fileID: 6207233443068661978, guid: 40bbfcbd9a1df5b4fb183bed5b998f42, type: 3}
       propertyPath: m_Name
       value: Skeleton Archer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722794088003958925, guid: 40bbfcbd9a1df5b4fb183bed5b998f42, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722794088003958925, guid: 40bbfcbd9a1df5b4fb183bed5b998f42, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722794088003958925, guid: 40bbfcbd9a1df5b4fb183bed5b998f42, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8722794088003958925, guid: 40bbfcbd9a1df5b4fb183bed5b998f42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46026,3 +46140,4 @@ SceneRoots:
   - {fileID: 1443104936}
   - {fileID: 432806925}
   - {fileID: 999356516}
+  - {fileID: 886955940}
