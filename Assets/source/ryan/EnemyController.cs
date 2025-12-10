@@ -1,17 +1,15 @@
-//using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.UI;
-
 public class EnemyController : Enemy
 {
+    // Called every fixed frame-rate frame, handles movement and decision-making
+    void FixedUpdate()
+    {
+        decideMove();
+        move();
+    }
 
-  void FixedUpdate() {
-    decideMove();
-    move();
-  }
-  void Awake()
-  {
-    initHealthAndSpeed(3,speed:1); // Sets current and max health to 3 and speed to 1
-    initMovement();
-  }
+    // Initializes movement and health bar on object creation
+    protected virtual void Awake()
+    {
+        initMovement();
+    }
 }

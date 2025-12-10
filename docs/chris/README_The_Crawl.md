@@ -8,14 +8,18 @@
 ---
 
 ## Download Instructions
-This README provides simple steps to **run the executable** on any Windows PC with minimal setup.
-Download the executable for pc from https://github.com/bananarama62/the-crawl/tree/main
-OR
-Download the executable for mobile from https://github.com/bananarama62/the-crawl/tree/mobile
-Unzip download file
-## Running the Game
-run executable from downloaded folder
-
+This README provides simple steps to **run the executable** on any Windows PC with minimal setup  
+Download the executable for pc from https://github.com/bananarama62/the-crawl/tree/main  
+OR  
+Download the executable for mobile from https://vandalsuidaho-my.sharepoint.com/:u:/g/personal/soto8290_vandals_uidaho_edu/EYWCzvtXMUVBgB1BFgLYYjgBWBFBoFPDpPgH__iZ29E_oA?e=76dSGb  
+Unzip download file  
+## Running the Game- PC
+run executable from downloaded folder  
+## Running the Game- Mobile
+ANDROID ONLY- Go to phone settings-->About phone-->Software Information-->Build number  
+Tap build number 7 times to enable dev mode  
+Go back to settings-->search at top for developer options-->USB debugging--> enable  
+Go to home screen-->search at top for files-->My Files--> CrawlMobile.APK  
 ---
 
 ## System Requirements

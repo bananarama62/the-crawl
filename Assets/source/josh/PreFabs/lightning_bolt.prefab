@@ -151,12 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a61dde505873ffc9f52b2e30891dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: NewAssembly::Lightning
-  animation_loop_1: {fileID: 9100000, guid: d29275d79f3b4c16c819d6a63228b7de, type: 2}
-  animation_loop_2: {fileID: 9100000, guid: 82d772dfb7d7adaed97c324c9d205cec, type: 2}
-  animation_loop_3: {fileID: 9100000, guid: 7dcde2ff30305aa8e8596ffe0b311fd5, type: 2}
-  animation_loop_4: {fileID: 9100000, guid: 43a5031022d4a2703ae53d25803a454c, type: 2}
-  animation_loop_5: {fileID: 9100000, guid: 5f79221b2a6a494a9bc974dde54200b5, type: 2}
-  animation_loop_6: {fileID: 9100000, guid: 938aa42eaf3e3840ba2c0aaea2cabcc3, type: 2}
   timeToLive: 20
   damage: 2
 --- !u!95 &312513691880580700
@@ -169,7 +163,7 @@ Animator:
   m_GameObject: {fileID: 7182045403467931410}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d29275d79f3b4c16c819d6a63228b7de, type: 2}
+  m_Controller: {fileID: 9100000, guid: d2c49bbdffd06256cb27e42506490ba7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Projectile
   - Walls
+  - EndPoint
   layers:
   - Default
   - TransparentFX
@@ -19,10 +20,10 @@ TagManager:
   - EnemyDetection
   - 
   - RoomCollider
-  - 
+  - EndPoint
   - PlayerProjectile
   - Walls
-  - 
+  - Walkable
   - 
   - 
   - 

@@ -1,6 +1,7 @@
 using System.Collections;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.Experimental.AI;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
@@ -18,20 +19,17 @@ public class ChrisPlayTest
     [UnityTest]
     public IEnumerator Fireball_SpawnsProjectile_WhenCastSkillIsCalled()
     {
-        // Find the Player object in your loaded scene
         var player = GameObject.FindObjectOfType<PlayerController>();
         Assert.NotNull(player, "PlayerController not found in scene!");
-
-        // Wait for any initialization logic
+        var MainMenu = GameObject.FindObjectOfType<MainMenuScript>();
+        MainMenu.setScene(false);
+        player.setClass(new Mage());
         yield return null;
 
-        // Act — simulate casting skill
         player.PlayerClass.castSkill();
 
-        // Wait for projectile spawn
         yield return new WaitForSeconds(0.1f);
 
-        // Assert — check that a projectile was created
         var spawned = GameObject.FindObjectOfType<Fireball>();
         Assert.NotNull(spawned, "Projectile should have been spawned by Fireball.");
     }
@@ -41,7 +39,9 @@ public class ChrisPlayTest
     {
         var player = GameObject.FindObjectOfType<PlayerController>();
         Assert.NotNull(player, "PlayerController not found in scene!");
-
+        var MainMenu = GameObject.FindObjectOfType<MainMenuScript>();
+        MainMenu.setScene(false);
+        player.setClass(new Mage());
         // Cast once (starts cooldown)
         player.PlayerClass.castSkill();
         yield return null;
@@ -51,6 +51,44 @@ public class ChrisPlayTest
         player.PlayerClass.castSkill();
         yield return new WaitForSeconds(0.1f);
         var afterCount = GameObject.FindObjectsOfType<Fireball>().Length;
+
+        Assert.AreEqual(beforeCount, afterCount, "No new fireball should spawn while on cooldown.");
+    }
+
+    [UnityTest]
+    public IEnumerator Trap_SpawnsProjectile_WhenCastSkillIsCalled()
+    {
+        var player = GameObject.FindObjectOfType<PlayerController>();
+        Assert.NotNull(player, "PlayerController not found in scene!");
+        var MainMenu = GameObject.FindObjectOfType<MainMenuScript>();
+        MainMenu.setScene(false);
+        player.setClass(new Archer());
+        yield return null;
+
+        player.PlayerClass.castSkill();
+
+        yield return new WaitForSeconds(0.1f);
+
+        var spawned = GameObject.FindObjectOfType<ArcherTrap>();
+        Assert.NotNull(spawned, "Projectile should have been spawned by Fireball.");
+    }
+    [UnityTest]
+    public IEnumerator Trap_CannotCast_WhenOnCooldown()
+    {
+        var player = GameObject.FindObjectOfType<PlayerController>();
+        Assert.NotNull(player, "PlayerController not found in scene!");
+        var MainMenu = GameObject.FindObjectOfType<MainMenuScript>();
+        MainMenu.setScene(false);
+        player.setClass(new Archer());
+        // Cast once (starts cooldown)
+        player.PlayerClass.castSkill();
+        yield return null;
+
+        // Try to cast again immediately
+        var beforeCount = GameObject.FindObjectsOfType<ArcherTrap>().Length;
+        player.PlayerClass.castSkill();
+        yield return new WaitForSeconds(0.1f);
+        var afterCount = GameObject.FindObjectsOfType<ArcherTrap>().Length;
 
         Assert.AreEqual(beforeCount, afterCount, "No new fireball should spawn while on cooldown.");
     }

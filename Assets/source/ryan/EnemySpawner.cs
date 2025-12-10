@@ -1,40 +1,33 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner
+public class EnemySpawner : MonoBehaviour
 {
-    private IEnemyFactory meleeFactory;
-    private IEnemyFactory rangedFactory;
+    [SerializeField] private GameObject spawnPoint; // Assign the spawn object in the Inspector
 
-    public EnemySpawner(IEnemyFactory meleeFactory, IEnemyFactory rangedFactory)
+    private EnemyFactory meleeFactory;
+    private EnemyFactory rangedFactory;
+
+    void Start()
     {
-        this.meleeFactory = meleeFactory;
-        this.rangedFactory = rangedFactory;
+        // Initialize the factories
+        meleeFactory = new OrcFactory();
+        rangedFactory = new ArcherFactory();
+
+        // Spawn one random enemy
+        SpawnRandomEnemy();
     }
 
-    public List<Enemy> SpawnEnemies(int meleeCount, int rangedCount)
+    // Spawns a random enemy using one of the factories
+    private void SpawnRandomEnemy()
     {
-        List<Enemy> spawnedEnemies = new List<Enemy>();
-
-        for (int i = 0; i < meleeCount; i++)
-        {
-            Vector2 position = GetRandomPosition();
-            spawnedEnemies.Add(meleeFactory.CreateEnemy(position));
-        }
-
-        for (int i = 0; i < rangedCount; i++)
-        {
-            Vector2 position = GetRandomPosition();
-            spawnedEnemies.Add(rangedFactory.CreateEnemy(position));
-        }
-
-        return spawnedEnemies;
+        EnemyFactory selectedFactory = Random.Range(0, 2) == 0 ? meleeFactory : rangedFactory; // Randomly select a factory
+        Vector2 position = GetSpawnPosition();
+        selectedFactory.CreateEnemy(position); // Use the factory to create and spawn the enemy
     }
 
-    private Vector2 GetRandomPosition()
+    // Gets the position of the spawn point
+    private Vector2 GetSpawnPosition()
     {
-        float x = Random.Range(-10f, 10f);
-        float y = Random.Range(-10f, 10f);
-        return new Vector2(x, y);
+        return spawnPoint.transform.position; // Use the spawn object's position
     }
 }
