@@ -1,5 +1,5 @@
 using UnityEngine;
-using NUnit.Framework;
+//using NUnit.Framework;
 
 public class SpawnPylon : Effect {
    public GameObject PylonPreFab; // Prefab for enemy to spawn
@@ -20,7 +20,7 @@ public class SpawnPylon : Effect {
    void Awake(){
       base.init();
       PlayerLocation = GameObject.Find("Player");
-      Assert.NotNull(PlayerLocation);
+      //Assert.NotNull(PlayerLocation);
    }
 
 }

@@ -1,5 +1,5 @@
 using UnityEngine;
-using NUnit.Framework;
+//using NUnit.Framework;
 
 public class Impact : MonoBehaviour {
 
@@ -31,6 +31,6 @@ public class Impact : MonoBehaviour {
 
    void Awake(){
       PlayerLocation = GameObject.Find("Player");
-      Assert.NotNull(PlayerLocation);
+      //Assert.NotNull(PlayerLocation);
    }
 }

@@ -1,5 +1,5 @@
 using UnityEngine;
-using NUnit.Framework;
+//using NUnit.Framework;
 
 public abstract class Effect : MonoBehaviour {
    protected Cooldown cooldown;
@@ -19,7 +19,7 @@ public abstract class Effect : MonoBehaviour {
 
    public void init(){
       Transform t = transform.Find("Cooldown");
-      Assert.NotNull(t);
+      //Assert.NotNull(t);
       cooldown = t.GetComponent<Cooldown>();
    }
 

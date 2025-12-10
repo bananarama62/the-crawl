@@ -1,4 +1,4 @@
-using NUnit.Framework;
+//using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +17,7 @@ public abstract class Enemy : Character
 
       //Path to slider
       Transform t = transform.Find(healthBarPath);
-      Assert.NotNull(t);
+      //Assert.NotNull(t);
       healthBar = t.GetComponent<Slider>();
 
       healthBar.maxValue = getMaxHealth();

@@ -1,7 +1,7 @@
 using System.Collections;
 //using System.Numerics;
 using System.Xml.Serialization;
-using NUnit.Framework;
+//using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -30,7 +30,8 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     public PlayerAim AimCon;
     Vector2 MoveVec;
     //mobile stuff
-    public float TiltSens = 90f;
+    public float TiltSens = 45f;
+    //private Vector2 neutralTilt;
 
     [SerializeField] float Speed = 5f;
     weapon temporary_test_weapon;
@@ -57,8 +58,9 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     void Start()
     {
         UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
-        UIHandler.instance.setIcon(1,temporary_test_weapon.icon);
-        Assert.NotNull(UIHandler.instance);
+        UIHandler.instance.setIcon(1, temporary_test_weapon.icon);
+        //neutralTilt = Input.acceleration;
+        //Assert.NotNull(UIHandler.instance);
     }
     // Update is called once per frame
     void Update()
@@ -76,12 +78,28 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     void FixedUpdate()
     {
         Vector2 tilt = Input.acceleration;
-        Vector2 tilmove = new Vector2(tilt.x,tilt.y);
-        Vector2 NewPos = rb.position + tilmove * Speed * Time.fixedDeltaTime;
-        rb.MovePosition(NewPos);
-        float tiltangle = tilt.x * TiltSens;
-        float TargetRotation = Mathf.LerpAngle(rb.rotation, tiltangle, 5f * Time.fixedDeltaTime);
-        rb.MoveRotation(TargetRotation);
+
+        // Filter out gravity noise
+        if (tilt.sqrMagnitude < 0.02f)
+            return;
+
+        float sensitivity = 2f;
+        Vector2 tiltMove = new Vector2(tilt.x, tilt.y) * sensitivity;
+        Vector2 newPos = rb.position + tiltMove * Speed * Time.fixedDeltaTime;
+        rb.MovePosition(newPos);
+
+        // Smooth tilt-based rotation (TiltSens = 45 for good feel)
+        float tiltAngle = tilt.x * TiltSens;
+        float targetRotation = Mathf.LerpAngle(rb.rotation, tiltAngle, 5f * Time.fixedDeltaTime);
+        rb.MoveRotation(targetRotation);
+        Debug.Log($"Accel: {Input.acceleration}");
+        // Vector2 tilt = Input.acceleration;
+        // Vector2 tilmove = new Vector2(tilt.x,tilt.y);
+        // Vector2 NewPos = rb.position + tilmove * Speed * Time.fixedDeltaTime;
+        // rb.MovePosition(NewPos);
+        // float tiltangle = tilt.x * TiltSens;
+        // float TargetRotation = Mathf.LerpAngle(rb.rotation, tiltangle, 5f * Time.fixedDeltaTime);
+        // rb.MoveRotation(TargetRotation);
         //HandleMovement();
         if (Moving())
         {
@@ -91,7 +109,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
                 AimDirection.up = -aimVec;
                 AimDirection.localPosition = aimVec;
             }
-  }
+        }
     }
     // class setter function that is called by UI when the button is pressed
     public void setClass(Archetype chosenClass)

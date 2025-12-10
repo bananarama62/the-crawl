@@ -11,7 +11,7 @@
  */
 
 using UnityEngine;
-using NUnit.Framework;
+//using NUnit.Framework;
 
 public class BossOverlord : Boss {
 
@@ -32,7 +32,7 @@ public class BossOverlord : Boss {
       initMovement();
       // Finds the Spawn minion ability.
       Transform t = transform.Find("SpawnMinion");
-      Assert.NotNull(t);
+      //Assert.NotNull(t);
       AbilitySpawnMinion = t.GetComponent<SpawnMinion>();
    }
 
