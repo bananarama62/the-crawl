@@ -69,7 +69,7 @@ public class PlayerController : Character // Parent class is in josh/Scripts/cha
     {
         UIHandler.instance.setHealthValue(getCurrentHealthPercentage());
         UIHandler.instance.setIcon(1,temporary_test_weapon.icon);
-        Assert.NotNull(UIHandler.instance);
+        //Assert.NotNull(UIHandler.instance);
     }
     /// <summary>
     /// updates every frame with player input and animation of player

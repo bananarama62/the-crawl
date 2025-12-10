@@ -99,11 +99,11 @@ TimeSinceFinalPylonPlaced += Time.deltaTime;
       initMovement();
       // Finds the ChainLightning Script
       Transform t = transform.Find("ChainLightning");
-      Assert.NotNull(t);
+      //Assert.NotNull(t);
       AbilityChainLightning = t.GetComponent<ChainLightning>();
       // Finds the SpawnPylon script
       t = transform.Find("SpawnPylon");
-      Assert.NotNull(t);
+      //Assert.NotNull(t);
       AbilitySpawnPylon = t.GetComponent<SpawnPylon>();
       AnimationControl = GetComponent<FourDirectionSprite>();
       Pylons = new List<GameObject>();

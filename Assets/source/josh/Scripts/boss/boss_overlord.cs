@@ -32,7 +32,7 @@ public class BossOverlord : Boss {
       initMovement();
       // Finds the Spawn minion ability.
       Transform t = transform.Find("SpawnMinion");
-      Assert.NotNull(t);
+      //Assert.NotNull(t);
       AbilitySpawnMinion = t.GetComponent<SpawnMinion>();
    }
 
