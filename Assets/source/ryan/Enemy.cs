@@ -32,16 +32,18 @@ public abstract class Enemy : Character
         //Assert.NotNull(rb, "Enemy requires a Rigidbody2D.");
 
         // If you prefer to assign healthBar in Inspector, you can skip this lookup
-        if (healthBar == null)
+        // if (healthBar == null)
+        // {
+        //     Transform t = transform.Find(healthBarPath);
+        //     //Assert.NotNull(t, $"HealthBar not found at path '{healthBarPath}'");
+        //     healthBar = t.GetComponent<Slider>();
+        // }
+        if (healthBar != null)
         {
-            Transform t = transform.Find(healthBarPath);
-            //Assert.NotNull(t, $"HealthBar not found at path '{healthBarPath}'");
-            healthBar = t.GetComponent<Slider>();
+            healthBar.maxValue = getMaxHealth();
+            healthBar.minValue = 0;
+            healthBar.value = getCurrentHealth();
         }
-
-        healthBar.maxValue = getMaxHealth();
-        healthBar.minValue = 0;
-        healthBar.value = getCurrentHealth();
     }
 
     // Moves the enemy based on the calculated movement vector

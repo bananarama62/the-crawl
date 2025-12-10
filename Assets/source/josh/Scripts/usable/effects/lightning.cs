@@ -48,7 +48,7 @@ public class Lightning : MonoBehaviour {
    void Awake()
    {
       AnimatorControl = GetComponent<Animator>();
-      Assert.NotNull(AnimatorControl);
+      //Assert.NotNull(AnimatorControl);
       setAnimation(1);
    }
 
