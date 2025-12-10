@@ -29,13 +29,13 @@ public abstract class Enemy : Character
     public void initMovement()
     {
         rb = GetComponent<Rigidbody2D>();
-        Assert.NotNull(rb, "Enemy requires a Rigidbody2D.");
+        //Assert.NotNull(rb, "Enemy requires a Rigidbody2D.");
 
         // If you prefer to assign healthBar in Inspector, you can skip this lookup
         if (healthBar == null)
         {
             Transform t = transform.Find(healthBarPath);
-            Assert.NotNull(t, $"HealthBar not found at path '{healthBarPath}'");
+            //Assert.NotNull(t, $"HealthBar not found at path '{healthBarPath}'");
             healthBar = t.GetComponent<Slider>();
         }
 

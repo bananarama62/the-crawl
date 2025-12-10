@@ -1,9 +1,6 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-
-using UnityEngine;
-using UnityEngine.UIElements;
 /// <summary>
 /// Author: Christopher Soto
 /// Date: November 14, 2025
